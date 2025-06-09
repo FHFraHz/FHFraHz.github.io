@@ -1,0 +1,14 @@
+.xl-visible {
+    display: inherit;
+}
+.xs-visible {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .xl-visible {
+        display: none;
+    }   
+    .xs-visible {
+        display: inherit;
+    }
+}

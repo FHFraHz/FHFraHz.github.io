@@ -1,0 +1,38 @@
+:root {
+    --fs-1: 30pt;
+    --fs-2: 24pt;
+    --fs-3: 18pt;
+    --fs-4: 16pt;
+    --fs-5: 14pt;
+    --fs-6: 12pt;
+    --fs-7: 10pt;
+    --fs-8: 9pt;
+    --fs-9: 8pt;
+    --fs-10: 7pt;
+}
+
+h1 {font-size: var(--fs-1);}
+h2 {font-size: var(--fs-2);}
+h3 {font-size: var(--fs-3);}
+h4 {font-size: var(--fs-4);}
+h5 {font-size: var(--fs-5);}
+h6 {font-size: var(--fs-6);}
+p {font-size: var(--fs-7);}
+
+.text-start {text-align: start;}
+.text-end {text-align: end;}
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-justify {text-align: justify;}
+
+.fs-1 {font-size: var(--fs-1);}
+.fs-2 {font-size: var(--fs-2);}
+.fs-3 {font-size: var(--fs-3);}
+.fs-4 {font-size: var(--fs-4);}
+.fs-5 {font-size: var(--fs-5);}
+.fs-6 {font-size: var(--fs-6);}
+.fs-7 {font-size: var(--fs-7);}
+.fs-8 {font-size: var(--fs-8);}
+.fs-9 {font-size: var(--fs-9);}
+.fs-10 {font-size: var(--fs-1);}
