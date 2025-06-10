@@ -20,5 +20,38 @@ button.btn.btn-seemore {
 }
 
 .bull-pasture {
-    background: green;
+    /* default background if no daytime is set */
+    background: linear-gradient(to top, darkgreen 0%, green 20%, limegreen 40%, limegreen 51%, #FFFFFF00 52%);
+    display: grid;
+    height: 100%;
+}
+.bull-pasture.day-right {
+    /* daytime background */
+    background: linear-gradient(to top, darkgreen 0%, green 20%, limegreen 40%, limegreen 51%, #8EF 52%, #0DF 100%);
+    grid-template-areas: 
+        "sky sun sky cloud sky sky"
+        "grass tree herb-1 bull grass grass"
+        "grass herb-2 grass flower grass grass";
+}
+.bull-pasture.day-right .bull {
+    transform: scaleX(-100%);
+}
+.bull-pasture.night-left {
+    /* daytime background */
+    background: linear-gradient(to top, darkslategray 0%, darkcyan 20%, steelblue 40%, steelblue 51%, #26A 52%, #135 100%);
+    grid-template-areas: 
+        "sky moon stars cloud stars sky"
+        "grass tree grass bull herb-1 grass"
+        "grass herb-2 grass flower grass grass";
+}
+.bull-pasture .bull {
+    grid-area: bull;
+    width: 64px;
+    height: auto;
+}
+.bull-pasture .herb-1 {
+    grid-area: herb-1;
+    align-self: center;
+    width: 16px;
+    height: auto;
 }
