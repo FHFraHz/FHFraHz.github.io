@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   height="800"
+   width="579.05939"
+   version="1.1"
+   id="Layer_1"
+   viewBox="0 0 370.59801 512"
+   xml:space="preserve"
+   sodipodi:docname="tree-nature-svgrepo-com.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs9" /><sodipodi:namedview
+   id="namedview9"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.458125"
+   inkscape:cx="123.32879"
+   inkscape:cy="708.32196"
+   inkscape:window-width="1280"
+   inkscape:window-height="971"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<polygon
+   style="fill:#d68231"
+   points="283.993,334.678 283.993,204.122 220.387,204.122 220.387,379.56 135.136,310.075 113.491,336.632 220.387,423.757 220.387,497.078 283.993,497.078 283.993,378.295 398.289,288.236 377.086,261.327 "
+   id="polygon1"
+   transform="translate(-70.701004)" />
+<path
+   style="opacity:0.2;enable-background:new"
+   d="m 64.434996,310.075 -21.645,26.556 48.072,39.181 C 101.449,370.037 109.644,361.042 113.816,350.324 Z"
+   id="path1" />
+<path
+   style="opacity:0.2;enable-background:new"
+   d="m 306.385,261.327 -50.405,39.716 c 3.616,10.976 11.395,20.321 21.685,26.531 l 49.922,-39.337 z"
+   id="path2" />
+<path
+   style="opacity:0.2;enable-background:new"
+   d="m 149.686,204.122 v 107.579 c 10.423,1.444 21.05,2.191 31.802,2.191 10.754,0 21.38,-0.747 31.804,-2.191 V 204.122 Z"
+   id="path3" />
+<ellipse
+   style="fill:#00ad68"
+   cx="181.48999"
+   cy="143.564"
+   rx="170.828"
+   ry="143.564"
+   id="ellipse3" />
+<ellipse
+   style="fill:#7cdfa8"
+   cx="316.98401"
+   cy="274.78101"
+   rx="53.613998"
+   ry="48.575001"
+   id="ellipse4" />
+<g
+   id="g5"
+   transform="translate(-70.701004)">
+	<ellipse
+   style="fill:#218649"
+   cx="124.315"
+   cy="323.35599"
+   rx="53.613998"
+   ry="48.575001"
+   id="ellipse5" />
+	<path
+   style="fill:#218649"
+   d="m 333.894,490.587 c 0,-5.888 -4.818,-10.706 -10.707,-10.706 H 181.191 c -5.888,0 -10.706,4.818 -10.706,10.706 v 10.707 c 0,5.888 4.818,10.706 10.706,10.706 h 141.998 c 5.889,0 10.707,-4.818 10.707,-10.706 v -10.707 z"
+   id="path5" />
+</g>
+<path
+   style="fill:#7cdfa8"
+   d="m 108.375,186.671 c -9.567004,-9.569 -40.755004,-19.079 -42.348004,-17.486 -1.592,1.593 7.919,32.78 17.486,42.349 9.569,9.567 22.891004,11.759 29.756004,4.893 6.865,-6.865 4.674,-20.187 -4.894,-29.756 z"
+   id="path6" />
+<g
+   id="g8"
+   transform="translate(-70.701004)">
+	<path
+   style="fill:#218649"
+   d="m 315.609,200.006 c 9.568,-9.568 19.078,-40.756 17.486,-42.348 -1.593,-1.593 -32.781,7.918 -42.348,17.486 -9.568,9.569 -11.76,22.89 -4.894,29.755 6.865,6.866 20.188,4.676 29.756,-4.893 z"
+   id="path7" />
+	<path
+   style="fill:#218649"
+   d="m 232.529,88.963 c 0,-13.531 -15.328,-42.31 -17.579,-42.31 -2.252,0 -17.58,28.778 -17.58,42.31 0,13.532 7.872,24.501 17.58,24.501 9.709,0 17.579,-10.968 17.579,-24.501 z"
+   id="path8" />
+</g>
+<path
+   style="fill:#7cdfa8"
+   d="m 282.086,115.818 c 9.569,-9.568 19.079,-40.756 17.487,-42.348 -1.592,-1.592 -32.781,7.919 -42.348,17.485 -9.569,9.569 -11.759,22.892 -4.894,29.756 6.866,6.866 20.188,4.676 29.755,-4.893 z"
+   id="path9" />
+</svg>

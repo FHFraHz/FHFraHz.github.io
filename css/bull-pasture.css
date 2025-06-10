@@ -39,7 +39,7 @@
     }
     .bull {
         grid-area: "bull";
-        align-self: start;
+        align-self: center;
         grid-row-start: 2;
         grid-row-end: 2;
         width: 64px;
@@ -47,12 +47,20 @@
     .herb1 {
         grid-area: "herb1";
         align-self: center;
+        transform: translateY(10px);
         grid-row-start: 2;
         grid-row-end: 2;
         width: 18px;
         opacity: 62%;
         /* filter:invert(1); */
         mix-blend-mode: darken;
+    }
+    .tree {
+        grid-area: "tree";
+        grid-row-start: 2;
+        grid-row-end: 2;
+        align-self: start;
+        width: 48px;
     }
     .flower {
         grid-area: "flower";
@@ -102,6 +110,10 @@
         justify-self: end;
         grid-column-start: 3;
         grid-column-end: 3;
+    }
+    .tree {
+        grid-column-start: 2;
+        grid-column-end: 2;
     }
     .flower {
         grid-column-start: 4;
