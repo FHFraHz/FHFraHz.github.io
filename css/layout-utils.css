@@ -37,17 +37,43 @@
 .gap-4 {gap: 4ch}
 .gap-5 {gap: 5ch}
 
-.w-6 {width: 6%}
 .w-12 {width: 12%}
-.w-18 {width: 18%}
 .w-25 {width: 25%}
 .w-37 {width: 37%}
 .w-50 {width: 50%}
 .w-62 {width: 62%}
 .w-75 {width: 75%}
 .w-87 {width: 87%}
-.w-93 {width: 93%}
 .w-100 {width: 100%}
+
+.w-18 {width: 18%}
+.w-24 {width: 24%}
+.w-36 {width: 36%}
+.w-42 {width: 42%}
+.w-48 {width: 48%}
+.w-54 {width: 54%}
+.w-66 {width: 66%}
+.w-72 {width: 72%}
+.w-78 {width: 78%}
+.w-84 {width: 84%}
+.w-96 {width: 96%}
+
+.w-5 {width: 5%}
+.w-10 {width: 10%}
+.w-15 {width: 15%}
+.w-20 {width: 20%}
+.w-30 {width: 30%}
+.w-35 {width: 35%}
+.w-40 {width: 40%}
+.w-45 {width: 45%}
+.w-55 {width: 55%}
+.w-60 {width: 60%}
+.w-65 {width: 65%}
+.w-70 {width: 70%}
+.w-80 {width: 80%}
+.w-85 {width: 85%}
+.w-90 {width: 90%}
+.w-95 {width: 95%}
 
 .m-0 {margin: 0}
 .m-1 {margin: calc(1 * var(--m-p-measure))}
