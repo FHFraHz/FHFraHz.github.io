@@ -42,7 +42,7 @@
         align-self: center;
         grid-row-start: 2;
         grid-row-end: 2;
-        width: 64px;
+        width: 50px;
     }
     .herb1 {
         grid-area: "herb1";
@@ -50,7 +50,7 @@
         transform: translateY(10px);
         grid-row-start: 2;
         grid-row-end: 2;
-        width: 18px;
+        width: 16px;
         opacity: 62%;
         /* filter:invert(1); */
         mix-blend-mode: darken;
@@ -60,7 +60,7 @@
         grid-row-start: 2;
         grid-row-end: 2;
         align-self: start;
-        width: 48px;
+        width: 50px;
     }
     .flower {
         grid-area: "flower";
