@@ -1,115 +1,120 @@
-.d-flex { display: flex; }
-.flex-row { flex-direction: row; }
-.flex-column { flex-direction: column; }
+:root {
+    --m-p-measure: 0.5em;
+}
 
-.justify-content-baseline {justify-content: baseline;}
-.justify-content-firstbaseline {justify-content: first baseline;}
-.justify-content-lastbaseline {justify-content: last baseline;}
-.justify-content-safe {justify-content: safe;}
-.justify-content-unsafe {justify-content: unsafe;}
-.justify-content-stretch {justify-content: stretch;}
-.justify-content-center {justify-content: center;}
-.justify-content-start {justify-content: start;}
-.justify-content-end {justify-content: end;}
-.justify-content-around {justify-content: space-around;}
-.justify-content-between {justify-content: space-between;}
-.justify-content-evenly {justify-content: space-evenly;}
+.d-flex {display: flex}
+.flex-row {flex-direction: row}
+.flex-column {flex-direction: column}
 
-.align-items-baseline {align-items: baseline;}
-.align-items-firstbaseline {align-items: first baseline;}
-.align-items-lastbaseline {align-items: last baseline;}
-.align-items-safe {align-items: safe;}
-.align-items-unsafe {align-items: unsafe;}
-.align-items-stretch {align-items: stretch;}
-.align-items-center {align-items: center;}
-.align-items-start {align-items: start;}
-.align-items-end {align-items: end;}
-.align-items-normal {align-items: normal;}
+.justify-content-baseline {justify-content: baseline}
+.justify-content-firstbaseline {justify-content: first baseline}
+.justify-content-lastbaseline {justify-content: last baseline}
+.justify-content-safe {justify-content: safe}
+.justify-content-unsafe {justify-content: unsafe}
+.justify-content-stretch {justify-content: stretch}
+.justify-content-center {justify-content: center}
+.justify-content-start {justify-content: start}
+.justify-content-end {justify-content: end}
+.justify-content-around {justify-content: space-around}
+.justify-content-between {justify-content: space-between}
+.justify-content-evenly {justify-content: space-evenly}
 
-.gap-0 {gap: 0ch;}
-.gap-1 {gap: 1ch;}
-.gap-2 {gap: 2ch;}
-.gap-3 {gap: 3ch;}
-.gap-4 {gap: 4ch;}
-.gap-5 {gap: 5ch;}
+.align-items-baseline {align-items: baseline}
+.align-items-firstbaseline {align-items: first baseline}
+.align-items-lastbaseline {align-items: last baseline}
+.align-items-safe {align-items: safe}
+.align-items-unsafe {align-items: unsafe}
+.align-items-stretch {align-items: stretch}
+.align-items-center {align-items: center}
+.align-items-start {align-items: start}
+.align-items-end {align-items: end}
+.align-items-normal {align-items: normal}
 
-.w-6 {width: 6%;}
-.w-12 {width: 12%;}
-.w-25 {width: 25%;}
-.w-37 {width: 37%;}
-.w-50 {width: 50%;}
-.w-62 {width: 62%;}
-.w-75 {width: 75%;}
-.w-87 {width: 87%;}
-.w-93 {width: 93%;}
-.w-100 {width: 100%;}
+.gap-0 {gap: 0}
+.gap-1 {gap: 1ch}
+.gap-2 {gap: 2ch}
+.gap-3 {gap: 3ch}
+.gap-4 {gap: 4ch}
+.gap-5 {gap: 5ch}
 
-.m-0 {margin: 0ch;}
-.m-1 {margin: 1ch;}
-.m-2 {margin: 2ch;}
-.m-3 {margin: 3ch;}
-.m-4 {margin: 4ch;}
-.m-5 {margin: 5ch;}
+.w-6 {width: 6%}
+.w-12 {width: 12%}
+.w-18 {width: 18%}
+.w-25 {width: 25%}
+.w-37 {width: 37%}
+.w-50 {width: 50%}
+.w-62 {width: 62%}
+.w-75 {width: 75%}
+.w-87 {width: 87%}
+.w-93 {width: 93%}
+.w-100 {width: 100%}
 
-.ml-0 {margin-left: 0ch}
-.ml-1 {margin-left: 1ch}
-.ml-2 {margin-left: 2ch}
-.ml-3 {margin-left: 3ch}
-.ml-4 {margin-left: 4ch}
-.ml-5 {margin-left: 5ch}
+.m-0 {margin: 0}
+.m-1 {margin: calc(1 * var(--m-p-measure))}
+.m-2 {margin: calc(2 * var(--m-p-measure))}
+.m-3 {margin: calc(3 * var(--m-p-measure))}
+.m-4 {margin: calc(4 * var(--m-p-measure))}
+.m-5 {margin: calc(5 * var(--m-p-measure))}
 
-.mr-0 {margin-right: 0ch}
-.mr-1 {margin-right: 1ch}
-.mr-2 {margin-right: 2ch}
-.mr-3 {margin-right: 3ch}
-.mr-4 {margin-right: 4ch}
-.mr-5 {margin-right: 5ch}
+.ml-0 {margin-left: 0}
+.ml-1 {margin-left: calc(1 * var(--m-p-measure))}
+.ml-2 {margin-left: calc(2 * var(--m-p-measure))}
+.ml-3 {margin-left: calc(3 * var(--m-p-measure))}
+.ml-4 {margin-left: calc(4 * var(--m-p-measure))}
+.ml-5 {margin-left: calc(5 * var(--m-p-measure))}
 
-.mt-0 {margin-top: 0ch}
-.mt-1 {margin-top: 1ch}
-.mt-2 {margin-top: 2ch}
-.mt-3 {margin-top: 3ch}
-.mt-4 {margin-top: 4ch}
-.mt-5 {margin-top: 5ch}
+.mr-0 {margin-right: 0}
+.mr-1 {margin-right: calc(1 * var(--m-p-measure))}
+.mr-2 {margin-right: calc(2 * var(--m-p-measure))}
+.mr-3 {margin-right: calc(3 * var(--m-p-measure))}
+.mr-4 {margin-right: calc(4 * var(--m-p-measure))}
+.mr-5 {margin-right: calc(5 * var(--m-p-measure))}
 
-.mb-0 {margin-bottom: 0ch}
-.mb-1 {margin-bottom: 1ch}
-.mb-2 {margin-bottom: 2ch}
-.mb-3 {margin-bottom: 3ch}
-.mb-4 {margin-bottom: 4ch}
-.mb-5 {margin-bottom: 5ch}
+.mt-0 {margin-top: 0}
+.mt-1 {margin-top: calc(1 * var(--m-p-measure))}
+.mt-2 {margin-top: calc(2 * var(--m-p-measure))}
+.mt-3 {margin-top: calc(3 * var(--m-p-measure))}
+.mt-4 {margin-top: calc(4 * var(--m-p-measure))}
+.mt-5 {margin-top: calc(5 * var(--m-p-measure))}
 
-.p-0 {padding: 0ch;}
-.p-1 {padding: 1ch;}
-.p-2 {padding: 2ch;}
-.p-3 {padding: 3ch;}
-.p-4 {padding: 4ch;}
-.p-5 {padding: 5ch;}
+.mb-0 {margin-bottom: 0}
+.mb-1 {margin-bottom: calc(1 * var(--m-p-measure))}
+.mb-2 {margin-bottom: calc(2 * var(--m-p-measure))}
+.mb-3 {margin-bottom: calc(3 * var(--m-p-measure))}
+.mb-4 {margin-bottom: calc(4 * var(--m-p-measure))}
+.mb-5 {margin-bottom: calc(5 * var(--m-p-measure))}
 
-.pl-0 {padding-left: 0ch}
-.pl-1 {padding-left: 1ch}
-.pl-2 {padding-left: 2ch}
-.pl-3 {padding-left: 3ch}
-.pl-4 {padding-left: 4ch}
-.pl-5 {padding-left: 5ch}
+.p-0 {padding: 0}
+.p-1 {padding: calc(1 * var(--m-p-measure))}
+.p-2 {padding: calc(2 * var(--m-p-measure))}
+.p-3 {padding: calc(3 * var(--m-p-measure))}
+.p-4 {padding: calc(4 * var(--m-p-measure))}
+.p-5 {padding: calc(5 * var(--m-p-measure))}
 
-.pr-0 {padding-right: 0ch}
-.pr-1 {padding-right: 1ch}
-.pr-2 {padding-right: 2ch}
-.pr-3 {padding-right: 3ch}
-.pr-4 {padding-right: 4ch}
-.pr-5 {padding-right: 5ch}
+.pl-0 {padding-left: 0}
+.pl-1 {padding-left: calc(1 * var(--m-p-measure))}
+.pl-2 {padding-left: calc(2 * var(--m-p-measure))}
+.pl-3 {padding-left: calc(3 * var(--m-p-measure))}
+.pl-4 {padding-left: calc(4 * var(--m-p-measure))}
+.pl-5 {padding-left: calc(5 * var(--m-p-measure))}
 
-.pt-0 {padding-top: 0ch}
-.pt-1 {padding-top: 1ch}
-.pt-2 {padding-top: 2ch}
-.pt-3 {padding-top: 3ch}
-.pt-4 {padding-top: 4ch}
-.pt-5 {padding-top: 5ch}
+.pr-0 {padding-right: 0}
+.pr-1 {padding-right: calc(1 * var(--m-p-measure))}
+.pr-2 {padding-right: calc(2 * var(--m-p-measure))}
+.pr-3 {padding-right: calc(3 * var(--m-p-measure))}
+.pr-4 {padding-right: calc(4 * var(--m-p-measure))}
+.pr-5 {padding-right: calc(5 * var(--m-p-measure))}
 
-.pb-0 {padding-bottom: 0ch}
-.pb-1 {padding-bottom: 1ch}
-.pb-2 {padding-bottom: 2ch}
-.pb-3 {padding-bottom: 3ch}
-.pb-4 {padding-bottom: 4ch}
-.pb-5 {padding-bottom: 5ch}
+.pt-0 {padding-top: 0}
+.pt-1 {padding-top: calc(1 * var(--m-p-measure))}
+.pt-2 {padding-top: calc(2 * var(--m-p-measure))}
+.pt-3 {padding-top: calc(3 * var(--m-p-measure))}
+.pt-4 {padding-top: calc(4 * var(--m-p-measure))}
+.pt-5 {padding-top: calc(5 * var(--m-p-measure))}
+
+.pb-0 {padding-bottom: 0}
+.pb-1 {padding-bottom: calc(1 * var(--m-p-measure))}
+.pb-2 {padding-bottom: calc(2 * var(--m-p-measure))}
+.pb-3 {padding-bottom: calc(3 * var(--m-p-measure))}
+.pb-4 {padding-bottom: calc(4 * var(--m-p-measure))}
+.pb-5 {padding-bottom: calc(5 * var(--m-p-measure))}

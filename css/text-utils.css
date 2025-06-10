@@ -11,12 +11,12 @@
     --fs-10: 7pt;
 }
 
-h1 {font-size: var(--fs-1);}
-h2 {font-size: var(--fs-2);}
-h3 {font-size: var(--fs-3);}
-h4 {font-size: var(--fs-4);}
-h5 {font-size: var(--fs-5);}
-h6 {font-size: var(--fs-6);}
+h1 {font-size: var(--fs-1)}
+h2 {font-size: var(--fs-2)}
+h3 {font-size: var(--fs-3)}
+h4 {font-size: var(--fs-4)}
+h5 {font-size: var(--fs-5)}
+h6 {font-size: var(--fs-6)}
 p {font-size: var(--fs-7);}
 
 .text-start {text-align: start;}

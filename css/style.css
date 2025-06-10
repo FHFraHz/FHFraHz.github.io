@@ -1,3 +1,24 @@
+:root {
+    --blue: #0055FF;
+    --light-blue: #0099EE;
+    --white: #F7F7F7;
+    --black: #111;
+}
 body, html, * {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, 'Liberation Sans', 'Open Sans', sans-serif;
+    font-family: Tahoma, Geneva, Verdana, 'Liberation Sans', 'Open Sans', sans-serif;
+    letter-spacing: 0.025ch;
+}
+select {
+    font-size: 11pt;
+    padding: 0.5ch;
+}
+section.spa-section {
+    padding: 2rem;
+}
+button.btn.btn-seemore {
+    background: #FFFFFF77;
+}
+
+.bull-pasture {
+    background: green;
 }

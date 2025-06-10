@@ -1,31 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap 5.3.6 -->
+    <link rel="stylesheet" href="./libs/bootstrap-5.3.6-dist/bootstrap.min.css">
+    <script type="text/javascript" src="./libs/bootstrap-5.3.6-dist/bootstrap.bundle.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/lang.css">
     <link rel="stylesheet" href="./css/layout-utils.css">
-    <link rel="stylesheet" href="./css/text-utils.css">
     <link rel="stylesheet" href="./css/pseudo-responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/text-utils.css">
+    <!-- Title -->
     <title>Francisco Hernández | Web Résume/CV</title>
 </head>
 <body>
-    <header class="d-flex flex-row justify-content-around">
-        <div class="d-flex flex-column w-25"></div>
-        <div class="d-flex flex-column text-center">
-            <h1 class="m-0">Francisco Hernández</h1>
-            <h2 class="m-0">Creative Solutions</h2>
-            <h3 class="m-0">Backend/Frontend Web Development</h3>
-            <h4 class="m-0">Audio and Music Production</h4>
-            <h5 class="m-0">Music Composition</h5>
-            <h6 class="m-0">Tech Support</h6>
-            <h6 class="m-0">Vector Graphics</h6>
-            <p>Image and Video Editing</p>
+    <header class="d-flex flex-row row m-0 p-4 justify-content-around align-items-center">
+        <div class="d-flex flex-column col-2 align-items-center">
+            <object data="./img/icons/buffalo-2-svgrepo-com.svg" width="64px" height="auto"></object>
         </div>
-        <div class="d-flex flex-column w-25"></div>
+        <div class="d-flex flex-column col-5 text-center">
+            <h1 class="mb-0 fw-bold">Francisco Hernández</h1>
+            <h2 class="m-0 fw-semibold">Creative Solutions</h2>
+        </div>
+        <div class="d-flex flex-column col-2 align-items-center">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <object data="./img/icons/flags/en.svg" width="16px" height="auto"></object>
+                    English
+                </button>
+                <ul class="dropdown-menu">
+                    <li><h6 class="dropdown-header" data-langkey="lang-dropdown-header">Select Language</h6></li>
+                    <li>
+                        <a class="dropdown-item" href="#" data-lang-toggle="en">
+                            <object data="./img/icons/flags/en.svg" width="16px" height="auto"></object>
+                            English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#" data-lang-toggle="es">
+                            <object data="./img/icons/flags/es.svg" width="16px" height="auto"></object>
+                            Español
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main>
-        
+        <section class="spa-section" id="webdev">
+            <div class="d-flex flex-row">
+                <div class="text-start w-75">
+                    <h3 data-langkey="webdev-title" class="fw-bold text-start">
+                        Frontend / Backend Web Development
+                    </h3>
+                    <p data-langkey="webdev-text" class="fs-6">
+                        Robust, conscious, custom made user interfaces with efficient and mindful inner workings to ensure reliable performance, with an emphatic focus on style, feature modularity and system status visibility.
+                    </p>
+                    <a href="#" class="btn btn-seemore">
+                        See More >
+                    </a>
+                </div>
+                <div class="w-25 d-flex flex-column bull-pasture day">
+                    <object class="bull" data="./img/icons/bison-svgrepo-com.svg" width="64px"></object>
+                </div>
+            </div>
+        </section>
+        <section class="spa-section" id="audioprod">
+            <div class="d-flex flex-row">
+                <div class="w-25"></div>
+                <div class="text-end w-75">
+                    <h3 data-langkey="audioprod-title" class="fw-bold text-end">
+                        Audio and Music Production
+                    </h3>
+                    <p data-langkey="audioprod-text" class="fs-6">
+                        Sound design, mixing and mastering, as well as musical instrumentation and arrangements, with a vintage/classic-focused but adaptable production style.
+                    </p>
+                    <a href="#" class="btn btn-seemore">
+                        < See More
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="spa-section" id="sysadmin">
+            <h3 data-langkey="sysadmin-title" class="fw-bold text-start">
+                Tech Support & SysAdmin
+            </h3>
+            <div class="text-start">
+                <p data-langkey="sysadmin-text" class="fs-6">
+                    Diligent and conscious system setup, cleanup, maintenance and support.
+                </p>
+                <a href="#" class="btn btn-seemore">
+                    See More >
+                </a>
+            </div>
+        </section>
+        <section class="spa-section" id="multimedia">
+            <h3 data-langkey="multimedia-title" class="fw-bold text-end">
+                Multimedia Editing
+            </h3>
+            <div class="text-end">
+                <p data-langkey="multimedia-text" class="fs-6">
+                    Precise and conscious audio, image and video editing for ads, presentations, videos or other visual or audiovisual productions.
+                </p>
+                <a href="#" class="btn btn-seemore">
+                    < See More
+                </a>
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="./js/main.js"></script>
