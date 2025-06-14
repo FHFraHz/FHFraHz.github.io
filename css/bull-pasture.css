@@ -9,26 +9,34 @@
     grid-template-columns: 6;
     grid-template-rows: 3;
     height: 100%;
+    min-height: 128px;
     border-radius: 1rem;
 }
 .bull-pasture {
-    .sunmoon {
+    #sunmoon, #cloudstars1, #cloudstars2 {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    #sunmoon {
         grid-area: "sun";
         grid-row-start: 1;
         grid-row-end: 1;
         justify-self: center;
         align-self: center;
         width: 24px;
+        height: 24px;
     }
-    .cloudstars1 {
+    #cloudstars1 {
         grid-area: "cloudstars1";
         grid-row-start: 1;
         grid-row-end: 1;
         justify-self: center;
         align-self: center;
         width: 28px;
+        height: 28px;
     }
-    .cloudstars2 {
+    #cloudstars2 {
         grid-area: "cloudstars2";
         grid-row-start: 1;
         grid-row-end: 1;
@@ -36,6 +44,7 @@
         align-self: center;
         opacity: 90%;
         width: 22px;
+        height: 22px;
     }
     .bull {
         grid-area: "bull";
@@ -72,31 +81,45 @@
 .bull-pasture.sunnyday {
     /* daytime background */
     background: linear-gradient(to top, darkgreen 0%, green 20%, limegreen 40%, limegreen 51%, #8EF 52%, #0DF 100%);
-    .sunmoon {
+    #sunmoon {
+        background-image: url('../img/icons/environment/sun-svgrepo-com.svg');
         filter:drop-shadow(0px 0px 8px #FFBB55DD);
     }
 }
-.bull-pasture.night {
+.bull-pasture.rainyday {
+    /* daytime background */
+    background: linear-gradient(to top, darkgreen 0%, green 20%, limegreen 40%, limegreen 51%, #8EF 52%, #0DF 100%);
+    #sunmoon {
+        background-image: url('../img/icons/environment/rain-svgrepo-com.svg');
+        filter:drop-shadow(0px 0px 8px #FFFFFFDD);
+        
+    }
+}
+.bull-pasture.clearnight {
     /* daytime background */
     background: linear-gradient(to top, darkslategray 0%, darkcyan 20%, steelblue 40%, steelblue 51%, #26A 52%, #135 100%);
-    .sunmoon {
+    #sunmoon {
+        background-image: url('../img/icons/environment/moon-svgrepo-com.svg');
         filter:drop-shadow(0px 0px 12px #AAEEFFCC);
     }
 }
-.bull-pasture.right {
-    grid-template-areas: 
-        "sky sunmoon sky cloudstars1 cloudstars2 sky"
-        "grass tree herb1 bull grass grass"
-        "grass herb2 grass flower grass grass";
-    .sunmoon {
+.bull-pasture.cloudynight {
+    /* daytime background */
+    background: linear-gradient(to top, darkslategray 0%, darkcyan 20%, steelblue 40%, steelblue 51%, #26A 52%, #135 100%);
+    #sunmoon {
+        filter:drop-shadow(0px 0px 12px #AAEEFFCC);
+    }
+}
+.bull-pasture.left {
+    #sunmoon {
         grid-column-start: 2;
         grid-column-end: 2;
     }
-    .cloudstars1 {
+    #cloudstars1 {
         grid-column-start: 4;
         grid-column-end: 4;
     }
-    .cloudstars2 {
+    #cloudstars2 {
         grid-column-start: 5;
         grid-column-end: 5;
     }
@@ -120,12 +143,8 @@
         grid-column-end: 4;
     }
 }
-.bull-pasture.left {
-    grid-template-areas: 
-        "sky cloudstars1 sky cloudstars2 sunmoon sky"
-        "grass tree bull herb1 grass grass"
-        "grass herb2 grass flower grass grass";
-    .sunmoon {
+.bull-pasture.right {
+    #sunmoon {
         grid-column-start: 5;
         grid-column-end: 5;
     }

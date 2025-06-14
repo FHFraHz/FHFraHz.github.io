@@ -18,37 +18,7 @@
     <title>Francisco Hernández | Web Résume/CV</title>
 </head>
 <body>
-    <header class="d-flex flex-row row m-0 p-4 justify-content-around align-items-center">
-        <div class="d-flex flex-column col-2 align-items-center">
-            <object data="./img/icons/buffalo-2-svgrepo-com.svg" width="64px" height="auto"></object>
-        </div>
-        <div class="d-flex flex-column col-5 text-center">
-            <h1 class="mb-0 fw-bold">Francisco Hernández</h1>
-            <h2 class="m-0 fw-semibold">IT & Creative Solutions</h2>
-        </div>
-        <div class="d-flex flex-column col-2 align-items-center">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <object data="./img/icons/flags/en.svg" width="16px" height="auto"></object>
-                    English
-                </button>
-                <ul class="dropdown-menu">
-                    <li><h6 class="dropdown-header" data-langkey="lang-dropdown-header">Select Language</h6></li>
-                    <li>
-                        <a class="dropdown-item" href="#" data-lang-toggle="en">
-                            <object data="./img/icons/flags/en.svg" width="16px" height="auto"></object>
-                            English
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#" data-lang-toggle="es">
-                            <object data="./img/icons/flags/es.svg" width="16px" height="auto"></object>
-                            Español
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <header id="header" class="d-flex flex-row row m-0 p-4 justify-content-around align-items-center">
     </header>
     <main>
         <section class="spa-section" id="webdev">
@@ -65,26 +35,12 @@
                     </a>
                 </div>
                 <div class="w-25 d-flex flex-column justify-content-stretch">
-                    <div class="bull-pasture sunnyday right">
-                        <object class="sunmoon" data="./img/icons/environment/sun-svgrepo-com.svg"></object>
-                        <object class="cloudstars1" data="./img/icons/environment/cloud-svgrepo-com.svg"></object>
-                        <object class="cloudstars2" data="./img/icons/environment/cloud-svgrepo-com.svg"></object>
-                        <object class="bull" data="./img/icons/bison-svgrepo-com.svg"></object>
-                        <object class="herb1" data="./img/icons/environment/grass-leaf-plant-5-svgrepo-com.svg"></object>
-                        <object class="tree" data="./img/icons/environment/tree-decidious-svgrepo-com.svg"></object>
-                    </div>
+                    
                 </div>
             </div>
         </section>
         <section class="spa-section" id="audioprod">
             <div class="d-flex flex-row justify-content-between">
-                <div class="w-25 d-flex flex-column justify-content-stretch">
-                    <div class="bull-pasture night left">
-                        <object class="sunmoon" data="./img/icons/environment/moon-1-svgrepo-com.svg"></object>
-                        <object class="bull" data="./img/icons/bison-svgrepo-com.svg"></object>
-                        <object class="herb1" data="./img/icons/environment/grass-leaf-plant-13-svgrepo-com.svg" width="12px"></object>
-                    </div>
-                </div>
                 <div class="text-end w-70">
                     <h3 data-langkey="audioprod-title" class="fw-bold text-end">
                         Audio and Music Production
@@ -130,6 +86,7 @@
         </section>
     </main>
     <footer></footer>
+    <script src="./js/bull-pasture.js" type="text/javascript"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

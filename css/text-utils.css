@@ -36,3 +36,5 @@ p {font-size: var(--fs-7);}
 .fs-8 {font-size: var(--fs-8);}
 .fs-9 {font-size: var(--fs-9);}
 .fs-10 {font-size: var(--fs-1);}
+
+.text-light { color: var(--white); }
