@@ -28,6 +28,7 @@ function initializeBullPastureWidget() {
     sceneDropdownItems.forEach((item) => {
         item.addEventListener('click', (event) => {
             event.preventDefault();
+            document.getElementById('scene-dropdown-button').innerHTML = event.target.innerHTML;
             setBullPastureClass(event.target.getAttribute('data-scene-toggle'), scenes);
         });
     });
@@ -37,6 +38,7 @@ function initializeBullPastureWidget() {
     sceneOrientationDropdownItems.forEach((item) => {
         item.addEventListener('click', (event) => {
             event.preventDefault(); // prevents the a or button element from navigating to a page or submitting a form
+            document.getElementById('sceneorientation-dropdown-button').innerHTML = event.target.innerHTML;
             setBullPastureClass(event.target.getAttribute('data-sceneorientation-toggle'), ['left', 'right']);
         });
     });

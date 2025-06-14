@@ -2,9 +2,9 @@
 <div class="d-flex flex-row col-3 row m-0 p-0 justify-content-center">
     <div class="d-flex flex-column m-0 p-0 rounded rounded-4 bg-dark">
         <div class="bull-pasture sunnyday left" id="bull-pasture">
-            <object id="sunmoon"></object>
-            <object id="cloudstars1"></object>
-            <object id="cloudstars2"></object>
+            <div id="sunmoon"></div>
+            <div id="cloudstars1"></div>
+            <div id="cloudstars2"></div>
             <object class="bull" data="./img/icons/bison-svgrepo-com.svg"></object>
             <object class="herb1" data="./img/icons/environment/grass-leaf-plant-5-svgrepo-com.svg"></object>
             <object class="tree" data="./img/icons/environment/tree-decidious-svgrepo-com.svg"></object>
@@ -13,33 +13,33 @@
             <p class="fs-8 m-0 p-0">Scene:</p>
             &nbsp;
             <div class="dropdown">
-                <button class="btn btn-secondary p-1 dropdown-toggle fs-7" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <object data="./img/icons/environment/sun-svgrepo-com.svg" width="12px" height="auto"></object>
+                <button class="btn btn-secondary p-1 dropdown-toggle fs-7" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="scene-dropdown-button">
+                    <img src="./img/icons/environment/sun-svgrepo-com.svg" width="12px" height="auto"></object>
                     Sunny Day
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark fs-7">
-                    <li><h6 class="dropdown-header fs-7" data-langkey="lang-dropdown-header">Select Scene</h6></li>
+                    <li><h6 class="dropdown-header fs-7" data-langkey="scene-dropdown-header">Select Scene</h6></li>
                     <li>
                         <a class="dropdown-item scene-dropdown-item" href="#" data-scene-toggle="sunnyday">
-                            <object data="./img/icons/environment/sun-svgrepo-com.svg" width="12px" height="auto"></object>
+                            <img src="./img/icons/environment/sun-svgrepo-com.svg" width="12px" height="auto"></object>
                             Sunny Day
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item scene-dropdown-item" href="#" data-scene-toggle="clearnight">
-                            <object data="./img/icons/environment/moon-svgrepo-com.svg" width="12px" height="auto"></object>
+                            <img src="./img/icons/environment/moon-svgrepo-com.svg" width="12px" height="auto"></object>
                             Clear Night
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item scene-dropdown-item" href="#" data-scene-toggle="rainyday">
-                            <object data="./img/icons/environment/rain-svgrepo-com.svg" width="12px" height="auto"></object>
+                            <img src="./img/icons/environment/rain-svgrepo-com.svg" width="12px" height="auto"></object>
                             Rainy Day
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item scene-dropdown-item" href="#" data-scene-toggle="cloudynight">
-                            <object data="./img/icons/environment/moon-svgrepo-com.svg" width="12px" height="auto"></object>
+                            <img src="./img/icons/environment/moon-svgrepo-com.svg" width="12px" height="auto"></object>
                             Cloudy Night
                         </a>
                     </li>
@@ -49,11 +49,11 @@
             <p class="fs-8 m-0 p-0 text-light">Orientation:</p>
             &nbsp;
             <div class="dropdown">
-        <button class="btn btn-secondary p-1 dropdown-toggle fs-7" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-secondary p-1 dropdown-toggle fs-7" type="button" data-bs-toggle="dropdown" aria-expanded="false"  id="sceneorientation-dropdown-button">
             Left
         </button>
         <ul class="dropdown-menu dropdown-menu-dark fs-7">
-            <li><h6 class="dropdown-header fs-7" data-langkey="lang-dropdown-header">Select Orientation</h6></li>
+            <li><h6 class="dropdown-header fs-7" data-langkey="sceneorientation-dropdown-header">Select Orientation</h6></li>
             <li>
                 <a class="dropdown-item sceneorientation-dropdown-item" href="#" data-sceneorientation-toggle="left">
                     Left
@@ -88,20 +88,20 @@
 <div class="d-flex flex-column col-3 align-items-center">
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <object data="./img/icons/flags/en.svg" width="16px" height="auto"></object>
+            <img src="./img/icons/flags/en.svg" width="16px" height="auto"></object>
             English
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
             <li><h6 class="dropdown-header" data-langkey="lang-dropdown-header">Select Language</h6></li>
             <li>
                 <a class="dropdown-item language-dropdown-item" href="#" data-lang-toggle="en">
-                    <object data="./img/icons/flags/en.svg" width="16px" height="auto"></object>
+                    <img src="./img/icons/flags/en.svg" width="16px" height="auto"></object>
                     English
                 </a>
             </li>
             <li>
                 <a class="dropdown-item language-dropdown-item" href="#" data-lang-toggle="es">
-                    <object data="./img/icons/flags/es.svg" width="16px" height="auto"></object>
+                    <img src="./img/icons/flags/es.svg" width="16px" height="auto"></object>
                     Español
                 </a>
             </li>

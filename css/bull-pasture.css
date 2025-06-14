@@ -68,7 +68,11 @@
         grid-area: "tree";
         grid-row-start: 2;
         grid-row-end: 2;
+        /* the tree doesn't change position with the scene orientation */
+        grid-column-start: 2;
+        grid-column-end: 2;
         align-self: start;
+        justify-self: start;
         width: 50px;
     }
     .flower {
@@ -85,14 +89,16 @@
         background-image: url('../img/icons/environment/sun-svgrepo-com.svg');
         filter:drop-shadow(0px 0px 8px #FFBB55DD);
     }
+    #cloudstars1, #cloudstars2 {
+        background-image: url('../img/icons/environment/cloud-svgrepo-com.svg');
+    }
 }
 .bull-pasture.rainyday {
     /* daytime background */
     background: linear-gradient(to top, darkgreen 0%, green 20%, limegreen 40%, limegreen 51%, #8EF 52%, #0DF 100%);
     #sunmoon {
         background-image: url('../img/icons/environment/rain-svgrepo-com.svg');
-        filter:drop-shadow(0px 0px 8px #FFFFFFDD);
-        
+        filter:drop-shadow(0px 0px 8px #FFFFFFDD);   
     }
 }
 .bull-pasture.clearnight {
@@ -134,16 +140,20 @@
         grid-column-start: 3;
         grid-column-end: 3;
     }
-    .tree {
-        grid-column-start: 2;
-        grid-column-end: 2;
-    }
     .flower {
         grid-column-start: 4;
         grid-column-end: 4;
     }
 }
 .bull-pasture.right {
+    #cloudstars1 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    #cloudstars2 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+    }
     #sunmoon {
         grid-column-start: 5;
         grid-column-end: 5;
