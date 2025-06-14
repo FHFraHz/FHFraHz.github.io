@@ -144,3 +144,7 @@
 .pb-3 {padding-bottom: calc(3 * var(--m-p-measure))}
 .pb-4 {padding-bottom: calc(4 * var(--m-p-measure))}
 .pb-5 {padding-bottom: calc(5 * var(--m-p-measure))}
+
+.flip-horizontal {
+    transform: scaleX(-100%);
+}

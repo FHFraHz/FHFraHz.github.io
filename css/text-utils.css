@@ -37,4 +37,6 @@ p {font-size: var(--fs-7);}
 .fs-9 {font-size: var(--fs-9);}
 .fs-10 {font-size: var(--fs-1);}
 
+.text-inherit { color: inherit; }
+.text-decoration-inherit { text-decoration: inherit; }
 .text-light { color: var(--white); }

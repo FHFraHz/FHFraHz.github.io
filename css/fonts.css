@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mozart NBP';
+    font-style: normal;
+    src: url('../ttf/mozart-nbp-font/MozartNbp-93Ey.ttf');
+}
+body, html, * {
+    font-family: Tahoma, Geneva, Verdana, 'Liberation Sans', 'Open Sans', sans-serif;
+    letter-spacing: 0.025ch;
+}

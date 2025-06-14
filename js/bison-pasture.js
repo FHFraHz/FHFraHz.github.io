@@ -2,44 +2,43 @@
 
 // const's and variables
 const scenes = ['sunnyday', 'clearnight', 'rainyday', 'cloudynight'];
-let bullPasture = null;
+let bisonPasture = null;
 
 // functions
-function setBullPastureClass(newClass, classFlushList = null) {
+function setbisonPastureClass(newClass, classFlushList = null) {
     // if classFlushList is set and is an array, it is expected to be a list of classes that contains the class to be added so it can be properly initialized
     if(Array.isArray(classFlushList)) {
         classFlushList.forEach((className) => {
-            try { bullPasture.classList.remove(className); } catch(e) {}
+            try { bisonPasture.classList.remove(className); } catch(e) {}
         });
     }
-    // adds the specified class to bull pasture widget
-    try { bullPasture.classList.add(newClass); } catch(e) {}
+    // adds the specified class to bison pasture widget
+    try { bisonPasture.classList.add(newClass); } catch(e) {}
 }
 
 // initialization
-function initializeBullPastureWidget() {
+function initializeBisonPastureWidget() {
 
-    // get bull pasture widget when document is ready
-    bullPasture = document.getElementById('bull-pasture');
+    // get bison pasture widget when document is ready
+    bisonPasture = document.getElementById('bison-pasture');
 
-    // get and configure bull pasture scene dropdown items
+    // get and configure bison pasture scene dropdown items
     let sceneDropdownItems = Array.from(document.getElementsByClassName('scene-dropdown-item'));
-    console.log(sceneDropdownItems);
     sceneDropdownItems.forEach((item) => {
         item.addEventListener('click', (event) => {
             event.preventDefault();
             document.getElementById('scene-dropdown-button').innerHTML = event.target.innerHTML;
-            setBullPastureClass(event.target.getAttribute('data-scene-toggle'), scenes);
+            setbisonPastureClass(event.target.getAttribute('data-scene-toggle'), scenes);
         });
     });
 
-    // get and configure bull pasture scene orientation dropdown items
+    // get and configure bison pasture scene orientation dropdown items
     let sceneOrientationDropdownItems = Array.from(document.getElementsByClassName('sceneorientation-dropdown-item'));
     sceneOrientationDropdownItems.forEach((item) => {
         item.addEventListener('click', (event) => {
             event.preventDefault(); // prevents the a or button element from navigating to a page or submitting a form
             document.getElementById('sceneorientation-dropdown-button').innerHTML = event.target.innerHTML;
-            setBullPastureClass(event.target.getAttribute('data-sceneorientation-toggle'), ['left', 'right']);
+            setbisonPastureClass(event.target.getAttribute('data-sceneorientation-toggle'), ['left', 'right']);
         });
     });
 
