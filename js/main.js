@@ -12,9 +12,20 @@ async function yieldComponentIntoElement(componentPath, elementId) {
     } catch(e) {}
 }
 
+async function showHourglassLoader() {
+    await yieldComponentIntoElement('components/hourglass-loader.html', 'hourglass-loader');
+    setTimeout(() => {
+        document.getElementById('hourglass-loader').classList.add('fade');
+        setTimeout(() => {
+            document.getElementById('hourglass-loader').remove();
+        }, 700);
+    }, 750);
+}
+
 document.addEventListener('DOMContentLoaded', initialize);
 
 async function initialize() {
+    showHourglassLoader();
     await yieldComponentIntoElement('components/head.html', 'head');
     await yieldComponentIntoElement('components/header.html', 'header');
     initializeBisonPastureWidget();
