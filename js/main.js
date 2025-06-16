@@ -28,11 +28,10 @@ document.addEventListener('DOMContentLoaded', initialize);
 window.addEventListener('load', hideHourglassLoader);
 
 async function initialize() {
-    
     await yieldComponentIntoElement('components/head.html', 'head');
     await showHourglassLoader();
-
     await yieldComponentIntoElement('components/header.html', 'header');
+    initializeThemeScripts();
     initializeBisonPastureWidget();
 }
 

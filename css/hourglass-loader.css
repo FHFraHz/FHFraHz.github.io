@@ -7,7 +7,7 @@
     --sand-shade: #CAB;
     --sand-bright: #FF9;
 }
-.loader {
+.hourglass-loader {
     width: 100vw;
     height: 100vh;
     overflow: hidden;

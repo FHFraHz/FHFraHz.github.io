@@ -1,0 +1,4 @@
+body, html, body > *, html > * {
+    background: #E0E0E0;
+    color: #111;
+}

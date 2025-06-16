@@ -1,3 +1,5 @@
+<link rel="stylesheet" id="theme-css" href="./css/theme-light.css">
+
 <!-- bison Pasture Widget -->
 <div class="d-flex flex-row col-3 row m-0 p-0 justify-content-center">
     <div class="d-flex flex-column m-0 p-0 rounded rounded-4 bg-dark">
@@ -87,23 +89,43 @@
 </a>
 
 <!-- Language Picker -->
-<div class="d-flex flex-column col-3 align-items-center">
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="./img/icons/flags/en.svg" width="16px" height="auto"></object>
+<div class="d-flex flex-row col-3 align-items-center justify-content-center gap-1">
+    <div class="dropdown d-flex flex-column">
+        <p class="fs-8 m-0 p-0" data-langkey="theme">Theme:</p>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="theme-dropdown-toggle">
+            Light
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><h6 class="dropdown-header" data-langkey="theme-dropdown-header">Select Theme</h6></li>
+            <li>
+                <a class="dropdown-item theme-dropdown-item" href="#" data-theme-toggle="light">
+                    Light
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item theme-dropdown-item" href="#" data-theme-toggle="dark">
+                    Dark
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="dropdown d-flex flex-column">
+        <p class="fs-8 m-0 p-0" data-langkey="language">Language:</p>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="language-dropdown-toggle">
+            <img src="./img/icons/flags/en.svg" width="16px" height="auto">
             English
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
             <li><h6 class="dropdown-header" data-langkey="lang-dropdown-header">Select Language</h6></li>
             <li>
                 <a class="dropdown-item language-dropdown-item" href="#" data-lang-toggle="en">
-                    <img src="./img/icons/flags/en.svg" width="16px" height="auto"></object>
+                    <img src="./img/icons/flags/en.svg" width="16px" height="auto">
                     English
                 </a>
             </li>
             <li>
                 <a class="dropdown-item language-dropdown-item" href="#" data-lang-toggle="es">
-                    <img src="./img/icons/flags/es.svg" width="16px" height="auto"></object>
+                    <img src="./img/icons/flags/es.svg" width="16px" height="auto">
                     Español
                 </a>
             </li>

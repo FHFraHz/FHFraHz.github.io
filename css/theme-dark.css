@@ -1,0 +1,7 @@
+body, html, body > *, html > * {
+    background: #172730;
+    color: #F7F7F7;
+}
+.hourglass-loader {
+    background: linear-gradient(to bottom, #445566EE, #445566EE, #112233EE);
+}
