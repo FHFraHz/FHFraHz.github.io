@@ -24,7 +24,7 @@ async function loadPage() {
 
 function insertJsonData(devJSONData) {
     Object.keys(devJSONData).forEach((techArrayKey) => {
-        let techArray = Array.from(devJSONData[techArrayKey]);
+        let techArray = devJSONData[techArrayKey];
         techArray.forEach((tech) => {
             let techIconComponent = createTechIconComponent(tech);
             document.getElementById(techArrayKey).appendChild(techIconComponent);
@@ -44,7 +44,7 @@ function createTechIconComponent(tech) {
     divContainer.appendChild(techIcon);
     
     // Prepare name heading element
-    let nameHeading = document.createElement('h5');
+    let nameHeading = document.createElement('h6');
     nameHeading.innerHTML = tech['name'];
     nameHeading.classList.add('fw-bold', 'pt-4');
     // Add element to component container
@@ -60,7 +60,7 @@ function createTechIconComponent(tech) {
 
     // Prepare experience count heading
     let experienceHeading = document.createElement('h6')
-    experienceHeading.classList.add('fw-bold', 'fs-7');
+    experienceHeading.classList.add('fw-bolder', 'fs-7');
     experienceHeading.innerHTML = tech['experience'][documentLangCtrl];
     // Add element to component container
     divContainer.appendChild(experienceHeading);

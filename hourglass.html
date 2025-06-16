@@ -1,3 +1,4 @@
+<style>
 :root {
     --hourglass-height: 100px;
     --hourglass-width: 60px;
@@ -6,16 +7,6 @@
     --glass-bright: #F7FFFFCC;
     --sand-shade: #CAB;
     --sand-bright: #FF9;
-}
-.loader {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: fixed;
-    transition: all linear 1s;
-    filter: opacity(1);
-    background: linear-gradient(to bottom, #F7F7F7EE, #EEEEEEEE, #8899AAEE);
-    z-index: 200;
 }
 .hourglass, .sand, .frame, .glass {
     animation-duration: var(--animation-duration);
@@ -74,14 +65,14 @@
         background-image: radial-gradient(ellipse at bottom, var(--sand-shade), var(--sand-bright));
     }
     50% {
-        height: 50%;
+        height: 45%;
         clip-path: polygon(
                 0% 2%, 40% 0%, 60% 4%, 100% 2%,
                 100% 90%, 50% 100%,
                 0% 90%, 0% 0%
             );
     }
-    84% {
+    75% {
         height: 30%;
         top: 70%;
         background-image: radial-gradient(ellipse at bottom, var(--sand-shade), var(--sand-bright));
@@ -90,6 +81,10 @@
             /* RIGHT  */ 100% 100%,
             /*  LEFT  */ 0% 100%, 0% 0%
             );
+    }
+    84% {
+        height: 30%;
+        top: 70%;
     }
     87% {
         height: 40%;
@@ -125,3 +120,11 @@
     87% { background-image: radial-gradient(ellipse at bottom, var(--glass-shade), var(--glass-bright)); }
     100% { background-image: radial-gradient(ellipse at top, var(--glass-shade), var(--glass-bright)); }
 }
+</style>
+<div class="hourglass">
+    <div class="frame">
+        <div class="glass">
+            <div class="sand"></div>
+        </div>
+    </div>
+</div>

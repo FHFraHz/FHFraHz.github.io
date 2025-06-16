@@ -14,7 +14,7 @@ main section {
 }
 .tech-icon-container img {
     filter: drop-shadow(1px 4px 2px #00000055);
-    height: 64px;
+    height: 32px;
     width: auto;
 }
 .tech-icon-container img {

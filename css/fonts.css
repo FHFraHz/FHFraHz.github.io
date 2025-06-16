@@ -1,9 +1,49 @@
+:root {
+    --main-font: 'Mytupi';
+}
+/* 
+@font-face {
+    font-family: 'Belleza';
+    src: url('../fonts/belleza-font/Belleza.ttf');
+}
+@font-face {
+    font-family: 'Chivo';
+    src: url('../fonts/chivo-font/Chivo.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chivo';
+    src: url('../fonts/chivo-font/ChivoItalic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Helmet';
+    src: url('../fonts/helmet-font/Helmet.otf');
+}
+*/
 @font-face {
     font-family: 'Mozart NBP';
-    font-style: normal;
-    src: url('../ttf/mozart-nbp-font/MozartNbp-93Ey.ttf');
+    src: url('../fonts/main/mozart-nbp-font/MozartNbp.ttf');
 }
+@font-face {
+    font-family: 'Mytupi';
+    src: url('../fonts/main/mytupi-font/Mytupi.ttf');
+}
+/* 
+@font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/overpass-font/OverpassReg.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/overpass-font/OverpassBold.ttf');
+    font-weight: bold;
+}
+*/
+
 body, html, * {
-    font-family: Tahoma, Geneva, Verdana, 'Liberation Sans', 'Open Sans', sans-serif;
-    letter-spacing: 0.025ch;
+    font-family: var(--main-font), Tahoma, Geneva, Verdana, 'Liberation Sans', 'Open Sans', sans-serif;
+    letter-spacing: 0.2pt;
+    font-weight: lighter;
 }

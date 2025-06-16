@@ -119,7 +119,7 @@
         {
             "name": "PHP",
             "type": {
-                "en": "Programming/Scripting language, SSR Template Engine, Full-Stack Web Engine",
+                "en": "Programming/scripting language, full-stack web engine",
                 "es": "Lenguaje de programación y scripting, motor de plantillas SSR, motor web full-stack"
             },
             "icon": "web/php.svg",
@@ -235,9 +235,9 @@
             "usage": "Console applications, desktop applications, web architecture, web backend and APIs"
         },
         {
-            "name": "Godot (GDScript)",
+            "name": "Godot",
             "type": {
-                "en": "Desktop application framework with Python-based scripting language",
+                "en": "Desktop application framework",
                 "es": ""
             },
             "icon": "desktop/godot.svg",
