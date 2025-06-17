@@ -18,18 +18,18 @@ async function showHourglassLoader() {
 function hideHourglassLoader() {
     setTimeout(() => {
         document.getElementById('hourglass-loader').classList.add('fade');
-    }, 500);
+    }, 900);
     setTimeout(() => {
         document.getElementById('hourglass-loader').remove();
-    }, 600);
+    }, 1000);
 }
 
 document.addEventListener('DOMContentLoaded', initialize);
-window.addEventListener('load', hideHourglassLoader);
+// window.addEventListener('load', hideHourglassLoader);
 
 async function initialize() {
     await yieldComponentIntoElement('components/head.html', 'head');
-    await showHourglassLoader();
+    // await showHourglassLoader();
     await yieldComponentIntoElement('components/header.html', 'header');
     initializeThemeScripts();
     initializeBisonPastureWidget();
