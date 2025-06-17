@@ -1,8 +1,7 @@
 'use strict';
 if(typeof(documentLangCtrl) === 'undefined')
     var documentLangCtrl = document.lang ?? 'en';
-
-document.addEventListener('DOMContentLoaded', loadPage);
+loadPage();
 
 async function loadPage() {
     document.title = 'Francisco Hernández | Development';

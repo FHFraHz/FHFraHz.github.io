@@ -7,8 +7,9 @@ var documentLangCtrl = document.lang;
 
 async function yieldComponentIntoElement(componentPath, elementId) {
     try {
-        document.getElementById(elementId).innerHTML = await fetch(componentPath)
-            .then(response => response.text());
+        let response = await fetch(componentPath)
+        if(response.ok)
+            document.getElementById(elementId).innerHTML = await response.text();
     } catch(e) {}
 }
 
@@ -28,11 +29,13 @@ document.addEventListener('DOMContentLoaded', initialize);
 // window.addEventListener('load', hideHourglassLoader);
 
 async function initialize() {
-    await yieldComponentIntoElement('components/head.html', 'head');
     // await showHourglassLoader();
+    console.log('initialize');
+    await yieldComponentIntoElement('components/head.html', 'head');
     await yieldComponentIntoElement('components/header.html', 'header');
     initializeThemeScripts();
     initializeBisonPastureWidget();
+    initializeRouter();
 }
 
 // utility functions
