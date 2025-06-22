@@ -6,9 +6,10 @@ loadPage();
 async function loadPage() {
     document.title = 'Francisco Hernández | Development';
 
-    await yieldComponentIntoElement('components/dev/webdev.html', 'webdev');
+    await yieldComponentIntoElement('components/dev/web.html', 'web');
     await yieldComponentIntoElement('components/dev/desktop.html', 'desktop');
-    await yieldComponentIntoElement('components/dev/databases.html', 'databases');
+    await yieldComponentIntoElement('components/dev/cli.html', 'cli');
+    await yieldComponentIntoElement('components/dev/db.html', 'db');
 
     let devJSONData = null;
     try {

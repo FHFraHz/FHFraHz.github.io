@@ -47,22 +47,19 @@ const routes = {
 
 async function initializeRouter() {
     window.addEventListener('popstate', router);
+    addLinkEventListeners();
     await router();
 }
 
 function addLinkEventListeners() {
     try {
-        let anchors = Array.from(document.getElementsByTagName('a'));
-        if(anchors.length > 0) {
-            anchors.forEach((anchor) => {
-                if(anchor.classList.contains('router-link')) {
-                    anchor.addEventListener('click', (event) => {
-                        event.preventDefault();
-                        navigateTo(anchor.href);
-                    });
-                }
-            });
-        }
+        document.body.addEventListener('click', (event) => {
+            let target = event.target.closest('a.router-link');
+            if(target) {
+                event.preventDefault();
+                navigateTo(target.href);
+            }
+        });
     } catch(e) {
         console.log(e);
     }
@@ -77,7 +74,7 @@ async function router() {
     let route = routes[window.location.pathname] || 'pages/404.html';
     try {
         await renderPage(route);
-        addLinkEventListeners();
+        // addLinkEventListeners();
     } catch(e) { throwHTTPStatus(500, 'Internal Server Error'); }
 }
 

@@ -37,7 +37,7 @@
             "name": "JavaScript",
             "type": {
                 "en": "Programming/scripting language",
-                "es": ""
+                "es": "Lenguaje de programación y scripting"
             },
             "icon": "web/javascript.svg",
             "experience": {
@@ -120,7 +120,7 @@
             "name": "PHP",
             "type": {
                 "en": "Programming/scripting language, full-stack web engine",
-                "es": "Lenguaje de programación y scripting, motor de plantillas SSR, motor web full-stack"
+                "es": "Lenguaje de programación y scripting, motor web full-stack"
             },
             "icon": "web/php.svg",
             "experience": {
@@ -139,7 +139,7 @@
                 "en": "Programming language",
                 "es": "Lenguaje de programación"
             },
-            "icon": "desktop/java.svg",
+            "icon": "web/java.svg",
             "experience": {
                 "en": "2 years of experience",
                 "es": "2 años de experiencia"
@@ -221,24 +221,27 @@
     ],
     "desktop-techs": [
         {
-            "name": "Java",
+            "name": "Lazarus",
             "type": {
-                "en": "Programming language",
-                "es": ""
+                "en": "Pascal/Object Pascal console and desktop application IDE",
+                "es": "Entorno de desarrollo de Pascal/Object Pascal para aplicaciones de consola y escritorio"
             },
-            "icon": "desktop/java.svg",
+            "icon": "desktop/lazarus.svg",
             "experience": {
-                "en": "2 years of experience",
-                "es": "2 años de experiencia"
+                "en": "1 year of experience",
+                "es": "1 año de experiencia"
             },
-            "versions": ["Current", "11", "8"],
-            "usage": "Console applications, desktop applications, web architecture, web backend and APIs"
+            "versions": ["Current"],
+            "usage": {
+                "en": "Console applications, desktop applications, desktop RAD",
+                "es": ""
+            }
         },
         {
             "name": "Godot",
             "type": {
-                "en": "Desktop application framework",
-                "es": ""
+                "en": "Desktop application framework with GDScript",
+                "es": "Framework de aplicaciones de escritorio con GDScript"
             },
             "icon": "desktop/godot.svg",
             "experience": {
@@ -246,7 +249,111 @@
                 "es": "1 año de experiencia"
             },
             "versions": ["Current"],
-            "usage": "Games, desktop applications"
+            "usage": {
+                "en": "Games, desktop applications",
+                "es": ""
+            }
+        },
+        {
+            "name": "SWING",
+            "type": {
+                "en": "RAD Java library",
+                "es": "Librería de Java para RAD (aplicaciones rápidas)"
+            },
+            "icon": "desktop/java.svg",
+            "experience": {
+                "en": "1 year of experience",
+                "es": "1 año de experiencia"
+            },
+            "versions": ["Current"],
+            "usage": {
+                "en": "Desktop applications, desktop RAD",
+                "es": ""
+            }
+        },
+        {
+            "name": "JavaFX",
+            "type": {
+                "en": "Desktop application Java framework",
+                "es": "Framework de Java para aplicaciones de escritorio"
+            },
+            "icon": "desktop/javafx.png",
+            "experience": {
+                "en": "1 year of experience",
+                "es": "1 año de experiencia"
+            },
+            "versions": ["Current"],
+            "usage": {
+                "en": "Desktop applications, desktop RAD",
+                "es": ""
+            }
+        }
+    ],
+    "cli-techs": [
+        {
+            "name": "Java",
+            "type": {
+                "en": "Programming language",
+                "es": "Lenguaje de programación"
+            },
+            "icon": "cli/java.svg",
+            "experience": {
+                "en": "2 years of experience",
+                "es": "2 años de experiencia"
+            },
+            "versions": ["Current", "11", "8"],
+            "usage": {
+                "en": "Console applications, desktop applications, web architecture, web backend and APIs",
+                "es": ""
+            }
+        },
+        {
+            "name": "Pascal/Object Pascal",
+            "type": {
+                "en": "Programming language",
+                "es": "Lenguaje de programación"
+            },
+            "icon": "cli/pascal.png",
+            "experience": {
+                "en": "4 years of experience",
+                "es": "4 años de experiencia"
+            },
+            "versions": ["TP7", "FPC (Current)"],
+            "usage": "Console applications, desktop RAD"
+        },
+        {
+            "name": "PHP",
+            "type": {
+                "en": "Programming/scripting language, full-stack web engine",
+                "es": "Lenguaje de programación y scripting, motor web full-stack"
+            },
+            "icon": "cli/php.svg",
+            "experience": {
+                "en": "2 years of experience",
+                "es": "2 años de experiencia"
+            },
+            "versions": ["Current", "8.4.0", "7.4.33", "5.6.4"],
+            "usage": {
+                "en": "API tests, internal server task auutomation",
+                "es": ""
+            }
+        },
+        {
+            "name": "JavaScript",
+            "type": {
+                "en": "Programming/scripting language",
+                "es": "Lenguaje de programación y scripting"
+            },
+            "icon": "cli/javascript.svg",
+            "experience": {
+                "en": "2 years of experience",
+                "es": "2 años de experiencia"
+            },
+            "versions": ["Current"],
+            "usage": {
+                "en": "API tests, web application tasks",
+                "es": ""
+            }
         }
     ],
     "SQL-database-techs": [
