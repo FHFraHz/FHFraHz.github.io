@@ -3,6 +3,7 @@
 // ES: Este script contendrá toda la funcionalidad que se referencia a lo largo de todas las páginas
 'use strict';
 var documentLangCtrl = document.lang;
+var techs = null;
 
 async function yieldComponentIntoElement(componentPath, elementId) {
     try {

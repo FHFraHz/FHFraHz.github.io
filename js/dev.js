@@ -1,7 +1,6 @@
 'use strict';
-
-let techs = null;
-
+if(typeof(techs) === 'undefined')
+    var techs = null;
 if(typeof(documentLangCtrl) === 'undefined')
     var documentLangCtrl = document.lang ?? 'en';
 loadPage();

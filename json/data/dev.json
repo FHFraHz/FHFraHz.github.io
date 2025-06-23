@@ -9,8 +9,8 @@
             },
             "icon": "web/html5.svg",
             "experience": {
-                "en": "5 years of experience",
-                "es": "5 años de experiencia"
+                "en": "6 years of experience",
+                "es": "6 años de experiencia"
             },
             "usage": {
                 "en": "Templates, views, frontend-only websites, offline-first web apps",
@@ -25,8 +25,8 @@
             },
             "icon": "web/css3.svg",
             "experience": {
-                "en": "5 years of experience",
-                "es": "5 años de experiencia"
+                "en": "6 years of experience",
+                "es": "6 años de experiencia"
             },
             "usage": {
                 "en": "Styles for all kinds of web apps",
@@ -41,8 +41,8 @@
             },
             "icon": "web/javascript.svg",
             "experience": {
-                "en": "5 years of experience",
-                "es": "5 años de experiencia"
+                "en": "6 years of experience",
+                "es": "6 años de experiencia"
             },
             "usage": {
                 "en": "Frontend scripting for all kinds of web apps, HTML content manipulation, AJAX",
@@ -57,8 +57,8 @@
             },
             "icon": "web/bootstrap.svg",
             "experience": {
-                "en": "4 years of experience",
-                "es": "4 años de experiencia"
+                "en": "5 years of experience",
+                "es": "5 años de experiencia"
             },
             "usage": {
                 "en": "Extensive experience, use and customization of Bootstrap's components and helper classes",
@@ -90,8 +90,8 @@
             },
             "icon": "web/smarty.svg",
             "experience": {
-                "en": "3 years of experience",
-                "es": "3 años de experiencia"
+                "en": "4 years of experience",
+                "es": "4 años de experiencia"
             },
             "usage": {
                 "en": "Template generation for small-medium PHP applications",
@@ -234,7 +234,7 @@
             "versions": ["Current"],
             "usage": {
                 "en": "Console applications, desktop applications, desktop RAD",
-                "es": ""
+                "es": "Aplicaciones de consola, aplicaciones de escritorio y RAD"
             }
         },
         {
@@ -251,7 +251,7 @@
             "versions": ["Current"],
             "usage": {
                 "en": "Games, desktop applications",
-                "es": ""
+                "es": "Juegos, aplicaciones de escritorio"
             }
         },
         {
@@ -268,7 +268,7 @@
             "versions": ["Current"],
             "usage": {
                 "en": "Desktop applications, desktop RAD",
-                "es": ""
+                "es": "Aplicaciones de escritorio y RAD"
             }
         },
         {
@@ -285,7 +285,7 @@
             "versions": ["Current"],
             "usage": {
                 "en": "Desktop applications, desktop RAD",
-                "es": ""
+                "es": "Aplicaciones de escritorio y RAD"
             }
         }
     ],
@@ -298,13 +298,13 @@
             },
             "icon": "cli/java.svg",
             "experience": {
-                "en": "2 years of experience",
-                "es": "2 años de experiencia"
+                "en": "3 years of experience",
+                "es": "3 años de experiencia"
             },
             "versions": ["Current", "11", "8"],
             "usage": {
                 "en": "Console applications, desktop applications, web architecture, web backend and APIs",
-                "es": ""
+                "es": "Aplicaciones de consola, aplicaciones de escritorio, arquitecturas web, backend web y APIs"
             }
         },
         {
@@ -319,7 +319,10 @@
                 "es": "4 años de experiencia"
             },
             "versions": ["TP7", "FPC (Current)"],
-            "usage": "Console applications, desktop RAD"
+            "usage": {
+                "en": "Console applications, desktop RAD",
+                "es": "Aplicaciones de consola, aplicaciones de escritorio y RAD"
+            }
         },
         {
             "name": "PHP",
@@ -329,13 +332,13 @@
             },
             "icon": "cli/php.svg",
             "experience": {
-                "en": "2 years of experience",
-                "es": "2 años de experiencia"
+                "en": "4 years of experience",
+                "es": "4 años de experiencia"
             },
             "versions": ["Current", "8.4.0", "7.4.33", "5.6.4"],
             "usage": {
                 "en": "API tests, internal server task auutomation",
-                "es": ""
+                "es": "Pruebas de API, automatización de tareas internas de servidor"
             }
         },
         {
@@ -351,8 +354,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "API tests, web application tasks",
-                "es": ""
+                "en": "API tests, web application task automation",
+                "es": "Pruebas de API, automatización de tareas de aplicación web"
             }
         }
     ],
