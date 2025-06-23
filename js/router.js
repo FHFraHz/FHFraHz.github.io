@@ -6,42 +6,60 @@ const routes = {
         'scripts': [{
             'src': 'js/home.js',
             'type': 'text/javascript'
-        }]
+        }],
+        'styles': [
+            'css/pages/home.css'
+        ]
     },
     '/dev': {
         'file': 'pages/dev.html',
         'scripts': [{
             'src': 'js/dev.js',
             'type': 'text/javascript'
-        }]
+        }],
+        'styles': [
+            'css/pages/dev.css'
+        ]
     },
     '/audio': {
         'file': 'pages/audio.html',
         'scripts': [{
             'src': 'js/audio.js',
             'type': 'text/javascript'
-        }]
+        }],
+        'styles': [
+            'css/pages/audio.css'
+        ]
     },
     '/multimedia': {
         'file': 'pages/multimedia.html',
         'scripts': [{
             'src': 'js/multimedia.js',
             'type': 'text/javascript'
-        }]
+        }],
+        'styles': [
+            'css/pages/multimedia.css'
+        ]
     },
     '/sysadmin': {
         'file': 'pages/sysadmin.html',
         'scripts': [{
             'src': 'js/sysadmin.js',
             'type': 'text/javascript'
-        }]
+        }],
+        'styles': [
+            'css/pages/sysadmin.css'
+        ]
     },
     '/about': {
         'file': 'pages/about.html',
         // 'scripts': [{
         //     'src': 'js/about.js',
         //     'type': 'text/javascript'
-        // }]
+        // }],
+        'styles': [
+            'css/pages/about.css'
+        ]
     }
 };
 
@@ -83,6 +101,8 @@ async function renderPage(route) {
     if(response.ok) {
         let text = await response.text();
         document.getElementById('app').innerHTML = text;
+        if(route.styles)
+            insertStyles(route.styles);
         if(route.scripts)
             insertScripts(route.scripts);
     }
@@ -95,6 +115,18 @@ function insertScripts(scripts) {
         scriptElement.src = script.src;
         scriptElement.type = script.type ?? 'text/javascript';
         document.getElementById('app').appendChild(scriptElement);
+    });
+}
+function insertStyles(styles) {
+    document.getElementById('page-styles').innerHTML = '';
+    styles.forEach((style) => {
+        try {
+            let linkCss = document.createElement('link');
+            linkCss.setAttribute('rel', 'stylesheet');
+            linkCss.setAttribute('type', 'text/css');
+            linkCss.setAttribute('href', style);
+            document.getElementById('page-styles').appendChild(linkCss);
+        } catch(e) { console.log(e); }
     });
 }
 function throwHTTPStatus(statusCode, statusText = '') {   

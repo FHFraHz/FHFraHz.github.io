@@ -2,7 +2,6 @@
 // EN: This script will contain any and all functionality that is referenced across all pages
 // ES: Este script contendrá toda la funcionalidad que se referencia a lo largo de todas las páginas
 'use strict';
-
 var documentLangCtrl = document.lang;
 
 async function yieldComponentIntoElement(componentPath, elementId) {
@@ -30,9 +29,9 @@ document.addEventListener('DOMContentLoaded', initialize);
 
 async function initialize() {
     // await showHourglassLoader();
-    console.log('initialize');
     await yieldComponentIntoElement('components/head.html', 'head');
     await yieldComponentIntoElement('components/header.html', 'header');
+    await yieldComponentIntoElement('components/footer.html', 'footer');
     initializeThemeScripts();
     initializeBisonPastureWidget();
     initializeRouter();

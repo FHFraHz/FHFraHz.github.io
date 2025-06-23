@@ -1,0 +1,7 @@
+.img-underlay {
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 0em;
+}

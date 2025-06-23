@@ -1,7 +1,20 @@
 body, html, body > *, html > * {
     background: #172730;
     color: #F7F7F7;
+    text-shadow: 1px 1px #111111AA;
+}
+footer {
+    background: #fffFFF11;
 }
 .hourglass-loader {
     background: linear-gradient(to bottom, #445566EE, #445566EE, #112233EE);
+}
+div.img-underlay-container {
+    background: linear-gradient(to bottom, #11111101, #FFFFFF33, #11111101);
+    div.img-underlay {
+        /* background: white; */
+        background-image: url('../../img/pages/dev/php_snippet.webp');
+        opacity: 05%;
+        background-blend-mode: multiply
+    }
 }

@@ -12,13 +12,35 @@ select {
 main section {
     padding: 2rem;
 }
-.tech-icon-container img {
-    filter: drop-shadow(1px 4px 2px #00000055);
-    height: 32px;
-    width: auto;
+.img-underlay-container {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    div.img-underlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    section, section *   {
+        z-index: 10;
+        position: relative;
+    }
+}
+.tech-icon-container {
+    cursor: pointer;
 }
 .tech-icon-container img {
-    cursor: pointer;
+    height: 32px;
+}
+img.tech-modal-icon {
+    height: 64px;
+}
+.tech-icon-container img, img.tech-modal-icon {
+    filter: drop-shadow(1px 4px 2px #00000055);
+    width: auto;
     animation-name: coinSpin;
     animation-timing-function: linear;
     animation-duration: 8s;

@@ -1,4 +1,7 @@
 'use strict';
+
+let techs = null;
+
 if(typeof(documentLangCtrl) === 'undefined')
     var documentLangCtrl = document.lang ?? 'en';
 loadPage();
@@ -10,26 +13,36 @@ async function loadPage() {
     await yieldComponentIntoElement('components/dev/desktop.html', 'desktop');
     await yieldComponentIntoElement('components/dev/cli.html', 'cli');
     await yieldComponentIntoElement('components/dev/db.html', 'db');
-
-    let devJSONData = null;
     try {
         let response = await fetch('json/data/dev.json');
         if(response.ok)
-            devJSONData = await response.json();
+            techs = await response.json();
     } catch(e) {}
 
-    if(devJSONData != null)
-        insertJsonData(devJSONData);
+    if(techs != null)
+        insertTechJSONData();
 }
 
-function insertJsonData(devJSONData) {
-    Object.keys(devJSONData).forEach((techArrayKey) => {
-        let techArray = devJSONData[techArrayKey];
+function insertTechJSONData() {
+    Object.keys(techs).forEach((techArrayKey) => {
+        let techArray = techs[techArrayKey];
         techArray.forEach((tech) => {
             let techIconComponent = createTechIconComponent(tech);
+            techIconComponent.addEventListener('click', () => {
+                openTechModal(tech);
+            });
             document.getElementById(techArrayKey).appendChild(techIconComponent);
         });
     });
+}
+
+function openTechModal(tech) {
+    document.getElementById('tech-modal-img').setAttribute('src', "img/icons/technologies/"+tech['icon']);
+    document.getElementById('tech-modal-label').innerHTML = tech['name'];
+    document.getElementById('tech-modal-usage').innerHTML = tech['usage'][documentLangCtrl] ?? '';
+    if(tech['description'])
+        document.getElementById('tech-modal-description').innerHTML = tech['description'][documentLangCtrl] ?? '';
+    document.getElementById('tech-modal-button').click();
 }
 
 function createTechIconComponent(tech) {
@@ -64,31 +77,5 @@ function createTechIconComponent(tech) {
     experienceHeading.innerHTML = tech['experience'][documentLangCtrl];
     // Add element to component container
     divContainer.appendChild(experienceHeading);
-
-    /*
-    // When uncommented, this information will be presented with a nicer HTML element
-
-    // Prepare usage description
-    let [
-        usageDesc, 
-        usageLabelTitle, 
-        usageLabelTitleSpan
-    ] = [
-        document.createElement('p'),
-        document.createElement('strong'), // 'strong' element in which to wrap the "Usage:" label
-        document.createElement('span') // span for the word 'usage' to be translated on demand
-    ];
-    // label/title "Usage:" will be replaced for its corresponding language key
-    usageLabelTitleSpan.setAttribute('data-langkey', 'usage'); // key to look for in JSON lang file(s)
-    usageLabelTitleSpan.innerHTML = 'Usage'; // initialize just to have English content in place
-    usageLabelTitle.appendChild(usageLabelTitleSpan);
-    usageLabelTitle.innerHTML += ":";
-    usageDesc.appendChild(usageLabelTitle);
-    usageDesc.innerHTML += " " + tech['usage'][documentLangCtrl];
-    usageDesc.classList.add('fs-8', 'fst-italic');
-    // Add element to component container
-    divContainer.appendChild(usageDesc);
-    */
-
     return divContainer;
 }
