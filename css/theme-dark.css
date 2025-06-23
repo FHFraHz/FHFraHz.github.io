@@ -13,8 +13,7 @@ div.img-underlay-container {
     background: linear-gradient(to bottom, #11111101, #FFFFFF33, #11111101);
     div.img-underlay {
         /* background: white; */
-        background-image: url('../../img/pages/dev/php_snippet.webp');
-        opacity: 05%;
+        opacity: 10%;
         background-blend-mode: multiply
     }
 }

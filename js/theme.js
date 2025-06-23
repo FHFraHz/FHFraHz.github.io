@@ -26,5 +26,6 @@ function toggleTheme(event) {
 function setTheme() {
     setCookie('theme', themeControlVar);
     document.getElementById('theme-css').setAttribute('href', './css/theme-'+themeControlVar+'.css');
-    document.body.setAttribute('data-bs-theme', themeControlVar);
+    document.getElementById('app').setAttribute('data-bs-theme', themeControlVar);
+    document.getElementById('footer').setAttribute('data-bs-theme', themeControlVar);
 }

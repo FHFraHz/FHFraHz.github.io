@@ -37,6 +37,7 @@ main section {
 }
 img.tech-modal-icon {
     height: 64px;
+    margin: 24px auto;
 }
 .tech-icon-container img, img.tech-modal-icon {
     filter: drop-shadow(1px 4px 2px #00000055);
