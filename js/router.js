@@ -21,36 +21,6 @@ const routes = {
             'css/pages/dev.css'
         ]
     },
-    '/audio': {
-        'file': 'pages/audio.html',
-        'scripts': [{
-            'src': 'js/audio.js',
-            'type': 'text/javascript'
-        }],
-        'styles': [
-            'css/pages/audio.css'
-        ]
-    },
-    '/multimedia': {
-        'file': 'pages/multimedia.html',
-        'scripts': [{
-            'src': 'js/multimedia.js',
-            'type': 'text/javascript'
-        }],
-        'styles': [
-            'css/pages/multimedia.css'
-        ]
-    },
-    '/sysadmin': {
-        'file': 'pages/sysadmin.html',
-        'scripts': [{
-            'src': 'js/sysadmin.js',
-            'type': 'text/javascript'
-        }],
-        'styles': [
-            'css/pages/sysadmin.css'
-        ]
-    },
     '/about': {
         'file': 'pages/about.html',
         // 'scripts': [{

@@ -10,7 +10,7 @@ footer {
     background: linear-gradient(to bottom, #445566EE, #445566EE, #112233EE);
 }
 div.img-underlay-container {
-    background: linear-gradient(to bottom, #11111101, #FFFFFF33, #11111101);
+    background: linear-gradient(to bottom, #11111101, #FFFFFF22, #11111101);
     div.img-underlay {
         /* background: white; */
         opacity: 10%;

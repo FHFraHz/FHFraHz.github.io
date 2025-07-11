@@ -9,7 +9,7 @@ footer {
     background: linear-gradient(to bottom, #F7F7F7EE, #EEEEEEEE, #8899AAEE);
 }
 div.img-underlay-container {
-    background: linear-gradient(to bottom, #FFFFFF01, #11111133);
+    background: linear-gradient(to bottom, #FFFFFF01, #11111122);
     div.img-underlay {
         /* background: white; */
         background-image: url('../../img/pages/dev/php_snippet.webp');

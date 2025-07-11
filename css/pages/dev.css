@@ -8,3 +8,15 @@
     background-position-y: center;
     opacity: 100%;
 }
+#web {
+    background: linear-gradient(to right, #CC22FF1E 0%, transparent 66%);
+}
+#desktop {
+    background: linear-gradient(to left, #44CC881E 0%, transparent 66%);
+}
+#cli {
+    background: linear-gradient(to right, #8800111E 0%, transparent 66%);
+}
+#db {
+    background: linear-gradient(to left, #4488CC1E 0%, transparent 66%);
+}
