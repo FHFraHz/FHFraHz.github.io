@@ -14,7 +14,7 @@ async function loadPage() {
         let response = await fetch('json/data/dev.json');
         if(response.ok)
             techs = await response.json();
-    } catch(e) {}
+    } catch(e) { console.log(e); }
 
     if(techs != null)
         insertTechJSONData();
@@ -22,7 +22,7 @@ async function loadPage() {
 
 function insertTechJSONData() {
     Object.keys(techs).forEach((techArrayKey) => {
-        let techArray = techs[techArrayKey];
+        let techArray = Array.from(techs[techArrayKey]);
         techArray.forEach((tech) => {
             let techIconComponent = createTechIconComponent(tech);
             techIconComponent.addEventListener('click', () => {

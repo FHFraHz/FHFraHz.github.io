@@ -7,7 +7,7 @@ async function setLangJson(jsonLangFile = 'main.json') {
         let response = await fetch('json/lang/'+jsonLangFile);
         if(response.ok)
             langJson = await response.json();
-    } catch(e) {}
+    } catch(e) { console.log(e); }
 }
 async function changeLanguage() {
 
