@@ -95,10 +95,10 @@
 }
 .bison-pasture.rainyday {
     /* daytime background */
-    background: linear-gradient(to top, darkgreen 0%, green 20%, limegreen 40%, limegreen 51%, #8EF 52%, #0DF 100%);
+    background: linear-gradient(to top, darkgreen 0%, green 20%, limegreen 40%, limegreen 51%, #8AC 52%, #89A 100%);
     #sunmoon {
         background-image: url('../img/icons/environment/rain-svgrepo-com.svg');
-        filter:drop-shadow(0px 0px 8px #FFFFFFDD);   
+        /* filter:drop-shadow(0px 0px 8px #FFFFFFDD);    */
     }
 }
 .bison-pasture.clearnight {
@@ -111,7 +111,7 @@
 }
 .bison-pasture.cloudynight {
     /* daytime background */
-    background: linear-gradient(to top, darkslategray 0%, darkcyan 20%, steelblue 40%, steelblue 51%, #26A 52%, #135 100%);
+    background: linear-gradient(to top, darkslategray 0%, darkcyan 20%, steelblue 40%, steelblue 51%, #658 52%, #435 100%);
     #sunmoon {
         filter:drop-shadow(0px 0px 12px #AAEEFFCC);
     }
