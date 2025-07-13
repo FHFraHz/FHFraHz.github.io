@@ -99,6 +99,19 @@
     #sunmoon {
         background-image: url('../img/icons/environment/rain-svgrepo-com.svg');
         /* filter:drop-shadow(0px 0px 8px #FFFFFFDD);    */
+        filter:brightness(0.75);
+    }
+    #cloudstars1, #cloudstars2 {
+        filter:brightness(0.75);
+        background-image: url('../img/icons/environment/rain-svgrepo-com.svg');
+        align-self: end;
+    }
+    #cloudstars1 {
+        width: 30px;
+    }
+    #cloudstars2 {
+        height: 32px;
+        width: 32px;
     }
 }
 .bison-pasture.clearnight {

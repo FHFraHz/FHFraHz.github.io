@@ -6,8 +6,6 @@ if(typeof(documentLangCtrl) === 'undefined')
 loadPage();
 
 async function loadPage() {
-    document.title = 'Francisco Hernández | Development';
-
     await yieldComponentIntoElement('components/home/web.html', 'web');
     await yieldComponentIntoElement('components/home/desktop.html', 'desktop');
     await yieldComponentIntoElement('components/home/consolecli.html', 'consolecli');
@@ -42,6 +40,7 @@ function openTechModal(tech) {
     if(tech['description'])
         document.getElementById('tech-modal-description').innerHTML = tech['description'][documentLangCtrl] ?? '';
     document.getElementById('tech-modal-button').click();
+    document.body.style = "";
 }
 
 function createTechIconComponent(tech) {

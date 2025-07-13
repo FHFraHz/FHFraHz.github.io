@@ -13,8 +13,8 @@
                 "es": "6 años de experiencia"
             },
             "usage": {
-                "en": "Templates, views, frontend-only websites, offline-first web apps",
-                "es": "Plantillas, vistas, sitios web estáticos, aplicaciones web offline-first"
+                "en": "Templates, views, frontend-only websites, offline-first web apps.",
+                "es": "Plantillas, vistas, sitios web estáticos, aplicaciones web offline-first."
             }
         },
         {
@@ -29,8 +29,8 @@
                 "es": "6 años de experiencia"
             },
             "usage": {
-                "en": "Styles for all kinds of web apps",
-                "es": "Estilos para todo tipo de aplicaciones web"
+                "en": "Styles for all kinds of web apps.",
+                "es": "Estilos para todo tipo de aplicaciones web."
             }
         },
         {
@@ -45,8 +45,8 @@
                 "es": "6 años de experiencia"
             },
             "usage": {
-                "en": "Frontend scripting for all kinds of web apps, HTML content manipulation, AJAX",
-                "es": "Scripts frontend para todo tipo de aplicaciones web, manipulación de contenido HTML, AJAX"
+                "en": "Frontend scripting for all kinds of web apps, HTML content manipulation, AJAX.",
+                "es": "Scripts frontend para todo tipo de aplicaciones web, manipulación de contenido HTML, AJAX."
             }
         },
         {
@@ -61,8 +61,8 @@
                 "es": "5 años de experiencia"
             },
             "usage": {
-                "en": "Extensive experience, use and customization of Bootstrap's components and helper classes",
-                "es": "Extensa experiencia, uso y personalización de los componentes y clases utilitarias de Bootstrap"
+                "en": "Extensive experience, use and customization of Bootstrap's components and helper classes.",
+                "es": "Extensa experiencia, uso y personalización de los componentes y clases utilitarias de Bootstrap."
             }
         },
         {
@@ -78,8 +78,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "Cleaner and faster way of using inline styles with great flexibility and customization",
-                "es": "Manera más límpia y rápida de utilizar estilos en lína con gran flexibilidad y personalización1"
+                "en": "Cleaner and faster way of using inline styles with great flexibility and customization.",
+                "es": "Manera más límpia y rápida de utilizar estilos en lína con gran flexibilidad y personalización1."
             }
         },
         {
@@ -94,8 +94,8 @@
                 "es": "4 años de experiencia"
             },
             "usage": {
-                "en": "Template generation for small-medium PHP applications",
-                "es": "Generación de plantillas para aplicaciones medianas-pequeñas en PHP"
+                "en": "Template generation for small-medium PHP applications.",
+                "es": "Generación de plantillas para aplicaciones medianas-pequeñas en PHP."
             }
         },
         {
@@ -110,8 +110,8 @@
                 "es": "3 años de experiencia"
             },
             "usage": {
-                "en": "SSR template engine for Laravel applications",
-                "es": "Motor de plantillas SSR para aplicaciones Laravel"
+                "en": "SSR template engine for Laravel applications.",
+                "es": "Motor de plantillas SSR para aplicaciones Laravel."
             }
         }
     ],
@@ -129,8 +129,8 @@
             },
             "versions": ["Current", "8.4.0", "7.4.33", "5.6.4"],
             "usage": {
-                "en": "Small-medium full-stack web apps, web backend & APIs, MVC, monoliths, micro applications, SSR components and scripts",
-                "es": "Aplicaciones web full-stack pequeñas a medianas, backend web y APIs, MVC, monolitos, micro aplicaciones, componentes y scripts SSR"
+                "en": "Small-medium full-stack web apps, web backend & APIs, MVC, monoliths, micro applications, SSR components and scripts.",
+                "es": "Aplicaciones web full-stack pequeñas a medianas, backend web y APIs, MVC, monolitos, micro aplicaciones, componentes y scripts SSR."
             }
         },
         {
@@ -146,8 +146,8 @@
             },
             "versions": ["Current", "11", "10", "9"],
             "usage": {
-                "en": "All kinds of medium-large scope web applications",
-                "es": "Todo tipo de aplicaciones web medianas y grandes"
+                "en": "All kinds of medium-large scope web applications.",
+                "es": "Todo tipo de aplicaciones web medianas y grandes."
             }
         },
         {
@@ -163,8 +163,8 @@
             },
             "versions": ["Current", "5.2", "4.5"],
             "usage": {
-                "en": "All kinds of small-medium scope web applications",
-                "es": "Todo tipo de pequeñas y medianas aplicaciones web"
+                "en": "All kinds of small-medium scope web applications.",
+                "es": "Todo tipo de pequeñas y medianas aplicaciones web."
             }
         },
         {
@@ -180,8 +180,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "Installation of useful packages to compliment minimal PHP frameworks or vanilla PHP applications",
-                "es": "Instalación de paquetes útiles para complementar frameworks mínimos de PHP o aplicaciones en PHP vainilla"
+                "en": "Installation of useful packages to compliment minimal PHP frameworks or vanilla PHP applications.",
+                "es": "Instalación de paquetes útiles para complementar frameworks mínimos de PHP o aplicaciones en PHP vainilla."
             }
         }
     ],
@@ -199,8 +199,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "RAD, console and visual cross-platform applications",
-                "es": "RAD, aplicaciones de consola y visuales multiplataforma"
+                "en": "RAD, console and visual cross-platform applications.",
+                "es": "RAD, aplicaciones de consola y visuales multiplataforma."
             }
         },
         {
@@ -216,8 +216,8 @@
             },
             "versions": ["Current (community)"],
             "usage": {
-                "en": "RAD, console and visual applications for Windows and Android",
-                "es": "RAD, aplicaciones visuales y de consola para Windows y Android"
+                "en": "RAD, console and visual applications for Windows and Android.",
+                "es": "RAD, aplicaciones visuales y de consola para Windows y Android."
             }
         },
         {
@@ -233,8 +233,8 @@
             },
             "versions": ["2.^ (current) by Jgc777"],
             "usage": {
-                "en": "Pseudo-desktop Windows applications with web-based frontend",
-                "es": "Aplicaciones de pseudo-escritorio de Windows con frontend web"
+                "en": "Pseudo-desktop Windows applications with web-based frontend.",
+                "es": "Aplicaciones de pseudo-escritorio de Windows con frontend web."
             }
         },
         {
@@ -250,8 +250,8 @@
             },
             "versions": ["Current (PHP 8.3 (Windows), PHP 7.2.12 (Linux))", "Legacy (PHP 5.x (Windows XP))"],
             "usage": {
-                "en": "Pseudo-desktop applications in PHP",
-                "es": "Aplicaciones de pseudo-escritorio en PHP"
+                "en": "Pseudo-desktop applications in PHP.",
+                "es": "Aplicaciones de pseudo-escritorio en PHP."
             }
         }
     ],
@@ -269,8 +269,8 @@
             },
             "versions": ["Current", "11", "8"],
             "usage": {
-                "en": "Console applications, desktop applications, web architecture, web backend and APIs",
-                "es": "Aplicaciones de consola, aplicaciones de escritorio, arquitecturas web, backend web y APIs"
+                "en": "Console applications, desktop applications, web architecture, web backend and APIs.",
+                "es": "Aplicaciones de consola, aplicaciones de escritorio, arquitecturas web, backend web y APIs."
             }
         },
         {
@@ -286,15 +286,15 @@
             },
             "versions": ["TP7", "FPC (Current)", "Delphi (Current)", "Pascal Next"],
             "usage": {
-                "en": "Console applications, desktop RAD",
-                "es": "Aplicaciones de consola, aplicaciones de escritorio y RAD"
+                "en": "Console applications, desktop RAD.",
+                "es": "Aplicaciones de consola, aplicaciones de escritorio y RAD."
             }
         },
         {
             "name": "PHP",
             "type": {
-                "en": "Programming/scripting language, full-stack web engine",
-                "es": "Lenguaje de programación y scripting, motor web full-stack"
+                "en": "Programming/scripting language, full-stack web engine.",
+                "es": "Lenguaje de programación y scripting, motor web full-stack."
             },
             "icon": "cli/php.svg",
             "experience": {
@@ -303,8 +303,8 @@
             },
             "versions": ["Current", "8.4.0", "7.4.33", "5.6.4"],
             "usage": {
-                "en": "API tests, internal server task auutomation",
-                "es": "Pruebas de API, automatización de tareas internas de servidor"
+                "en": "API tests, internal server task auutomation.",
+                "es": "Pruebas de API, automatización de tareas internas de servidor."
             }
         },
         {
@@ -320,8 +320,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "API tests, web application task automation",
-                "es": "Pruebas de API, automatización de tareas de aplicación web"
+                "en": "API tests, web application task automation.",
+                "es": "Pruebas de API, automatización de tareas de aplicación web."
             }
         }
     ],
@@ -339,8 +339,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "General standard for relational databases",
-                "es": "Estándar general para bases de datos relacionales"
+                "en": "General standard for relational databases.",
+                "es": "Estándar general para bases de datos relacionales."
             }
         },
         {
@@ -356,8 +356,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "Remote databases for web or online applications",
-                "es": "Bases de datos remotas para aplicaciones web o para trabajar en línea"
+                "en": "Remote databases for web or online applications.",
+                "es": "Bases de datos remotas para aplicaciones web o para trabajar en línea."
             }
         },
         {
@@ -373,8 +373,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "Remote databases for web or online applications",
-                "es": "Bases de datos remotas para aplicaciones web o para trabajar en línea"
+                "en": "Remote databases for web or online applications.",
+                "es": "Bases de datos remotas para aplicaciones web o para trabajar en línea."
             }
         },
         {
@@ -390,8 +390,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "Local databases for offline-first desktop or web applications",
-                "es": "Bases de datos locales para aplicaciones web o de escritorio que sean offline-first"
+                "en": "File-based databases for desktop or web applications.",
+                "es": "Bases de datos basadas en archivos, para aplicaciones web o de escritorio."
             }
         }
     ],
@@ -409,8 +409,8 @@
             },
             "versions": ["Current"],
             "usage": {
-                "en": "Handling minimal data records in comma separated values",
-                "es": "Manejo de registros mínimos de información en valores separados por comas"
+                "en": "Handling minimal data records in comma separated values.",
+                "es": "Manejo de registros mínimos de información en valores separados por comas."
             }
         }
     ],
@@ -429,8 +429,8 @@
                 },
                 "versions": ["Current", "11", "8"],
                 "usage": {
-                    "en": "Console applications, desktop applications, web architecture, web backend and APIs",
-                    "es": "Apilcaciones de consola, aplicaciones de escritorio, arquitecturas web, backend web y APIs"
+                    "en": "Console applications, desktop applications, web architecture, web backend and APIs.",
+                    "es": "Apilcaciones de consola, aplicaciones de escritorio, arquitecturas web, backend web y APIs."
                 }
             },
             {
@@ -446,8 +446,8 @@
                 },
                 "versions": ["Current"],
                 "usage": {
-                    "en": "Installation of needed libraries and packages for specific project requirements",
-                    "es": "Instalación de librerías y paquetes necesarios para requerimientos específicos de proyectos"
+                    "en": "Installation of needed libraries and packages for specific project requirements.",
+                    "es": "Instalación de librerías y paquetes necesarios para requerimientos específicos de proyectos."
                 }
             }
         ],
@@ -465,8 +465,8 @@
                 },
                 "versions": ["Current"],
                 "usage": {
-                    "en": "Games, desktop applications",
-                    "es": "Juegos, aplicaciones de escritorio"
+                    "en": "Games, desktop applications.",
+                    "es": "Juegos, aplicaciones de escritorio."
                 }
             },
             {
@@ -482,8 +482,8 @@
                 },
                 "versions": ["Current"],
                 "usage": {
-                    "en": "Desktop applications, desktop RAD",
-                    "es": "Aplicaciones de escritorio y RAD"
+                    "en": "Desktop applications, desktop RAD.",
+                    "es": "Aplicaciones de escritorio y RAD."
                 }
             },
             {
@@ -499,8 +499,8 @@
                 },
                 "versions": ["Current"],
                 "usage": {
-                    "en": "Desktop applications, desktop RAD",
-                    "es": "Aplicaciones de escritorio y RAD"
+                    "en": "Desktop applications, desktop RAD.",
+                    "es": "Aplicaciones de escritorio y RAD."
                 }
             }
         ]

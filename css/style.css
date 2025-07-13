@@ -4,6 +4,11 @@
     --white: #F7F7F7;
     --black: #111;
 }
+body, html {
+    transition: linear;
+    transition-property: all;
+    transition-duration: 250ms;
+}
 select {
     font-size: 11pt;
     padding: 0.5ch;
