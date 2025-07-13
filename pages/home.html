@@ -1,12 +1,33 @@
-<section>
-    <a href="/dev" id="dev" class="text-inherit text-decoration-inherit router-link"></a>
-</section>
-<section>
-    <a href="/audio" id="audio" class="text-inherit text-decoration-inherit router-link"></a>
-</section>
-<section>
-    <a href="/sysadmin" id="sysadmin" class="text-inherit text-decoration-inherit router-link"></a>
-</section>
-<section>
-    <a href="/multimedia" id="multimedia" class="text-inherit text-decoration-inherit router-link"></a>
-</section>
+<div class="img-underlay-container">
+    
+    <div class="img-underlay"></div>    
+    <!-- <a href="/web" id="web" class="text-inherit text-decoration-inherit router-link"> -->
+        <section id="web"></section>
+    <!-- </a> -->
+    <section id="desktop"></section>
+    <section id="consolecli"></section>
+    <section id="db"></section>
+</div>
+
+<button type="button" hidden aria-hidden="true" data-bs-toggle="modal" data-bs-target="#tech-modal" id="tech-modal-button"></button>
+<div class="modal fade" id="tech-modal" tabindex="-1" aria-labelledby="tech-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tech-modal-label"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row m-0 p-0">
+        <img class="col-4 img-fluid tech-modal-icon align-self-center" id="tech-modal-img" class=""></img>
+        <div class="col-8 align-self-center">
+            <p class="fw-semibold my-2"><span data-langkey="usage" class="fw-semibold">Usage</span>:</p>
+            <p id="tech-modal-usage"></p>
+            <p id="tech-modal-description"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

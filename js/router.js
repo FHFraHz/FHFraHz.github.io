@@ -11,16 +11,16 @@ const routes = {
             'css/pages/home.css'
         ]
     },
-    '/dev': {
-        'file': 'pages/dev.html',
-        'scripts': [{
-            'src': 'js/dev.js',
-            'type': 'text/javascript'
-        }],
-        'styles': [
-            'css/pages/dev.css'
-        ]
-    },
+    // '/dev': {
+    //     'file': 'pages/dev.html',
+    //     'scripts': [{
+    //         'src': 'js/dev.js',
+    //         'type': 'text/javascript'
+    //     }],
+    //     'styles': [
+    //         'css/pages/dev.css'
+    //     ]
+    // },
     '/about': {
         'file': 'pages/about.html',
         // 'scripts': [{

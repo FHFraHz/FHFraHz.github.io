@@ -255,7 +255,7 @@
             }
         }
     ],
-    "cli-techs": [
+    "consolecli-techs": [
         {
             "name": "Java",
             "type": {
