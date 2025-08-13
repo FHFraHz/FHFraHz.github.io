@@ -25,7 +25,7 @@ function hideHourglassLoader() {
     }, 1000);
 }
 
-document.addEventListener('DOMContentLoaded', initialize);
+window.addEventListener('load', initialize);
 // window.addEventListener('load', hideHourglassLoader);
 
 async function initialize() {
