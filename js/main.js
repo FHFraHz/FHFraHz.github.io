@@ -29,13 +29,13 @@ window.addEventListener('load', initialize);
 // window.addEventListener('load', hideHourglassLoader);
 
 async function initialize() {
-    // await showHourglassLoader();
-    await yieldComponentIntoElement('components/head.html', 'head');
+    await showHourglassLoader();
     await yieldComponentIntoElement('components/header.html', 'header');
     await yieldComponentIntoElement('components/footer.html', 'footer');
     initializeThemeScripts();
     initializeBisonPastureWidget();
-    initializeRouter();
+    hideHourglassLoader();
+    // initializeRouter();
 }
 
 // utility functions

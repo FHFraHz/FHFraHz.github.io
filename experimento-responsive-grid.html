@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .mi-area-grid {
+            display: grid;
+            grid-template-areas:
+            "elemento-grid-2"
+            "elemento-grid-3"
+            "elemento-grid-1";
+        }
+        .mi-area-grid .elemento-grid-1 { grid-area: elemento-grid-1; }
+        .mi-area-grid .elemento-grid-2 { grid-area: elemento-grid-2; }
+        .mi-area-grid .elemento-grid-3 { grid-area: elemento-grid-3; }
+        @media screen and (max-width: 800px) {
+            .mi-area-grid {
+                grid-template-areas:
+                "elemento-grid-2"
+                "elemento-grid-1"
+                "elemento-grid-3";
+            }
+        }
+    </style>
+    <div class="mi-area-grid">
+        <div class="elemento-grid-1">
+            <h3>Hola mundo</h3>
+            <p>Grid area 1</p>
+        </div>
+        <div class="elemento-grid-2">
+            <h3>Hola mundo</h3>
+            <p>Grid area 2</p>
+        </div>
+        <div class="elemento-grid-3">
+            <h3>Hola mundo</h3>
+            <p>Grid area 3</p>
+        </div>
+    </div>
+</body>
+</html>
