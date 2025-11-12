@@ -26,7 +26,7 @@ function hideHourglassLoader() {
 }
 
 window.addEventListener('load', initialize);
-// window.addEventListener('load', hideHourglassLoader);
+window.addEventListener('load', hideHourglassLoader);
 
 async function initialize() {
     await showHourglassLoader();
@@ -34,8 +34,6 @@ async function initialize() {
     await yieldComponentIntoElement('components/footer.html', 'footer');
     initializeThemeScripts();
     initializeBisonPastureWidget();
-    hideHourglassLoader();
-    // initializeRouter();
 }
 
 // utility functions
