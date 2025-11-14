@@ -69,3 +69,26 @@ img.tech-modal-icon {
         transform: rotateY(360deg)
     }
 }
+
+.grid-header {
+    display: grid;
+    grid-template-areas: 
+    "header-pasture header-heading header-options";
+    grid-template-columns: 25% 50% 25%;
+}
+.grid-header .area-header-pasture { grid-area: header-pasture; }
+.grid-header .area-header-heading { grid-area: header-heading; }
+.grid-header .area-header-options { grid-area: header-options; }
+
+@media screen and (max-width: 800px) {
+    .grid-header {
+        grid-template-areas: 
+        "header-heading"
+        "header-options"
+        "header-pasture";
+        grid-template-columns: auto;
+    }   
+    .area-header-options {
+        padding: 1em 0;
+    }
+}
