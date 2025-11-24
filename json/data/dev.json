@@ -13,7 +13,7 @@
                 "es": "6 años de experiencia"
             },
             "usage": {
-                "en": "Templates, views, frontend-only websites, offline-first web apps.",
+                "en": "Templates, viwews, frontend-only websites, offline-first web apps.",
                 "es": "Plantillas, vistas, sitios web estáticos, aplicaciones web offline-first."
             }
         },
@@ -194,8 +194,8 @@
             },
             "icon": "desktop/lazarus.svg",
             "experience": {
-                "en": "1 year of experience",
-                "es": "1 año de experiencia"
+                "en": "In training",
+                "es": "En entrenamiento"
             },
             "versions": ["Current"],
             "usage": {
@@ -211,8 +211,8 @@
             },
             "icon": "desktop/delphi.png",
             "experience": {
-                "en": "1 year of experience",
-                "es": "1 año de experiencia"
+                "en": "In training",
+                "es": "En entrenamiento"
             },
             "versions": ["Current (community)"],
             "usage": {
@@ -326,23 +326,6 @@
         }
     ],
     "SQL-database-techs": [
-        {
-            "name": "SQL",
-            "type": {
-                "en": "Structured Query Language",
-                "es": "Lenguaje estructurado de consultas"
-            },
-            "icon": "db/sql.svg",
-            "experience": {
-                "en": "4 years of experience",
-                "es": "4 años de experiencia"
-            },
-            "versions": ["Current"],
-            "usage": {
-                "en": "General standard for relational databases.",
-                "es": "Estándar general para bases de datos relacionales."
-            }
-        },
         {
             "name": "MySQL",
             "type": {

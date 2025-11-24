@@ -2,7 +2,7 @@
 // EN: This script will contain any and all functionality that is referenced across all pages
 // ES: Este script contendrá toda la funcionalidad que se referencia a lo largo de todas las páginas
 'use strict';
-var documentLangCtrl = document.lang;
+var documentLangCtrl = document.lang;   
 var techs = null;
 
 async function yieldComponentIntoElement(componentPath, elementId) {
@@ -30,10 +30,16 @@ window.addEventListener('load', hideHourglassLoader);
 
 async function initialize() {
     await showHourglassLoader();
-    await yieldComponentIntoElement('components/header.html', 'header');
+    // THIS SOLUTION IS A MESS AND IS A PRODUCT OF SPAGHETTI FRANKENSTEIN CODE
+    // But thankfully it's purely aesthetic and no sensitive data or operations are compromised :)
+    if(typeof(currentPage) === 'undefined' || (typeof(currentPage) !== 'undefined' && currentPage === 'home')) {
+        await yieldComponentIntoElement('components/header.html', 'header');
+        initializeBisonPastureWidget();
+    }
+    else
+        await yieldComponentIntoElement('components/header-inner.html', 'header');
     await yieldComponentIntoElement('components/footer.html', 'footer');
     initializeThemeScripts();
-    initializeBisonPastureWidget();
 }
 
 // utility functions

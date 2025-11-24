@@ -3,6 +3,9 @@ if(typeof(techs) === 'undefined')
     var techs = null;
 if(typeof(documentLangCtrl) === 'undefined')
     var documentLangCtrl = document.lang ?? 'en';
+if(typeof(currentPage) === 'undefined')
+    var currentPage = 'home';
+
 loadPage();
 
 async function loadPage() {

@@ -28,5 +28,6 @@ function setTheme() {
     document.getElementById('theme-css').setAttribute('href', './css/theme-'+themeControlVar+'.css');
     document.getElementById('app').setAttribute('data-bs-theme', themeControlVar);
     document.getElementById('footer').setAttribute('data-bs-theme', themeControlVar);
-    try { changeDayNight(themeControlVar); } catch(e) { console.log(e); }
+    if(typeof(currentPage) === 'undefined' || (typeof(currentPage) !== 'undefined' && currentPage === 'home'))
+        try { changeDayNight(themeControlVar); } catch(e) { console.log(e); }
 }
