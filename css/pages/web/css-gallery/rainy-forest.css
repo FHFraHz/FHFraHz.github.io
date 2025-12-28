@@ -2,3 +2,35 @@
     background: linear-gradient(to bottom, darkslategray, lightblue);
     background-position-y: -120px;
 }
+#picture_frame-rainy_forest .cloudy-sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(to bottom, #ccddee, darkslategray);
+    --mask:
+        radial-gradient(62.84px at 50% calc(100% - 73.5px),#000 99%,#0000 101%) calc(25% - 10px) 0/60px 100%,
+        radial-gradient(62.84px at 50% calc(100% + 43.5px),#0000 99%,#000 101%) 50% calc(100% - 15px)/30px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+#picture_frame-rainy_forest .trees-foreground {
+    position: absolute;
+    background: linear-gradient(to right,
+        #774411 0%, #774411 9.99%,
+        #00000000 10%, #00000000 19.99%,
+        #774411 20%, #774411 29.99%,
+        #00000000 30%, #00000000 39.99%,
+        #774411 40%, #774411 49.9%,
+        #00000000 50%, #00000000 59.99%,
+        #774411 60%, #774411 69.99%,
+        #00000000 70%, #00000000 79.99%,
+        #774411 80%, #774411 89.99%,
+        #00000000 90%, #00000000 100%
+    );
+    top: 20%;
+    width: 100%;
+    height: 120px;
+}

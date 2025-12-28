@@ -54,7 +54,7 @@
     min-width: 21px;
     border-radius: 50%;
     animation: sunny_beach-sun_glow 3s linear infinite alternate;
-    background-image: radial-gradient(circle at top right, gold, yellow);
+    background: radial-gradient(circle at top right, gold, yellow);
 }
 
 /* === CLOUDS === */
