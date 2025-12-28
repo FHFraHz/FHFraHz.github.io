@@ -378,26 +378,26 @@
             }
         }
     ],
-    "other-database-techs": [
-        {
-            "name": "CSV",
-            "type": {
-                "en": "File-based data handling",
-                "es": "Manejo de datos con archivo"
-            },
-            "icon": "db/csv.svg",
-            "experience": {
-                "en": "1 year of experience",
-                "es": "1 año de experiencia"
-            },
-            "versions": ["Current"],
-            "usage": {
-                "en": "Handling minimal data records in comma separated values.",
-                "es": "Manejo de registros mínimos de información en valores separados por comas."
-            }
-        }
-    ],
     "drawer": {
+        "other-database-techs": [
+            {
+                "name": "CSV",
+                "type": {
+                    "en": "File-based data handling",
+                    "es": "Manejo de datos con archivo"
+                },
+                "icon": "db/csv.svg",
+                "experience": {
+                    "en": "1 year of experience",
+                    "es": "1 año de experiencia"
+                },
+                "versions": ["Current"],
+                "usage": {
+                    "en": "Handling minimal data records in comma separated values.",
+                    "es": "Manejo de registros mínimos de información en valores separados por comas."
+                }
+            }
+        ],
         "web-backend": [
             {
                 "name": "Java",

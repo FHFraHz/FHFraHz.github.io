@@ -1,16 +1,6 @@
 button.btn.btn-seemore {
     background: #FFFFFF77;
 }
-.img-underlay {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../../img/pages/dev/negative-space-programming-java-code.jpg') !important;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    opacity: 100%;
-}
 #web {
     background: linear-gradient(to right, #CC22FF1E 0%, transparent 66%);
 }
