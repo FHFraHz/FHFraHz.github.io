@@ -1,20 +1,23 @@
 <div class="grid-tecnologia-izquierda">
     <div class="area-titulo-descripcion">
         <h2>CSS Gallery</h2>
-        <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, a.</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt quia nam tenetur saepe commodi harum adipisci debitis, iure possimus numquam.</p>
+        <h4>Some drawings with the power of CSS3</h4>
+        <p>All the graphics are generated with pure HTML+CSS. No SVG or JS here.</p>
     </div>
     <div class="area-imagen">
         <img src="img/icons/technologies/web/globe-with-meridians-svgrepo-com.svg">
     </div>
 </div>
 
+<link rel="stylesheet" type="text/css" href="css/pages/web/css-gallery/global.css">
 <link rel="stylesheet" type="text/css" href="css/pages/web/css-gallery/sunny-beach.css">
+<link rel="stylesheet" type="text/css" href="css/pages/web/css-gallery/rainy-forest.css">
 
-<div class="d-flex flex-row justify-content-around">
-    <div class="col-md-3 col-sm-9">
+<div class="d-flex flex-row flex-wrap justify-content-around">
+    <div class="col-md-4 col-sm-10 col-12">
         <h3 class="fst-italic">"Sunny Beach"</h3>
-        <div id="picture_frame-sunny_beach">
+        <!-- Sunny Beach -->
+        <div id="picture_frame-sunny_beach" class="css_gallery-picture_frame">
             <div class="cloud-left"></div>
             <div class="sun"></div>
             <div class="cloud-right"></div>
@@ -29,9 +32,14 @@
             <div class="sand"></div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-9">
+    <div class="col-md-4 col-sm-10 col-12">
         <h3 class="fst-italic">"Rainy Forest"</h3>
-        <div id="picture_frame-rainy_forest">
+        <!-- Rainy Forest -->
+        <div id="picture_frame-rainy_forest" class="css_gallery-picture_frame">
+            <div class="trees-background"></div>
+            <div class="trees-foreground"></div>
         </div>
     </div>
 </div>
+
+<p class="my-4 center-on-breakpoint">Expect to see more of these in the future as I figure out and incorporate more and more new stuff into my craft.</p>

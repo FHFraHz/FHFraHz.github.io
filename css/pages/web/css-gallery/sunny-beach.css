@@ -2,12 +2,8 @@
 
 /* === SKY (BACKGROUND) === */
 #picture_frame-sunny_beach {
-    position: relative;
-    min-height: 240px;
-    min-width: 320px;
     background: linear-gradient(to bottom, dodgerblue, skyblue);
     background-position-y: -120px;
-    overflow: hidden;
 }
 
 /* === SAND === */
@@ -38,6 +34,7 @@
 /* === SEA === */
 #picture_frame-sunny_beach .sea {
     position: absolute;
+    opacity: 87%;
     background: radial-gradient(lightblue, teal);
     background-size: 200%;
     background-position-x: center;

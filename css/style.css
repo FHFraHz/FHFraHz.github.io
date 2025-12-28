@@ -91,4 +91,7 @@ img.tech-modal-icon {
     .area-header-options {
         padding: 1em 0;
     }
+    .center-on-breakpoint {
+        text-align: center;
+    }
 }

@@ -1,0 +1,7 @@
+.css_gallery-picture_frame {
+    position: relative;
+    min-height: 240px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
