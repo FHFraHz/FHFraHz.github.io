@@ -1,0 +1,118 @@
+#picture_frame-sunny_beach {
+    position: relative;
+    min-height: 240px;
+    min-width: 320px;
+    background: linear-gradient(to bottom, dodgerblue, skyblue);
+    background-position-y: -120px;
+    overflow: hidden;
+}
+
+#picture_frame-sunny_beach .sand {
+    position: absolute;
+    --mask:
+    /* BOTTOM */
+    /* radial-gradient(.99px at 50% calc(100% - 48px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(34.99px at 50% calc(100% + 18px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x; */
+    /* TOP */
+    /* radial-gradient(24.99px at 50% 48px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(24.99px at 50% -18px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x; */
+    /* TOP softer */
+    radial-gradient(50.4px at 50% 70.5px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(50.4px at 50% -40.5px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    background: radial-gradient(burlywood, beige);
+    background-size: 400%;
+    background-position: center;
+    min-height: 37%;
+    min-width: 100%;
+    bottom: 0;
+}
+
+#picture_frame-sunny_beach .sea {
+    position: absolute;
+    background: radial-gradient(lightblue, teal);
+    background-size: 200%;
+    background-position-x: center;
+    min-height: 50%;
+    min-width: 100%;
+    bottom: 0;
+}
+
+#picture_frame-sunny_beach .sun {
+    position: absolute;
+    top: 1em;
+    left: 3em;
+    min-height: 10%;
+    min-width: 8%;
+    border-radius: 50%;
+    background: gold;
+    filter: drop-shadow(0px 0px 8px gold);
+}
+#picture_frame-sunny_beach .ship {
+    position: absolute;
+    bottom: 50%;
+    --ship-width: 48px;
+    --ship-height: 24px;
+    width: var(--ship-width);
+    height: var(--ship-height);
+    background: linear-gradient(to bottom,
+    #00000000 0%, #00000000 19.99999%,
+    crimson 20%, maroon 100%);
+    clip-path: polygon(
+        0% 55%, 25% 60%, 25% 0%, 80% 0, 80% 60%, 100% 55%,
+        90% 100%, 15% 100%, 0% 55%
+    );
+    animation-timing-function: linear;
+    animation-name: sunny_beach-ship_move;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+}
+
+#picture_frame-sunny_beach .ship .cabin {
+    position: relative;
+    top: 4px;
+    height: 41%;
+    width: 100%;
+    background: white;
+}
+
+#picture_frame-sunny_beach .ship .cabin .windows {
+    position: absolute;
+    top: 20%;
+    --cabin-window-widthheight: 6px;
+    --window-color: #77bbdd;
+    left: calc(50% - calc(var(--cabin-window-widthheight) / 2));
+    width: var(--cabin-window-widthheight);
+    height: var(--cabin-window-widthheight);
+    background: linear-gradient(to left,
+    var(--window-color) 0% , var(--window-color) 39.99999%,
+    #00000000 40%, #00000000 59.99999%,
+    var(--window-color) 60%, var(--window-color) 100%);
+    clip-path: polygon(
+        /* 100% 100%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0% 55%, 0% 100% */
+    );
+}
+
+#picture_frame-sunny_beach .ship .cabin .chimney {
+    position: absolute;
+    top: -8px;
+    left: 18px;
+    height: 8px;
+    width: 4px;
+    background: darkslategray;
+}
+
+@keyframes sunny_beach-ship_move {
+
+    0% {
+        /* left: calc(100% - calc(var(--ship-width) / 2)); */
+        left: 100%;
+    }
+    100% {
+        left: calc(0% - var(--ship-width));
+        /* left: calc(-5% - calc(var(--ship-width) / 2)); */
+    }
+}
