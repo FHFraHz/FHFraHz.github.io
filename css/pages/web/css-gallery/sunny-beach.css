@@ -1,3 +1,6 @@
+/* ----- BASIC BEACH SHAPE (SKY, SEA, SAND) ----- */
+
+/* === SKY (BACKGROUND) === */
 #picture_frame-sunny_beach {
     position: relative;
     min-height: 240px;
@@ -7,6 +10,7 @@
     overflow: hidden;
 }
 
+/* === SAND === */
 #picture_frame-sunny_beach .sand {
     position: absolute;
     --mask:
@@ -31,6 +35,7 @@
     bottom: 0;
 }
 
+/* === SEA === */
 #picture_frame-sunny_beach .sea {
     position: absolute;
     background: radial-gradient(lightblue, teal);
@@ -41,16 +46,81 @@
     bottom: 0;
 }
 
+/* ----- SKY DETAILS ----- */
+
+/* === SUN === */
 #picture_frame-sunny_beach .sun {
     position: absolute;
     top: 1em;
-    left: 3em;
-    min-height: 10%;
-    min-width: 8%;
+    left: 25%;
+    min-height: 21px;
+    min-width: 21px;
     border-radius: 50%;
-    background: gold;
-    filter: drop-shadow(0px 0px 8px gold);
+    animation: sunny_beach-sun_glow 3s linear infinite alternate;
+    background-image: radial-gradient(circle at top right, gold, yellow);
 }
+
+/* === CLOUDS === */
+#picture_frame-sunny_beach .cloud-left,
+#picture_frame-sunny_beach .cloud-left:before,
+#picture_frame-sunny_beach .cloud-left:after,
+#picture_frame-sunny_beach .cloud-right,
+#picture_frame-sunny_beach .cloud-right:before,
+#picture_frame-sunny_beach .cloud-right:after {
+    content: '';
+    position: absolute;
+    width: var(--cloud-width);
+    height: var(--cloud-height);
+    border-radius: var(--cloud-border-radius);
+    background: radial-gradient(#ffffffdd, #ffffffaa);
+    animation: sunny_beach-cloud_blur 4s ease-in-out infinite;
+    border-bottom: 2px lightblue solid;
+}
+#picture_frame-sunny_beach .cloud-right {
+    top: 15%;
+    left: 36%;
+    --cloud-width: 36px;
+    --cloud-height: 12px;
+    --cloud-border-radius: 8px;
+    animation: sunny_beach-cloud_idle 20s linear infinite alternate;
+}
+#picture_frame-sunny_beach .cloud-right:before {
+    top: -32%;
+    left: 24%;
+    --cloud-width: 18px;
+    --cloud-height: 18px;
+    --cloud-border-radius: 8px;
+}
+#picture_frame-sunny_beach .cloud-right:after {
+    top: -9px;
+    right: -3px;
+    --cloud-width: 21px;
+    --cloud-height: 21px;
+    --cloud-border-radius: 18px;
+}
+#picture_frame-sunny_beach .cloud-left {
+    top: 13%;
+    left: 7%;
+    --cloud-width: 36px;
+    --cloud-height: 14px;
+    --cloud-border-radius: 12px;
+    animation: sunny_beach-cloud_idle 25s linear infinite alternate;
+}
+#picture_frame-sunny_beach .cloud-left:before {
+    top: -10%;
+    right: 8%;
+    --cloud-width: 16px;
+    --cloud-height: 16px;
+    --cloud-border-radius: 8px;
+}
+#picture_frame-sunny_beach .cloud-left:after {
+    top: -7px;
+    left: 4px;
+    --cloud-width: 20px;
+    --cloud-height: 20px;
+    --cloud-border-radius: 18px;
+}
+
 #picture_frame-sunny_beach .ship {
     position: absolute;
     bottom: 50%;
@@ -104,7 +174,37 @@
     width: 4px;
     background: darkslategray;
 }
-
+@keyframes sunny_beach-sun_glow {
+    0% {
+        filter: drop-shadow(0px 0px 8px gold);
+        transform: rotate(0deg);
+    }
+    25% {
+        filter: drop-shadow(0px 0px 12px gold);
+        transform: rotate(90deg);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 8px gold);
+        transform: rotate(180deg);
+    }
+    75% {
+        filter: drop-shadow(0px 0px 12px gold);
+        transform: rotate(270deg);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 8px gold);
+        transform: rotate(360deg);
+    }
+}
+@keyframes sunny_beach-cloud_idle {
+    0% { transform: translateX(0);}
+    100% { transform: translateX(10px);}
+}
+@keyframes sunny_beach-cloud_blur {
+    0% { filter: blur(0); }
+    50% { filter: blur(1px); }
+    100% { filter: blur(0); }
+}
 @keyframes sunny_beach-ship_move {
 
     0% {
