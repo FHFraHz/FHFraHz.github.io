@@ -14,23 +14,188 @@
         radial-gradient(62.84px at 50% calc(100% + 43.5px),#0000 99%,#000 101%) 50% calc(100% - 15px)/30px 100% repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
+    z-index: 3;
+    opacity: 75%;
+}
+
+#picture_frame-rainy_forest .trees-background, 
+#picture_frame-rainy_forest .trees-foreground,
+#picture_frame-rainy_forest .trees-foreground:before,
+#picture_frame-rainy_forest .grass {
+    position: absolute;
+    content: '';
+}
+
+#picture_frame-rainy_forest .trees-background {
+    background: linear-gradient(to right,
+        #552211,
+        #442211,
+        #114433,
+        #553322,
+        #225533,
+        #553322,
+        /* #442211, */
+        #114433,
+        #553711,
+        #115533,
+        #552211);
+    width: 100%;
+    height: 62%;
+    top: 30%;
+    z-index: 1;
+    --mask: 
+    radial-gradient(87.21px at 50% calc(100% - 117px),#000 99%,#0000 101%) calc(50% - 78px) 0/40px 100%,
+    radial-gradient(87.21px at 50% calc(100% + 78px),#0000 99%,#000 101%) 50% calc(100% - 39px)/20px 100% repeat-x;
+ 
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
 }
 
 #picture_frame-rainy_forest .trees-foreground {
-    position: absolute;
     background: linear-gradient(to right,
-        #774411 0%, #774411 9.99%,
+        #774411 0%, #604000 9.99%,
         #00000000 10%, #00000000 19.99%,
-        #774411 20%, #774411 29.99%,
+        #604000 20%, #774411 29.99%,
         #00000000 30%, #00000000 39.99%,
-        #774411 40%, #774411 49.9%,
+        #604000 40%, #774411 49.9%,
         #00000000 50%, #00000000 59.99%,
-        #774411 60%, #774411 69.99%,
+        #774411 60%, #604000 69.99%,
         #00000000 70%, #00000000 79.99%,
-        #774411 80%, #774411 89.99%,
+        #774411 80%, #604000 89.99%,
         #00000000 90%, #00000000 100%
     );
-    top: 20%;
+    top: 30%;
     width: 100%;
-    height: 120px;
+    height: 55%;
+    clip-path: polygon(0% -20%, 100% -20%,
+    100% 100%,
+    88% 98%, 66% 102%, 44% 96%, 22% 98%, 0% 100%);
+    z-index: 2;
+}
+#picture_frame-rainy_forest .trees-foreground:before {
+    top: -30%;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, green, darkgreen);
+    --mask:
+    radial-gradient(78.26px at 50% 105px,#000 99%,#0000 101%) calc(50% - 70px) 0/70px 51% repeat-x,
+    radial-gradient(78.26px at 50% -70px,#0000 99%,#000 101%) 50% 35px/140px calc(51% - 35px) repeat-x,
+    radial-gradient(78.26px at 50% calc(100% - 105px),#000 99%,#0000 101%) 50% 100%/60px 51% repeat-x,
+    radial-gradient(78.26px at 50% calc(100% + 70px),#0000 99%,#000 101%) calc(50% - 70px) calc(100% - 35px)/140px calc(51% - 35px) repeat-x;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+#picture_frame-rainy_forest .grass {
+    bottom: 0;
+    height: 37%;
+    width: 120%;
+    z-index: 0;
+    background: linear-gradient(to right,
+        #114433,
+        #225533,
+        #227755,
+        #226644
+    );
+    background-size: 12px;
+    transform: skew(355deg);
+}
+
+#picture_frame-rainy_forest .rain {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 10%;
+}
+
+#picture_frame-rainy_forest .rain .raindrops-1,
+#picture_frame-rainy_forest .rain .raindrops-2,
+#picture_frame-rainy_forest .rain .raindrops-3 {
+    z-index: 4;
+    content: '';
+    position: absolute;
+    width: 150%;
+    /* background: red; */
+    background: linear-gradient(to right,
+        #ffffff77 0%,
+        #ffffff77 20%,
+        #ffffff00 21%,
+        #ffffff00 100%);
+    /* transform: skew(350deg); */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#picture_frame-rainy_forest .rain .raindrops-1 {
+    background-size: 8px;
+    top: 1%;
+    height: 100%;
+    animation: rainy_forest-rainfall-1 0.75s linear infinite, rainy_forest-rainfall_flicker 0.75s linear infinite;
+    opacity: 37%;
+    --mask:
+    radial-gradient(96.15px at 50% 129px,#000 99%,#0000 101%) calc(50% - 86px) 0/62px 51% repeat-x,
+    radial-gradient(96.15px at 50% -86px,#0000 99%,#000 101%) 50% 43px/172px calc(51% - 43px) repeat-x,
+    radial-gradient(96.15px at 50% calc(100% - 129px),#000 99%,#0000 101%) calc(50% - 86px) 100%/62px 51% repeat-x,
+    radial-gradient(96.15px at 50% calc(100% + 86px),#0000 99%,#000 101%) 50% calc(100% - 43px)/172px calc(51% - 43px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+#picture_frame-rainy_forest .rain .raindrops-2 {
+    background-size: 12px;
+    top: 30%;
+    left: 5%;
+    height: 87.5%;
+    animation: rainy_forest-rainfall-2 0.62s linear infinite, rainy_forest-rainfall_flicker 0.5s linear infinite;
+    animation-delay: 0.5s;
+    opacity: 31%;
+     --mask:
+    radial-gradient(84.97px at 50% 114px,#000 99%,#0000 101%) calc(50% - 76px) 0/82px 51% repeat-x,
+    radial-gradient(84.97px at 50% -76px,#0000 99%,#000 101%) 50% 38px/152px calc(51% - 38px) repeat-x,
+    radial-gradient(84.97px at 50% calc(100% - 114px),#000 99%,#0000 101%) calc(50% - 76px) 100%/82px 51% repeat-x,
+    radial-gradient(84.97px at 50% calc(100% + 76px),#0000 99%,#000 101%) 50% calc(100% - 38px)/152px calc(51% - 38px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+#picture_frame-rainy_forest .rain .raindrops-3 {
+    background-size: 16px;
+    top: 25%;
+    height: 75%;
+    animation: rainy_forest-rainfall-3 0.5s linear infinite, rainy_forest-rainfall_flicker 1s linear infinite;
+    animation-duration: 0.5s;
+    animation-delay: 0.87s;
+    opacity: 25%;
+}
+@keyframes rainy_forest-rainfall_flicker {
+    0% {
+        filter: opacity(30%);
+    }
+    100% {
+        filter: opacity(25%) brightness(0.25);
+    }
+}
+
+@keyframes rainy_forest-rainfall-1 {
+    0% {
+        transform: skew(355deg);
+    }
+    100% {
+        transform: translateX(-6px) translateY(16px) skew(348deg);
+    }
+}
+@keyframes rainy_forest-rainfall-2 {
+    0% {
+        transform: skew(353deg);
+    }
+    100% {
+        transform: translateX(-3px) translateY(16px) skew(350deg);
+    }
+}
+@keyframes rainy_forest-rainfall-3 {
+    0% {
+        transform: skew(350deg);
+    }
+    100% {
+        transform: translateX(-9px) translateY(16px) skew(348deg);
+    }
 }
