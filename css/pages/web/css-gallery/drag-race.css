@@ -66,20 +66,12 @@
 }
 #picture_frame-drag_race .highway .cars {
    width: 100%;
+   height: 100%;
    z-index: 3;
 }
 #picture_frame-drag_race .highway .cars .car {
    width: var(--car-width);
    height: var(--car-height);
-}
-
-#picture_frame-drag_race .highway .cars .car.car-1 {
-   top: 2%;
-   left: calc(50% - calc(var(--car-width) / 2));
-}
-#picture_frame-drag_race .highway .cars .car.car-1 .body {
-   --car-primary-color: linear-gradient(to top, #992233, #BB4455);
-   /* --car-secondary-color: #ee6699; */
 }
 
 #picture_frame-drag_race .highway .cars .car .body {
@@ -113,7 +105,29 @@
    
 }
 #picture_frame-drag_race .highway .cars .car .wheels {}
-#picture_frame-drag_race .highway .cars .car.car-2 {}
-#picture_frame-drag_race .highway .cars .car.car-3 {}
-#picture_frame-drag_race .highway .cars .car.car-4 {}
-#picture_frame-drag_race .highway .cars .car.car-5 {}
+
+#picture_frame-drag_race .highway .cars .car.car-1 {
+   top: 10%;
+   left: calc(75% - calc(var(--car-width) / 2));
+   --car-primary-color: linear-gradient(to top, #992233, #BB4455);
+}
+#picture_frame-drag_race .highway .cars .car.car-2 {
+   top: 24%;
+   left: calc(52% - calc(var(--car-width) / 2));
+   --car-primary-color: linear-gradient(to top, #112299, #3344BB);
+}
+#picture_frame-drag_race .highway .cars .car.car-3 {
+   top: 4%;
+   left: calc(35% - calc(var(--car-width) / 2));
+   --car-primary-color: linear-gradient(to top, slategray, whitesmoke);
+}
+#picture_frame-drag_race .highway .cars .car.car-4 {
+   top: 55%;
+   left: calc(42% - calc(var(--car-width) / 2));
+   --car-primary-color: linear-gradient(to top, #DDBB22, #886611);
+}
+#picture_frame-drag_race .highway .cars .car.car-5 {
+   top: 77%;
+   left: calc(25% - calc(var(--car-width) / 2));
+   --car-primary-color: linear-gradient(to top, green, darkgreen);
+}
