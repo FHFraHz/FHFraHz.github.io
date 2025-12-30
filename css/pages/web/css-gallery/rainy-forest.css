@@ -2,6 +2,13 @@
     background: linear-gradient(to bottom, darkslategray, lightblue);
     background-position-y: -120px;
 }
+/* #picture_frame-rainy_forest:hover { */
+#picture_frame-rainy_forest {
+    --raindrops-1-animation: rainy_forest-rainfall-1 0.75s linear infinite, rainy_forest-rainfall_flicker 0.75s linear infinite;
+    --raindrops-2-animation: rainy_forest-rainfall-2 0.62s linear infinite, rainy_forest-rainfall_flicker 0.5s linear infinite;
+    --raindrops-3-animation: rainy_forest-rainfall-3 0.5s linear infinite, rainy_forest-rainfall_flicker 1s linear infinite;
+}
+
 #picture_frame-rainy_forest .cloudy-sky {
     position: absolute;
     top: 0;
@@ -134,7 +141,7 @@
     background-size: 24px;
     top: 1%;
     height: 100%;
-    animation: rainy_forest-rainfall-1 0.75s linear infinite, rainy_forest-rainfall_flicker 0.75s linear infinite;
+    animation: var(--raindrops-1-animation);
     opacity: 37%;
     --mask:
     radial-gradient(96.15px at 50% 129px,#000 99%,#0000 101%) calc(50% - 86px) 0/62px 51% repeat-x,
@@ -147,9 +154,9 @@
 #picture_frame-rainy_forest .rain .raindrops-2 {
     background-size: 36px;
     top: 30%;
-    left: 5%;
+    left: 12%;
     height: 87.5%;
-    animation: rainy_forest-rainfall-2 0.62s linear infinite, rainy_forest-rainfall_flicker 0.5s linear infinite;
+    animation: var(--raindrops-2-animation);
     animation-delay: 0.5s;
     opacity: 31%;
      --mask:
@@ -164,7 +171,7 @@
     background-size: 48px;
     top: 25%;
     height: 75%;
-    animation: rainy_forest-rainfall-3 0.5s linear infinite, rainy_forest-rainfall_flicker 1s linear infinite;
+    animation: var(--raindrops-3-animation);
     animation-duration: 0.5s;
     animation-delay: 0.87s;
     opacity: 25%;

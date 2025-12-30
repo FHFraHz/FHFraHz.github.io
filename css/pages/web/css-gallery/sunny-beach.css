@@ -5,6 +5,14 @@
     background: linear-gradient(to bottom, dodgerblue, skyblue);
     background-position-y: -120px;
 }
+/* #picture_frame-sunny_beach:hover { */
+#picture_frame-sunny_beach {
+    --sun-animation: sunny_beach-sun_glow 3s linear infinite alternate;
+    --cloud-blur-animation: sunny_beach-cloud_blur 4s ease-in-out infinite;
+    --cloud-right-animation: sunny_beach-cloud_idle 20s linear infinite alternate;
+    --cloud-left-animation: sunny_beach-cloud_idle 25s linear infinite alternate;
+    --ship-animation: sunny_beach-ship_move linear infinite 60s;
+}
 
 /* === SAND === */
 #picture_frame-sunny_beach .sand {
@@ -53,7 +61,7 @@
     min-height: 21px;
     min-width: 21px;
     border-radius: 50%;
-    animation: sunny_beach-sun_glow 3s linear infinite alternate;
+    animation: var(--sun-animation);
     background: radial-gradient(circle at top right, gold, yellow);
 }
 
@@ -70,7 +78,7 @@
     height: var(--cloud-height);
     border-radius: var(--cloud-border-radius);
     background: radial-gradient(#ffffffdd, #ffffffaa);
-    animation: sunny_beach-cloud_blur 4s ease-in-out infinite;
+    animation: var(--cloud-blur-animation);
     border-bottom: 2px lightblue solid;
 }
 #picture_frame-sunny_beach .cloud-right {
@@ -79,7 +87,7 @@
     --cloud-width: 36px;
     --cloud-height: 12px;
     --cloud-border-radius: 8px;
-    animation: sunny_beach-cloud_idle 20s linear infinite alternate;
+    animation: var(--cloud-right-animation);
 }
 #picture_frame-sunny_beach .cloud-right:before {
     top: -32%;
@@ -101,7 +109,7 @@
     --cloud-width: 36px;
     --cloud-height: 14px;
     --cloud-border-radius: 12px;
-    animation: sunny_beach-cloud_idle 25s linear infinite alternate;
+    animation: var(--cloud-left-animation);
 }
 #picture_frame-sunny_beach .cloud-left:before {
     top: -10%;
@@ -121,6 +129,7 @@
 #picture_frame-sunny_beach .ship {
     position: absolute;
     bottom: 50%;
+    left: calc(50% - calc(var(--ship-width) / 2));
     --ship-width: 48px;
     --ship-height: 24px;
     width: var(--ship-width);
@@ -132,10 +141,7 @@
         0% 55%, 25% 60%, 25% 0%, 80% 0, 80% 60%, 100% 55%,
         90% 100%, 15% 100%, 0% 55%
     );
-    animation-timing-function: linear;
-    animation-name: sunny_beach-ship_move;
-    animation-iteration-count: infinite;
-    animation-duration: 60s;
+    animation: var(--ship-animation);
 }
 
 #picture_frame-sunny_beach .ship .cabin {

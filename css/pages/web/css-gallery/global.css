@@ -6,3 +6,6 @@
     margin: 0 auto;
     overflow: hidden;
 }
+.css_gallery-picture_frame:hover {
+    cursor: pointer;
+}
