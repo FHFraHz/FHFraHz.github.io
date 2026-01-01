@@ -3,6 +3,10 @@
    --car-height: 36px;
    --car-primary-color: slategray;
    --car-secondary-color: lightslategray;
+   --car-vibrate-animation: drag_race-car_vibrate 0.2s ease-in-out infinite;
+   --car-throttle-animation: drag_race-car_throttle_onoff ease-in-out infinite;
+   --car-handling-animation: drag_race-car_handling infinite;
+   --car-handling-drift: 1px; /* DEFAULT VALUE WHICH CAN BE OVERRIDEN */
 }
 
 #picture_frame-drag_race .cityscape-background,
@@ -76,13 +80,15 @@
    height: var(--car-height);
    top: var(--car-position-top);
    left: var(--car-position-left);
+   filter: drop-shadow(1px 2px 0px #00000022);
 }
 
 #picture_frame-drag_race .highway .cars .car .body {
    background: var(--car-primary-color);
    width: 100%;
    height: 100%;
-   clip-path: polygon(0% 10%, 10% 0%, 20% 00%, 20% 20%, 30% 0%, 70% 0%, 80% 20%, 95% 20%, 100% 40%, 100% 60%, 90% 100%, 0% 100%);
+   clip-path: polygon(0% 30%, 10% 10%, 20% 10%, 20% 20%, 30% 0%, 70% 0%, 80% 20%, 95% 20%, 100% 40%,
+   100% 60%, 85% 100%, 0% 100%);
 }
 #picture_frame-drag_race .highway .cars .car .body:after {
    content: '';
@@ -95,56 +101,99 @@
    width: 100%;
    height: 90%;
    border-radius: 4px;
-   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 100%, 80% 80%, 75% 60%, 65% 60%, 55% 20%, 20% 20%, 10% 55%, 10% 20%, 0% 20%, 0% 0%);
+   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 100%, 80% 80%, 75% 60%, 65% 60%, 55% 20%, 20% 20%, 10% 50%, 10% 30%, 0% 30%, 0% 0%);
 }
-#picture_frame-drag_race .highway .cars .car .doors {}
 #picture_frame-drag_race .highway .cars .car .windows {}
 #picture_frame-drag_race .highway .cars .car .lights {
-   /* height: calc(var(--car-height) / 2.5);
-   top: 40%;
+   height: 8px;
+   top: 50%;
    right: 2px;
-   width: 10px;
-   background: gold;
-   mask: */
-   
+   width: calc(var(--car-height) / 4);
+   background: linear-gradient(to bottom, whitesmoke, lightslategray);
+   mask: linear-gradient(to right, #fff 0 33%, #777 33% 70%, #fff 70% 100%);
+   mask-mode: luminance;
+   transform: skewY(-59deg);
+   /* transform: rotateZ(-60deg); */
+   overflow: visible;
 }
-#picture_frame-drag_race .highway .cars .car .wheels {}
+#picture_frame-drag_race .highway .cars .car .lights:after {
+   content: '';
+   position: absolute;
+   bottom: 0px;
+   width: 100%;
+   height: 2px;
+   mask: unset;
+   background: gold;
+}
+#picture_frame-drag_race .highway .cars .car .doors {
+   width: calc(var(--car-width) * 0.8);
+   bottom: 4px;
+   left: 20%;
+}
+#picture_frame-drag_race .highway .cars .car .doors:before,
+#picture_frame-drag_race .highway .cars .car .doors:after {
+   position: absolute;
+   content: '';
+   /* padding: 2px; */
+   width: 14px;
+   height: 14px;
+   border-radius: 7px;
+   bottom: -8px;
+   background: radial-gradient(silver 0 20%, slategray 20% 40%, #222 40% 100%);
+}
+
+#picture_frame-drag_race .highway .cars .car .doors:before {
+   left: -6px;
+}
+#picture_frame-drag_race .highway .cars .car .doors:after {
+   left: 22px;
+}
 
 #picture_frame-drag_race .highway .cars .car.car-1 {
    --car-position-top: 10%;
    --car-position-left: calc(75% - calc(var(--car-width) / 2));
    --car-primary-color: linear-gradient(to top, #992233, #BB4455);
    animation:
-      drag_race-car_vibrate 0.2s ease-in-out infinite,
-      drag_race-car_throttle_onoff 2s ease-in-out infinite;
+      var(--car-vibrate-animation),
+      var(--car-throttle-animation) 2s;
 }
 #picture_frame-drag_race .highway .cars .car.car-2 {
    --car-position-top: 24%;
    --car-position-left: calc(52% - calc(var(--car-width) / 2));
    --car-primary-color: linear-gradient(to top, #112299, #3344BB);
-   animation: drag_race-car_vibrate 0.2s ease-in-out infinite reverse,
-   drag_race-car_throttle_onoff 3s ease-in-out infinite;
+   --car-handling-drift: 4px;
+   animation:
+      var(--car-vibrate-animation),
+      var(--car-handling-animation) 2s linear,
+      var(--car-throttle-animation) 3s;
 }
 #picture_frame-drag_race .highway .cars .car.car-3 {
    --car-position-top: 4%;
    --car-position-left: calc(35% - calc(var(--car-width) / 2));
    --car-primary-color: linear-gradient(to top, slategray, whitesmoke);
-   animation: drag_race-car_vibrate 0.2s ease-in-out infinite,
-      drag_race-car_throttle_onoff 2s ease-in-out infinite reverse;
+   animation:
+      var(--car-vibrate-animation) reverse,
+      var(--car-handling-animation) 3s ease-in-out reverse,
+      var(--car-throttle-animation) 2s reverse;
 }
 #picture_frame-drag_race .highway .cars .car.car-4 {
    --car-position-top: 55%;
    --car-position-left: calc(42% - calc(var(--car-width) / 2));
    --car-primary-color: linear-gradient(to top, #DDBB22, #886611);
-   animation: drag_race-car_vibrate 0.2s ease-in-out infinite reverse,
-      drag_race-car_throttle_onoff 2.5s ease-in-out infinite reverse;
+   animation:
+      var(--car-vibrate-animation),
+      var(--car-handling-animation) 2s reverse,
+      var(--car-throttle-animation) 2.5s reverse;
 }
 #picture_frame-drag_race .highway .cars .car.car-5 {
-   --car-position-top: 77%;
+   --car-position-top: 76%;
    --car-position-left: calc(25% - calc(var(--car-width) / 2));
    --car-primary-color: linear-gradient(to top, green, darkgreen);
-   animation: drag_race-car_vibrate 0.2s ease-in-out infinite,
-      drag_race-car_throttle_onoff 3s ease-in-out infinite;
+   --car-handling-drift: 5px;
+   animation:
+      var(--car-vibrate-animation) reverse,
+      var(--car-handling-animation) 2.5s linear reverse,
+      var(--car-throttle-animation) 3s;
 }
 
 @keyframes drag_race-car_vibrate {
@@ -158,13 +207,27 @@
 
 @keyframes drag_race-car_throttle_onoff {
    0% {
-      left: calc(var(--car-position-left) - 3px);
+      left: calc(var(--car-position-left) - 2px);
    }
    50% {
-      left: calc(var(--car-position-left) + 3px);
+      left: calc(var(--car-position-left) + 2px);
    }
    100% {
-      left: calc(var(--car-position-left) - 3px);
+      left: calc(var(--car-position-left) - 2px);
+   }
+}
+@keyframes drag_race-car_handling {
+   0% {
+      top: var(--car-position-top);
+   }
+   25% {
+      top: calc(var(--car-position-top) + var(--car-handling-drift));
+   }
+   75% {
+      top: calc(var(--car-position-top) - var(--car-handling-drift));
+   }
+   100% {
+      top: var(--car-position-top);
    }
 }
 @keyframes drag_race-lane_hr {
