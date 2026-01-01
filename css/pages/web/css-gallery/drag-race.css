@@ -7,63 +7,98 @@
    --car-throttle-animation: drag_race-car_throttle_onoff ease-in-out infinite;
    --car-handling-animation: drag_race-car_handling infinite;
    --car-handling-drift: 1px; /* DEFAULT VALUE WHICH CAN BE OVERRIDEN */
+   --road-animation: drag_race-road_animation 0.2s linear infinite;
 }
 
-#picture_frame-drag_race .cityscape-background,
+#picture_frame-drag_race .background,
+#picture_frame-drag_race .highway,
+#picture_frame-drag_race .highway:before,
+#picture_frame-drag_race .highway:after,
+#picture_frame-drag_race .highway .cars .car .body:after,
+#picture_frame-drag_race .highway .cars .car .lights:after,
+#picture_frame-drag_race .highway .cars .car .doors-wheels:before,
+#picture_frame-drag_race .highway .cars .car .doors-wheels:after {
+   content: '';
+   position: absolute;
+}
+
+#picture_frame-drag_race .background { width: 100%; height: 100%; }
+#picture_frame-drag_race .background * { width: 300%; height: 100%; }
+#picture_frame-drag_race .background .cityscape {
+   /* background: linear-gradient(
+      to left,
+      lightslategray 0% 48%,
+      darkslategray 49% 50%,
+      lightslategray 51% 98%,
+      darkslategray 99% 100%);
+   background-size: 33%; */
+}
+
+#picture_frame-drag_race .highway:before,
+#picture_frame-drag_race .highway:after {
+   width: 125%;
+   height: 14px;
+   background: linear-gradient(to right, lightslategray 0% 10%, #0000 10% 90%, lightslategray 90% 100%);
+   background-size: 24px;
+   border-bottom: 2px #678 solid;
+   border-top: 4px #9ab solid;
+   animation: var(--road-animation);
+}
+#picture_frame-drag_race .highway:before { top: -14px; }
+#picture_frame-drag_race .highway:after {
+   bottom: 0px;
+   z-index: 100;
+}
+
 #picture_frame-drag_race .highway {
-    content: '';
-    position: absolute;
+   width: 100%;
+   height: 80%;
+   top: 10%;
+   background: linear-gradient(to bottom, slategray, darkslategray);
+   /* outline-width: 4px;
+   outline-color: #334;
+   outline-offset: 0px;
+   outline-style: solid; */
+}
+#picture_frame-drag_race .highway .road-lines .lane {
+   position: absolute;
+   /* display: flex;
+   flex-direction: row;
+   align-items: center; */
+   height: 48%;
+   width: 100%;
+   z-index: 1;
+}
+#picture_frame-drag_race .highway .road-lines .lane hr {
+   position: absolute;
+   top: 2.5ch;
+   width: 125%;
+   color: whitesmoke;
+   mask: repeating-linear-gradient(to left, #000 0 24px, transparent 24px 48px);
+   border: none;
+   border-top: solid whitesmoke 8px;
+   animation: var(--road-animation);
+}
+#picture_frame-drag_race .highway .road-lines .division {
+   position: absolute;
+   border-top: 2px gold solid;
+   border-bottom: 2px gold solid;
+   height: 6px;
+   width: 100%;
+   top: calc(50% - 3px);
+   z-index: 2;
 }
 
- #picture_frame-drag_race .cityscape-background {
-    width: 100%;
- }
-
- #picture_frame-drag_race .highway {
-    width: 100%;
-    height: 80%;
-    top: 10%;
-    background: linear-gradient(to bottom, slategray, darkslategray);
- }
- #picture_frame-drag_race .highway .road-lines .lane {
-    position: absolute;
-    /* display: flex;
-    flex-direction: row;
-    align-items: center; */
-    height: 48%;
-    width: 100%;
-    z-index: 1;
- }
- #picture_frame-drag_race .highway .road-lines .lane hr {
-    position: absolute;
-    top: 2.5ch;
-    width: 125%;
-    color: whitesmoke;
-    mask: repeating-linear-gradient(to left, #000 0 24px, transparent 24px 48px);
-    border: none;
-    border-top: solid whitesmoke 8px;
-    animation: drag_race-lane_hr 0.2s linear infinite;
- }
- #picture_frame-drag_race .highway .road-lines .division {
-    position: absolute;
-    border-top: 2px gold solid;
-    border-bottom: 2px gold solid;
-    height: 6px;
-    width: 100%;
-    top: calc(50% - 3px);
-    z-index: 2;
- }
-
- #picture_frame-drag_race .highway .road-lines .lane:first-of-type {
-    top: 1%;
-    border-top: 2px whitesmoke solid;
-    border-bottom: 2px whitesmoke solid;
- }
- #picture_frame-drag_race .highway .road-lines .lane:last-of-type {
-    bottom: 1%;
-    border-top: 2px lightgray solid;
-    border-bottom: 2px lightgray solid;
- }
+#picture_frame-drag_race .highway .road-lines .lane:first-of-type {
+   top: 1%;
+   border-top: 2px whitesmoke solid;
+   border-bottom: 2px whitesmoke solid;
+}
+#picture_frame-drag_race .highway .road-lines .lane:last-of-type {
+   bottom: 1%;
+   border-top: 2px lightgray solid;
+   border-bottom: 2px lightgray solid;
+}
 
 #picture_frame-drag_race .highway .cars,
 #picture_frame-drag_race .highway .cars .car,
@@ -91,11 +126,9 @@
    100% 60%, 85% 100%, 0% 100%);
 }
 #picture_frame-drag_race .highway .cars .car .body:after {
-   content: '';
    background: #FFFFFF22;
    /* background: var(--car-secondary-color); */
    background-blend-mode: multiply;
-   position: absolute;
    top: 0;
    right: 0;
    width: 100%;
@@ -103,7 +136,17 @@
    border-radius: 4px;
    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 100%, 80% 80%, 75% 60%, 65% 60%, 55% 20%, 20% 20%, 10% 50%, 10% 30%, 0% 30%, 0% 0%);
 }
-#picture_frame-drag_race .highway .cars .car .windows {}
+#picture_frame-drag_race .highway .cars .car .windows {
+   opacity: 50%;
+   position: absolute;
+   background: linear-gradient(45deg, teal, skyblue);
+   width: 60%;
+   height: 48%;
+   left: 18%;
+   top: 2px;
+   clip-path: polygon(0% 100%, 20% 35%, 32% 35%, 32% 100%, 38% 100%, 38% 35%, 55% 35%, 70% 100%, 80% 100%, 62% 35%, 85% 0%, 100% 40%, 77% 100%);
+}
+
 #picture_frame-drag_race .highway .cars .car .lights {
    height: 8px;
    top: 50%;
@@ -114,39 +157,42 @@
    mask-mode: luminance;
    transform: skewY(-59deg);
    /* transform: rotateZ(-60deg); */
-   overflow: visible;
+   /* overflow: visible; */
 }
 #picture_frame-drag_race .highway .cars .car .lights:after {
-   content: '';
-   position: absolute;
    bottom: 0px;
    width: 100%;
    height: 2px;
    mask: unset;
    background: gold;
 }
-#picture_frame-drag_race .highway .cars .car .doors {
-   width: calc(var(--car-width) * 0.8);
-   bottom: 4px;
-   left: 20%;
+#picture_frame-drag_race .highway .cars .car .doors-wheels {
+   width: calc(var(--car-width) * 0.625);
+   bottom: 0px;
+   left: 10%;
+   height: 42%;
+   border-top: #fff3 1px solid;
+   border-radius: 25%;
+   background: linear-gradient(to right, #0000 0% 48%, #fff2 49% 51%, #0000 52% 100%);
+   border-bottom: #1117 2px solid;
 }
-#picture_frame-drag_race .highway .cars .car .doors:before,
-#picture_frame-drag_race .highway .cars .car .doors:after {
-   position: absolute;
-   content: '';
+#picture_frame-drag_race .highway .cars .car .doors-wheels:before,
+#picture_frame-drag_race .highway .cars .car .doors-wheels:after {
    /* padding: 2px; */
    width: 14px;
    height: 14px;
    border-radius: 7px;
-   bottom: -8px;
-   background: radial-gradient(silver 0 20%, slategray 20% 40%, #222 40% 100%);
+   bottom: -6px;
+   background: repeating-conic-gradient(silver 0, lightslategray 20%, #567 33%);
+   border: 3px #223 solid;
+   animation: drag_race-wheel_speen 0.25s linear infinite;
 }
 
-#picture_frame-drag_race .highway .cars .car .doors:before {
-   left: -6px;
+#picture_frame-drag_race .highway .cars .car .doors-wheels:before {
+   left: -4%;
 }
-#picture_frame-drag_race .highway .cars .car .doors:after {
-   left: 22px;
+#picture_frame-drag_race .highway .cars .car .doors-wheels:after {
+   right: -4%;
 }
 
 #picture_frame-drag_race .highway .cars .car.car-1 {
@@ -178,7 +224,7 @@
 }
 #picture_frame-drag_race .highway .cars .car.car-4 {
    --car-position-top: 55%;
-   --car-position-left: calc(42% - calc(var(--car-width) / 2));
+   --car-position-left: calc(44% - calc(var(--car-width) / 2));
    --car-primary-color: linear-gradient(to top, #DDBB22, #886611);
    animation:
       var(--car-vibrate-animation),
@@ -186,7 +232,7 @@
       var(--car-throttle-animation) 2.5s reverse;
 }
 #picture_frame-drag_race .highway .cars .car.car-5 {
-   --car-position-top: 76%;
+   --car-position-top: 73%;
    --car-position-left: calc(25% - calc(var(--car-width) / 2));
    --car-primary-color: linear-gradient(to top, green, darkgreen);
    --car-handling-drift: 5px;
@@ -230,11 +276,19 @@
       top: var(--car-position-top);
    }
 }
-@keyframes drag_race-lane_hr {
+@keyframes drag_race-road_animation {
    0% {
       transform: translateX(0px);
    }
    100% {
       transform: translateX(-48px);
+   }
+}
+@keyframes drag_race-wheel_speen {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(359deg);
    }
 }
