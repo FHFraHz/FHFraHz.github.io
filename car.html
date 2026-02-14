@@ -13,14 +13,18 @@
             width: 480px;
             height: 360px;
             /* transform: rotateY(45deg) rotateX(30deg) rotateZ(25deg); */
+            /* transform-style: preserve-3d; */
+            perspective: 900px;
         }
         .car3d-canvas .car {
             transform-style: preserve-3d;
-            perspective: 900px;
             top: 25%;
+            left: 5%;
             position: relative;
             width: 60%;
             height: 50%;
+            transform: rotateY(-45deg);
+            perspective: 900px;
         }
         .car3d-canvas .car :is(.front, .side, .back) {
             position: absolute;
@@ -44,10 +48,23 @@
         /* .side {
             } */
         .car3d-canvas .car .side.right-side {
-            transform: scaleX(1) rotateY(-45deg);
+            transform: scaleX(1);
         }
         .car3d-canvas .car .side.left-side {
-            transform: scaleX(-1) rotateY(225deg) translateZ(250px);
+            transform: scaleX(-1) rotateY(180deg) translateZ(250px);
+        }
+        .car3d-canvas .car .front {
+            width: 250px;
+            height: 70%;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .car3d-canvas .car .front .bumper {
+            /* position: absolute; */
+            width: 60%;
+            height: 24px;
+            /* background: linear-gradient(to bottom, slategray, lightgray, slategray); */
+            background: white;
+            transform: translateX(260px) translateY(125px);
         }
     </style>
     <h1>Car</h1>
@@ -58,7 +75,9 @@
                 <div class="hood-straight"></div>
                 <div class="hood-inclined"></div>
                 <div class="lights-grill"></div>
-                <div class="bumper-plate"></div>
+                <div class="bumper">
+                    <div class="plate"></div>
+                </div>
             </div>
             <div class="side right-side"></div>
             <div class="side left-side"></div>
