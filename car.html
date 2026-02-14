@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FHFraHz | Car</title>
+</head>
+<body>
+    <style>
+        .car3d-canvas {
+            position: relative;
+            background: darkslategray;
+            width: 480px;
+            height: 360px;
+            /* transform: rotateY(45deg) rotateX(30deg) rotateZ(25deg); */
+        }
+        .car3d-canvas .car {
+            transform-style: preserve-3d;
+            perspective: 900px;
+            top: 25%;
+            position: relative;
+            width: 60%;
+            height: 50%;
+        }
+        .car3d-canvas .car :is(.front, .side, .back) {
+            position: absolute;
+            opacity: 75%;
+        }
+        .car3d-canvas .car .side {
+            width: 100%;
+            height: 100%;
+            background: firebrick;
+            clip-path: polygon(
+            /*top side */    
+            /* 0% 18%, 9% 18%, 9% 20%, 8% 22%, 9% 25%, 18% 25%, 28% 0%, 55% 0%, 70% 25%, 90% 28%, */
+            0% 25%, 18% 25%, 28% 0%, 55% 0%, 70% 25%, 90% 28%,
+            /* right side */
+            100% 40%, 100% 80%,
+            /* bottom side */
+            0% 80%
+            );
+            background-blend-mode: multiply;
+        }
+        /* .side {
+            } */
+        .car3d-canvas .car .side.right-side {
+            transform: scaleX(1) rotateY(-45deg);
+        }
+        .car3d-canvas .car .side.left-side {
+            transform: scaleX(-1) rotateY(225deg) translateZ(250px);
+        }
+    </style>
+    <h1>Car</h1>
+    <div class="car3d-canvas">
+        <div class="car">
+            <div class="front">
+                <div class="windshield"></div>
+                <div class="hood-straight"></div>
+                <div class="hood-inclined"></div>
+                <div class="lights-grill"></div>
+                <div class="bumper-plate"></div>
+            </div>
+            <div class="side right-side"></div>
+            <div class="side left-side"></div>
+            <div class="sunroof"></div>
+            <div class="back">
+                <div class="lights"></div>
+                <div class="bumper-plate"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

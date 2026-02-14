@@ -1,0 +1,25 @@
+#picture_frame-3d_colosseum {
+    background: #444;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    --colosseum-height: 80%;
+    --radius: 100px;
+    --n: 12;
+    --length: calc(var(--radius) * 2 * tan(180deg / var(--n)));
+}
+
+/* .wall {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+} */
+
+.wall .face {
+    position: absolute;
+    height: 120px;
+    width: var(--length);
+    background: beige;
+    filter: brightness(calc(var(--face-i) / 12));
+    width: calc(100% / 12);
+    transform: rotateY(calc(var(--angle) * var(--face-i))) translateZ(var(--radius));
+}
