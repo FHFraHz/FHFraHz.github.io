@@ -4,6 +4,21 @@
     --white: #F7F7F7;
     --black: #111;
 }
+body {
+    height: 100vh;
+    height: 100svh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+}
+header { grid-area: header; }
+main { grid-area: main; }
+footer { grid-area: footer; }
 body, html {
     transition: linear;
     transition-property: all;
@@ -69,6 +84,23 @@ img.tech-modal-icon {
         transform: rotateY(360deg)
     }
 }
+/** Particular elements **/
+
+ .btn-primary-custom {
+    background: #37CE;
+    color: whitesmoke;
+ }
+ .btn-primary-custom:hover {
+    background: #37CF;
+    color: white;
+    text-decoration: underline;
+ }
+ .btn-primary-custom:active {
+    background: #37C7;
+ }
+
+
+/** Header layout **/
 
 .grid-header {
     display: grid;
