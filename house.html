@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            height: 100svh;
+        }
+        h1, h2, h3, h4, h5, h6 { margin: 0; padding: 1ch 0ch;}
+
+        .house-container {
+            background: #1117;
+            width: 100%; height: 100%;
+            perspective: 1000px;
+        }
+        .house {
+            transform-style: preserve-3d;
+            position: relative;
+            --house-height: 500px;
+            --house-width: 500px;
+            height: var(--house-height);
+            width: var(--house-width);
+            transform: translateX(50%) translateY(50%) rotateY(45deg);
+        }
+        .house-side {
+            position: absolute;
+            top: 40%;
+            height: 60%;
+            width: 100%;
+            opacity: 50%;
+            /* background: whitesmoke; */
+        }
+        .house-side.front {
+            background: whitesmoke;
+            transform: translateZ(250px);
+        }
+        .house-side.back {
+            background: slategray;
+            transform: translateZ(-250px);
+        }
+        .house-side.right {
+            background: green;
+            transform: translateX(250px) rotateY(90deg);
+        }
+        .house-side.left {
+            background: magenta;
+            transform: translateX(-250px) rotateY(-90deg);
+        }
+        .roof {
+            position: absolute;
+            top: 0%;
+            height: 40%;
+            width: 100%;
+        }
+        .roof .roof-side {
+            position: absolute;
+            top: 0%;
+            height: 100%;
+            width: 100%;
+        }
+        .roof-side.right {
+            background: firebrick;
+            transform: translateX(250px) rotate3d(90deg, 90deg, 45deg);
+        }
+        .roof-side.left {
+            background: coral;
+            transform:  translateX(-250px) rotate3d(-90deg, -90deg, -45deg);
+        }
+    </style>
+    
+    <div class="house-container">
+        <div class="house">
+            <div class="house-side front"></div>
+            <div class="house-side left"></div>
+            <div class="house-side right"></div>
+            <div class="house-side back"></div>
+            <div class="roof">
+                <div class="roof-side left"></div>
+                <div class="roof-side right"></div>            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
