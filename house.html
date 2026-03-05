@@ -24,55 +24,69 @@
             transform-style: preserve-3d;
             position: relative;
             --house-height: 500px;
-            --house-width: 500px;
+            --house-width: 375px;
             height: var(--house-height);
             width: var(--house-width);
-            transform: translateX(50%) translateY(50%) rotateY(45deg);
+            /* transform: translateX(50%) translateY(50%) */
+            /* rotateY(45deg) rotateZ(350deg) */
+            ;
         }
         .house-side {
             position: absolute;
-            top: 40%;
-            height: 60%;
-            width: 100%;
+            top: 50%;
+            height: 50%;
             opacity: 50%;
             /* background: whitesmoke; */
         }
+        .house-side.left, .house-side.right {
+            width: var(--house-height);
+        }
+        .house-side.front, .house-side.back {
+            width: var(--house-width);
+        }
         .house-side.front {
             background: whitesmoke;
-            transform: translateZ(250px);
+            transform: translateZ(calc(var(--house-height) / 2));
+            height: 100%;
+            top: 0%;
+            left: calc(var(--house-height) - var(--house-width));
         }
         .house-side.back {
             background: slategray;
-            transform: translateZ(-250px);
+            transform: translateZ(calc(0px - calc(var(--house-height) / 2)));
+            right: calc(var(--house-height) - var(--house-width));
         }
         .house-side.right {
             background: green;
-            transform: translateX(250px) rotateY(90deg);
+            transform: translateX(calc(var(--house-width) / 2)) rotateY(90deg);
         }
         .house-side.left {
             background: magenta;
-            transform: translateX(-250px) rotateY(-90deg);
+            transform: translateX(0px) rotateY(270deg);
         }
         .roof {
             position: absolute;
+            transform-style: preserve-3d;
             top: 0%;
             height: 40%;
-            width: 100%;
+
+            .roof-side {
+                position: absolute;
+                top: 0%;
+                height: 100%;
+                width: 100%;
+            }
+            .roof-side.right {
+                    background: firebrick;
+                    transform: rotateY(90deg) rotateX(25deg);
+                    /* transform: rotateZ(45deg); */
+            }
+            .roof-side.left {
+                    /* background: coral; */
+                    /* transform: rotateZ:;(315deg,); */
+            }
         }
-        .roof .roof-side {
-            position: absolute;
-            top: 0%;
-            height: 100%;
-            width: 100%;
-        }
-        .roof-side.right {
-            background: firebrick;
-            transform: translateX(250px) rotate3d(90deg, 90deg, 45deg);
-        }
-        .roof-side.left {
-            background: coral;
-            transform:  translateX(-250px) rotate3d(-90deg, -90deg, -45deg);
-        }
+
     </style>
     
     <div class="house-container">
