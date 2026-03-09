@@ -15,7 +15,7 @@
         }
         h1, h2, h3, h4, h5, h6 { margin: 0; padding: 1ch 0ch;}
 
-        .house-container {
+        .scene {
             background: #1117;
             width: 100%; height: 100%;
             perspective: 2000px;
@@ -23,12 +23,15 @@
         .house {
             transform-style: preserve-3d;
             position: relative;
-            --house-height: 500px;
-            --house-width: 375px;
+            --font-size: 48px;
+            /* --house-height: 500px;
+            --house-width: 375px; */
+            --house-height: 10em;
+            --house-width: calc(var(--house-height) * 0.75);
             height: var(--house-height);
             width: var(--house-height);
             transform: translateX(37vw) translateY(25vh)
-            rotateY(45deg) rotateZ(350deg)
+            rotateY(315deg) rotateZ(350deg)
             ;
         }
         .house-side {
@@ -49,7 +52,7 @@
         }
         .house-side.front {
             background-color: whitesmoke;
-            background-image: radial-gradient(to center, #FB03 #FFF0);
+            background-image: radial-gradient(ellipse at top left, #FFF0, #FB03);
             transform: translateZ(calc(var(--house-height) / 2));
         }
         .house-side.back {
@@ -79,23 +82,23 @@
         .roof-side.left {
             background: firebrick;
             transform:
-                translateY(-40px)
-                translateX(-182px)
+                translateY(-10%)
+                translateX(-37%)
                 rotateZ(37deg)
                 rotateY(90deg);
         }
         .roof-side.right {
             background: orange;
             transform:
-                translateY(-40px)
-                translateX(60px)
+                translateY(-10%)
+                translateX(12%)
                 rotateZ(323deg)
                 rotateY(270deg);
         }
 
     </style>
     
-    <div class="house-container">
+    <div class="scene">
         <div class="house">
             <div class="house-side front"></div>
             <div class="house-side left"></div>
@@ -104,6 +107,7 @@
             <div class="roof-side left"></div>
             <div class="roof-side right"></div>            
         </div>
+        <div class="grass"></div>
     </div>
 </body>
 </html>
