@@ -27,6 +27,7 @@
         perspective: 100em;
         perspective-origin: center;
         overflow: hidden;
+        background: #001a;
     }
 
     .scene {
@@ -42,7 +43,10 @@
         --house-width: 1.5em;
         --house-height: 2em;
         --house-depth: 1em;
-        animation: speen 8s infinite linear;
+        --speen-time: 30s;
+        --speen-timing-function: linear;
+        --speen-count: infinite;
+        animation: speen var(--speen-time) var(--speen-timing-function) var(--speen-count);
     }
 
     .scene > * {
@@ -97,26 +101,74 @@
         /* transform: rotateY(45deg); */
         
         .house-side {
+            --color-front: #cdc;
+            --color-left: #898;
+            --color-right: #bcb;
+            --color-back: #9a9;
+
+            background-blend-mode: multiply;
             bottom: 0;
             left: calc(var(--house-container-margin) / 2);
-            width: var(--house-height);
             height: var(--house-height);
+            width: var(--house-height);
             /* background: #faa7; */
-            outline: 1px solid lime;
+            /* outline: 1px solid lime; */
         }
         .house-side.front {
+            background: var(--color-front);
             transform: translateZ(calc(var(--house-height) * 0.5));
-        }
-        .house-side.back {
-            transform: translateZ(calc(var(--house-height) * -0.5));
-        }
-        .house-side.left {
-            transform: translateX(calc(var(--house-width) * -2/3)) rotateY(90deg);
+            animation:
+            colorShift-front var(--speen-time) var(--speen-timing-function) var(--speen-count)
+            ;
+            
         }
         .house-side.right {
+            background: var(--color-right);
             transform: translateX(calc(var(--house-width) * 2/3)) rotateY(90deg);
+            animation:
+                colorShift-right var(--speen-time) var(--speen-timing-function) var(--speen-count)
+            ;
+        }
+        .house-side.back {
+            background: var(--color-back);
+            transform: translateZ(calc(var(--house-height) * -0.5)) rotateY(180deg);
+            animation:
+                colorShift-back var(--speen-time) var(--speen-timing-function) var(--speen-count)
+            ;
+        }
+        .house-side.left {
+            background: var(--color-left);
+            transform: translateX(calc(var(--house-width) * -2/3)) rotateY(270deg);
+            animation:
+                colorShift-left var(--speen-time) var(--speen-timing-function) var(--speen-count)
+            ;
         }
     }
+
+    @keyframes colorShift-front {
+            0% {background: var(--color-front);}
+            25% {background: var(--color-right);}
+            50% {background: var(--color-back);}
+            75% {background: var(--color-left);}
+        }
+        @keyframes colorShift-right {
+            0% {background: var(--color-right);}
+            25% {background: var(--color-back);}
+            50% {background: var(--color-left);}
+            75% {background: var(--color-front);}
+        }
+        @keyframes colorShift-back {
+            0% {background: var(--color-back);}
+            25% {background: var(--color-left);}
+            50% {background: var(--color-front);}
+            75% {background: var(--color-right);}
+        }
+        @keyframes colorShift-left {
+            0% {background: var(--color-left);}
+            25% {background: var(--color-front);}
+            50% {background: var(--color-right);}
+            75% {background: var(--color-back);}
+        }
 
     </style>
     <div class="container">
