@@ -25,7 +25,7 @@
         height: 100%;
         position: relative;
         perspective: 100em;
-        perspective-origin: center;
+        perspective-origin: top center;
         overflow: hidden;
         background: #001a;
     }
@@ -38,14 +38,17 @@
         /* background: #7777; */
         font-size: 96px;
         transform-style: preserve-3d;
-        --grass-width: 7em;
-        --grass-height: 7em;
+        --grass-width: 8em;
+        --grass-height: 8em;
         --house-width: 1.5em;
         --house-height: 2em;
         --house-depth: 1em;
         --speen-time: 30s;
         --speen-timing-function: linear;
         --speen-count: infinite;
+        /* perspective: inherit; */
+        /* perspective-origin: top center; */
+        /* top: 64px; */
         animation: speen var(--speen-time) var(--speen-timing-function) var(--speen-count);
     }
 
@@ -81,6 +84,15 @@
         );
         background-size: 1em 1em;
     }
+    .grass::before {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(ellipse at center, #FFE1 37%, #0004);
+        background-blend-mode: multiply;
+        transform: translateX(-1px);
+    }
 
     .house * {
         position: absolute;
@@ -105,17 +117,25 @@
             --color-left: #898;
             --color-right: #bcb;
             --color-back: #9a9;
-
-            background-blend-mode: multiply;
+            background-image: radial-gradient(ellipse at center, #fed2, #0002);
+            /* background-blend-mode: multiply; */
             bottom: 0;
             left: calc(var(--house-container-margin) / 2);
             height: var(--house-height);
             width: var(--house-height);
             /* background: #faa7; */
             /* outline: 1px solid lime; */
+            /* opacity: 50%; */
+        }
+        .house-side.bottom {
+            opacity: 100%;
+            background-color: #222;
+            top: calc(var(--house-height) - 1px);
+            filter: drop-shadow(0px 0px 128px #111);
+            transform: rotateX(90deg);
         }
         .house-side.front {
-            background: var(--color-front);
+            background-color: var(--color-front);
             transform: translateZ(calc(var(--house-height) * 0.5));
             animation:
             colorShift-front var(--speen-time) var(--speen-timing-function) var(--speen-count)
@@ -123,21 +143,21 @@
             
         }
         .house-side.right {
-            background: var(--color-right);
+            background-color: var(--color-right);
             transform: translateX(calc(var(--house-width) * 2/3)) rotateY(90deg);
             animation:
                 colorShift-right var(--speen-time) var(--speen-timing-function) var(--speen-count)
             ;
         }
         .house-side.back {
-            background: var(--color-back);
+            background-color: var(--color-back);
             transform: translateZ(calc(var(--house-height) * -0.5)) rotateY(180deg);
             animation:
                 colorShift-back var(--speen-time) var(--speen-timing-function) var(--speen-count)
             ;
         }
         .house-side.left {
-            background: var(--color-left);
+            background-color: var(--color-left);
             transform: translateX(calc(var(--house-width) * -2/3)) rotateY(270deg);
             animation:
                 colorShift-left var(--speen-time) var(--speen-timing-function) var(--speen-count)
@@ -146,28 +166,28 @@
     }
 
     @keyframes colorShift-front {
-            0% {background: var(--color-front);}
-            25% {background: var(--color-right);}
-            50% {background: var(--color-back);}
-            75% {background: var(--color-left);}
+            0% {background-color: var(--color-front);}
+            25% {background-color: var(--color-right);}
+            50% {background-color: var(--color-back);}
+            75% {background-color: var(--color-left);}
         }
         @keyframes colorShift-right {
-            0% {background: var(--color-right);}
-            25% {background: var(--color-back);}
-            50% {background: var(--color-left);}
-            75% {background: var(--color-front);}
+            0% {background-color: var(--color-right);}
+            25% {background-color: var(--color-back);}
+            50% {background-color: var(--color-left);}
+            75% {background-color: var(--color-front);}
         }
         @keyframes colorShift-back {
-            0% {background: var(--color-back);}
-            25% {background: var(--color-left);}
-            50% {background: var(--color-front);}
-            75% {background: var(--color-right);}
+            0% {background-color: var(--color-back);}
+            25% {background-color: var(--color-left);}
+            50% {background-color: var(--color-front);}
+            75% {background-color: var(--color-right);}
         }
         @keyframes colorShift-left {
-            0% {background: var(--color-left);}
-            25% {background: var(--color-front);}
-            50% {background: var(--color-right);}
-            75% {background: var(--color-back);}
+            0% {background-color: var(--color-left);}
+            25% {background-color: var(--color-front);}
+            50% {background-color: var(--color-right);}
+            75% {background-color: var(--color-back);}
         }
 
     </style>
@@ -179,6 +199,7 @@
                 <div class="house-side left"></div>
                 <div class="house-side right"></div>
                 <div class="house-side back"></div>
+                <div class="house-side bottom"></div>
                 <div class="roof-side left"></div>
                 <div class="roof-side right"></div>            
             </div>
