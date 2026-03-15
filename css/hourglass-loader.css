@@ -15,7 +15,7 @@
     transition: all linear 1s;
     filter: opacity(1);
     /* moved original color to theme */
-    background: linear-gradient(to bottom, #F7F7F777, #EEEEEE77, #8899AA77);
+    background: linear-gradient(to bottom, #F7F7F733, #EEEEEE33, #8899AA33);
     z-index: 200;
 }
 .hourglass, .sand, .frame, .glass {
