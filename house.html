@@ -41,17 +41,18 @@
         --grass-width: 8em;
         --grass-height: 8em;
         --house-width: 1.5em;
-        --house-height: 3em;
-        --house-ratio: calc(var(--house-height) / var(--house-width));
+        --house-height: 2em;
+        --house-ratio: calc(var(--house-width) / var(--house-height));
         /* --house-depth: 1em; */
-        --speen-time: 60s;
+        --speen-time: 30s;
         --speen-timing-function: linear;
         --speen-count: infinite;
+        --roof-angle: 45deg;
         /* perspective: inherit; */
         /* perspective-origin: top center; */
         /* bottom: 72px; */
         animation: speen var(--speen-time) var(--speen-timing-function) var(--speen-count);
-        transform: rotateY(30deg);
+        /* transform: rotateY(30deg); */
     }
 
     .scene > * {
@@ -113,14 +114,90 @@
             background-image: radial-gradient(ellipse at center, #fed2, #0002);
             bottom: 0;
             /* opacity: 25%; */
+            .door {
+                position: absolute;
+                --door-width: calc(var(--house-height) * 1/4);
+                --door-height: calc(var(--house-width) * 3/5);
+                width: var(--door-width);
+                height: var(--door-height);
+                border: 2px outset #672d1d77;
+                border-bottom: none;
+                background-color: #672d1ddd;
+                background-image: radial-gradient(ellipse at center, #fed1, #fed1 25%, #0002);
+                background-size: 100% 125%;
+                background-position: top center;
+                border-radius: 25% 25% 0% 0%;
+                filter: drop-shadow(0px 0px 2px #5215);
+                bottom: 0;
+                right: 16.75%;
+            }
+            .windows {
+                width: 75%;
+                height: 80%;
+                bottom: 11.25%;
+                left: 12.5%;
+                /* background: #7777; */
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                align-items: center;
+                .window.upstairs { grid-area: upstairs;}
+                .window.left { grid-area: left;}
+                .window.center { grid-area: center;}
+                .window.right { grid-area: right;}
+
+                .window {
+                    --window-size: calc(var(--house-width) * 0.2);
+                    height: var(--window-size);
+                    width: var(--window-size);
+                    margin: auto auto;
+                    background-color: #49fd;
+                    border: outset 2px #7775;
+                }
+                .window::after {
+                    content: ' ';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: slategray;
+                    background-image: radial-gradient(circle at center, #fffb, #0005);
+                    clip-path: polygon(0% 45%, 45% 45%, 45% 0%, 55% 0%, 55% 45%, 100% 45%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0% 55%);
+                }
+                .window.round {
+                    border-radius: 50%;
+                    --window-size: calc(var(--house-width) * 0.225);
+                }
+            }
         }
+
+        .house-side.front .windows, .house-side.back .windows {
+            grid-template-areas:
+            "upstairs upstairs upstairs"
+            "left center right"
+            ;
+            .window.upstairs { justify-self: center; }
+            .window.left { justify-self: left; }
+            .window.center { justify-self: center; }
+            .window.right { justify-self: right; }
+        }
+        .house-side.left .windows, .house-side.right .windows {
+            grid-template-areas: "left center right";
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+
         .house-side.front, .house-side.bottom, .house-side.back {
             /* left: calc(var(--house-width) * var(--house-ratio) * 2); */
             height: var(--house-height);
             width: var(--house-width);
         }
+        .house-side.front, .house-side.back {
+            clip-path: polygon(0% 37%, 50% 0%, 100% 37%, 100% 100%, 0% 100%);
+        }
         .house-side.right, .house-side.left {
-            height: var(--house-height);
+            height: calc(var(--house-height) * 0.63);
             width: var(--house-height);
         }
         .house-side.right {
@@ -167,31 +244,70 @@
                 colorShift-left var(--speen-time) var(--speen-timing-function) var(--speen-count)
             ;
         }
+
+        .roof-side {
+            top: 0;
+            width: var(--house-width);
+            height: calc(var(--house-height) * 1.1);
+            background-image: repeating-linear-gradient(to right, white, white 0.05em, darkslategray 0.125em);
+            background-blend-mode: multiply;
+            --roof-color-right: #821;
+            --roof-color-left: #621;
+            --roof-color-back: #510;
+            --roof-color-front: #921;
+        }
+        .roof-side.right {
+            background-color: var(--roof-color-right);
+            right: calc(var(--house-width) * -0.5);
+            transform: translateY(-0.6em) translateX(-0.22em) rotateX(90deg) rotateY(var(--roof-angle));
+            animation: roofSideLight-right var(--speen-time)  var(--speen-timing-function) var(--speen-count);
+            filter: drop-shadow(1px 0px 4px #0005);
+        }
+        .roof-side.left {
+            left: calc(var(--house-width) * -0.5);
+            /* background-color: yellow; */
+            transform: translateY(-0.6em) translateX(0.22em) rotateX(90deg) rotateY(calc(360deg - var(--roof-angle))) rotateZ(180deg);
+            animation: roofSideLight-left var(--speen-time)  var(--speen-timing-function) var(--speen-count);
+            filter: drop-shadow(-1px 0px 4px #0005);
+        }
     }
 
     @keyframes colorShift-front {
-            0% {background-color: var(--color-front);}
+            0%, 100% {background-color: var(--color-front);}
             25% {background-color: var(--color-right);}
             50% {background-color: var(--color-back);}
             75% {background-color: var(--color-left);}
         }
         @keyframes colorShift-right {
-            0% {background-color: var(--color-right);}
+            0%, 100% {background-color: var(--color-right);}
             25% {background-color: var(--color-back);}
             50% {background-color: var(--color-left);}
             75% {background-color: var(--color-front);}
         }
         @keyframes colorShift-back {
-            0% {background-color: var(--color-back);}
+            0%, 100% {background-color: var(--color-back);}
             25% {background-color: var(--color-left);}
             50% {background-color: var(--color-front);}
             75% {background-color: var(--color-right);}
         }
         @keyframes colorShift-left {
-            0% {background-color: var(--color-left);}
+            0%, 100% {background-color: var(--color-left);}
             25% {background-color: var(--color-front);}
             50% {background-color: var(--color-right);}
             75% {background-color: var(--color-back);}
+        }
+
+        @keyframes roofSideLight-right {
+            0%, 100% {background-color: var(--roof-color-right);}
+            25% {background-color: var(--roof-color-back);}
+            50% {background-color: var(--roof-color-left);}
+            75% {background-color: var(--roof-color-front);}
+        }
+        @keyframes roofSideLight-left {
+            0%, 100% {background-color: var(--roof-color-left);}
+            25% {background-color: var(--roof-color-front);}
+            50% {background-color: var(--roof-color-right);}
+            75% {background-color: var(--roof-color-back);}
         }
 
     </style>
@@ -199,9 +315,24 @@
         <div class="scene">
             <div class="grass"></div>
             <div class="house">
-                <div class="house-side front"></div>
-                <div class="house-side left"></div>
-                <div class="house-side right"></div>
+                <div class="house-side front">
+                    <div class="windows">
+                        <div class="window square left"></div>
+                        <div class="window round upstairs"></div>
+                    </div>
+                    <div class="door"></div>
+                </div>
+                <div class="house-side left">
+                    <div class="windows">
+                        <div class="window square center"></div>
+                    </div>
+                </div>
+                <div class="house-side right">
+                    <div class="windows">
+                        <div class="window square left"></div>
+                        <div class="window square right"></div>
+                    </div>
+                </div>
                 <div class="house-side back"></div>
                 <div class="house-side bottom"></div>
                 <div class="roof-side left"></div>
