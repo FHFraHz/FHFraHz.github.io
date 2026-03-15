@@ -41,22 +41,22 @@
         --grass-width: 8em;
         --grass-height: 8em;
         --house-width: 1.5em;
-        --house-height: 2.25em;
-        --house-depth: 1em;
-        --speen-time: 30s;
+        --house-height: 3em;
+        --house-ratio: calc(var(--house-height) / var(--house-width));
+        /* --house-depth: 1em; */
+        --speen-time: 60s;
         --speen-timing-function: linear;
         --speen-count: infinite;
         /* perspective: inherit; */
         /* perspective-origin: top center; */
-        /* top: 64px; */
-        /* animation: speen var(--speen-time) var(--speen-timing-function) var(--speen-count); */
+        /* bottom: 72px; */
+        animation: speen var(--speen-time) var(--speen-timing-function) var(--speen-count);
         transform: rotateY(30deg);
     }
 
     .scene > * {
         position: absolute;
-        outline: lime 1px solid;
-        /* transform: rotateY(45deg); */
+        /* outline: lime 1px solid; */
     }
 
     @keyframes speen {
@@ -69,7 +69,7 @@
     }
 
     .grass {
-        top: 1em;
+        top: calc(var(--house-height) / 2);
         width: var(--grass-width);
         height: var(--grass-height);
         transform:
@@ -98,13 +98,10 @@
     }
 
     .house {
-        --house-container-margin: 1em;
-        --house-container-width: calc(var(--house-height) + var(--house-container-margin));
-        --house-container-height: calc(var(--house-height) + var(--house-container-margin));
-        width: var(--house-container-width);
-        height: var(--house-container-height);
-        top: calc(50% - var(--house-container-height) / 2 - var(--house-container-margin));
-        left: calc(50% - var(--house-container-width) / 2 - var(--house-container-margin) / 4);
+        width: var(--house-width);
+        height: var(--house-height);
+        top: calc(50% - var(--house-height) / 2);
+        left: calc(50% - var(--house-width) / 2);
         position: relative;
         transform-style: preserve-3d;
         
@@ -115,22 +112,31 @@
             --color-back: #9a9;
             background-image: radial-gradient(ellipse at center, #fed2, #0002);
             bottom: 0;
+            /* opacity: 25%; */
         }
         .house-side.front, .house-side.bottom, .house-side.back {
-            left: calc(var(--house-container-margin) / 2 + 1px * var(--house-width) / var(--house-height) );
+            /* left: calc(var(--house-width) * var(--house-ratio) * 2); */
             height: var(--house-height);
             width: var(--house-width);
         }
         .house-side.right, .house-side.left {
-            left: calc(var(--house-width) / 2);
             height: var(--house-height);
             width: var(--house-height);
+        }
+        .house-side.right {
+            /* background: fuchsia !important; */
+            right: calc(calc(var(--house-height) - var(--house-width)) * -0.5);
+        }
+        .house-side.left {
+            /* background: lime !important; */
+            left: calc(calc(var(--house-height) - var(--house-width)) * -0.5);
+            
         }
         .house-side.bottom {
             opacity: 100%;
             background-color: #222;
             filter: drop-shadow(0px 0px 128px #111);
-            transform: translateY(calc(var(--house-height) * 0.5 + 1px)) rotateX(90deg);
+            transform: translateY(calc(var(--house-height) * 0.5 - 1px)) rotateX(90deg);
         }
         .house-side.front {
             background-color: var(--color-front);
