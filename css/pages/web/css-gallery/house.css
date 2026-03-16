@@ -31,7 +31,7 @@
         --speen-count: infinite;
         --roof-angle: 45deg;
         animation: speen var(--speen-time) var(--speen-timing-function) var(--speen-count);
-        /* transform: rotateY(90deg); */
+        /* transform: rotateY(180deg); */
 
         .grass {
             width: var(--grass-width);
@@ -77,11 +77,14 @@
                 background-image: radial-gradient(ellipse at center, #fed2, #0002);
                 bottom: 0;
                 .door {
-                    position: absolute;
                     --door-width: calc(var(--house-height) * 1/4);
                     --door-height: calc(var(--house-width) * 3/5);
+                    position: absolute;
                     width: var(--door-width);
                     height: var(--door-height);
+                    bottom: 0;
+                }
+                .door.frontdoor {
                     border: 2px outset #672d1d77;
                     border-bottom: none;
                     background-color: #672d1ddd;
@@ -90,8 +93,86 @@
                     background-position: top center;
                     border-radius: 25% 25% 0% 0%;
                     filter: drop-shadow(0px 0px 2px #5215);
-                    bottom: 0;
                     right: 16.75%;
+                }
+                .door.backdoor {
+                    border: 2px outset #67678777;
+                    border-bottom: none;
+                    background: 
+                        radial-gradient(ellipse at center, #def1, #def1 25%, #0002),
+                        #fff7
+                    ;
+                    /* background-blend-mode: multiply; */
+                    background-size: 100% 125%;
+                    background-position: top center;
+                    filter: drop-shadow(0px 0px 2px #5215);
+                    left: 16.75%;
+
+                    .window {
+                        /* position: absolute; */
+                        height: 15%;
+                        width: 75%;
+                        top: 6%;
+                        --my-border-width: 2px;
+                        --bar-color: #567F;
+                        left: calc(12.5% - var(--my-border-width));
+                        background:
+                            linear-gradient(
+                                to right,
+                                #0000 0%, #0000 31%,
+                                var(--bar-color) 32%, var(--bar-color) 34%,
+                                #0000 35%, #0000 64%,
+                                var(--bar-color) 65%, var(--bar-color) 67%,
+                                #0000 68%
+                                ),
+                            linear-gradient(
+                                to bottom,
+                                #0000 0%, #0000 45%,
+                                var(--bar-color) 47%, var(--bar-color) 54%,
+                                #0000 55%
+                                ),
+                            linear-gradient(15deg, #7Afb, #9efb, #7Afb)
+                            ;
+                        border: var(--my-border-width) inset #7777;
+                    }
+                }
+                .door.frontdoor::before, .door.frontdoor::after,
+                .door.backdoor::before, .door.backdoor::after {
+                    content: '';
+                    position: absolute;
+                }
+                .door.backdoor::before {
+                    top: 32%;
+                    left: 10%;
+                    height: 62%;
+                    width: 80%;
+                    background:
+                        linear-gradient(
+                            to bottom,
+                            #7773 0%,
+                            #7773 46%,
+                            #0000 47%,
+                            #0000 53%,
+                            #7773 54%
+                        )
+                    ;
+                }
+                .door.frontdoor::after, .door.backdoor::after {
+                    --door-handle-width: calc(var(--perspective-font-size) * 0.075);
+                    top: calc(50% - var(--door-handle-width) / 2);
+                    right: calc(var(--door-handle-width) * 0.75);
+                    width: var(--door-handle-width);
+                    height: calc(var(--door-handle-width) * 2);
+                }
+                .door.frontdoor::after {
+                    background:
+                        radial-gradient(ellipse at center, #fff7, #0007),
+                        #feb
+                }
+                .door.backdoor::after {
+                    background:
+                        radial-gradient(ellipse at center, #fff7, #0007),
+                        #abc
                 }
                 .windows {
                     width: 75%;
@@ -112,7 +193,10 @@
                         height: var(--window-size);
                         width: var(--window-size);
                         margin: auto auto;
-                        background-color: #49fd;
+                        background: 
+                            linear-gradient(15deg, #7Afb, #9efb, #7Afb),
+                            #49fb
+                            ;
                         border: outset 2px #7775;
                     }
                     .window::after {
@@ -133,9 +217,9 @@
 
             .house-side.front .windows, .house-side.back .windows {
                 grid-template-areas:
-                "upstairs upstairs upstairs"
-                "left center right"
-                ;
+                    "upstairs upstairs upstairs"
+                    "left center right"
+                    ;
                 .window.upstairs { justify-self: center; }
                 .window.left { justify-self: left; }
                 .window.center { justify-self: center; }
