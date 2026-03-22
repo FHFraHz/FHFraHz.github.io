@@ -31,7 +31,7 @@
         --speen-count: infinite;
         --roof-angle: 45deg;
         animation: speen var(--speen-time) var(--speen-timing-function) var(--speen-count);
-        /* transform: rotateY(180deg); */
+        /* transform: rotateY(315deg); */
 
         .grass {
             width: var(--grass-width);
@@ -324,6 +324,7 @@
             transform: translateZ(2em);
         }
         .tree * {
+            animation: tree-brightness-spin var(--speen-time) var(--speen-timing-function) var(--speen-count);
             position: absolute;
         }
         .tree .trunk {   
@@ -387,6 +388,7 @@
             border-radius: 50%;
         }
 
+
     }
 
 }
@@ -436,4 +438,10 @@
     25% {background-color: var(--roof-color-front);}
     50% {background-color: var(--roof-color-right);}
     75% {background-color: var(--roof-color-back);}
+}
+
+@keyframes tree-brightness-spin {
+    0%, 100% { filter: brightness(0.85);}
+    25% { filter: brightness(1); }
+    62% { filter: brightness(0.70); }
 }
