@@ -36,10 +36,10 @@
             width: 100%;
             height: 100%;
             position: relative;
-            /* transform:
+            transform:
                 rotateX(-20deg)
-                rotateY(20deg)
-            ; */
+                /* rotateY(90deg) */
+            ;
         
             .cylinder {
                 position: relative;
@@ -53,12 +53,12 @@
                 top: calc(50% - var(--diameter) / 2);
                 left: calc(50% - var(--diameter) / 2);
                 transform-style: preserve-3d;
-
+                
                 .side {
                     position: absolute;
                     --side-i: inherit;
                     height: var(--depth);
-                    --side-width: calc(var(--diameter) / calc(var(--side-count) / 3));
+                    --side-width: calc(var(--diameter) / calc(var(--side-count) / 1.5));
                     width: var(--side-width);
                     left: calc(50% - var(--side-width) / 2);
                     background:
@@ -69,17 +69,17 @@
                             75%
                         );
                     --angle-multiple: calc(calc(var(--side-i) - 0.5) / var(--side-count));
-                    --angle: calc(var(--angle-multiple) * 360deg);
-                    /* --angle: calc(var(--side-i) / var(--side-count) * 360deg); */
+                    --angle: calc(var(--angle-multiple) * 180deg - 90deg);
                     
                     /* this --formed-gap variable is actually a compensation for a gap
                     that I kept getting between sides when I just used translateZ(var(--radius))...!
                     I don't know if this is a good thing to do
                     or if it will apply to cylinders of any size and side count!
                     */
-                    --formed-gap: calc(var(--side-count) * 1px / 3);
+                    --formed-gap: calc(var(--side-count) * 1px);
 
                     transform:
+                    /* rotate(90deg) */
                     rotateY(var(--angle))
                     translateZ(calc(var(--radius) - var(--formed-gap)))
                     ;
@@ -90,7 +90,7 @@
     </style>
     <div class="scene-container">
         <div class="scene">
-            <div class="cylinder" style="--side-count: 18">
+            <div class="cylinder" style="--side-count: 9">
                 <div class="side" style="--side-i: 1"></div>
                 <div class="side" style="--side-i: 2"></div>
                 <div class="side" style="--side-i: 3"></div>
@@ -100,15 +100,9 @@
                 <div class="side" style="--side-i: 7"></div>
                 <div class="side" style="--side-i: 8"></div>
                 <div class="side" style="--side-i: 9"></div>
-                <div class="side" style="--side-i: 10"></div>
+                <!-- <div class="side" style="--side-i: 10"></div>
                 <div class="side" style="--side-i: 11"></div>
-                <div class="side" style="--side-i: 12"></div>
-                <div class="side" style="--side-i: 13"></div>
-                <div class="side" style="--side-i: 14"></div>
-                <div class="side" style="--side-i: 15"></div>
-                <div class="side" style="--side-i: 16"></div>
-                <div class="side" style="--side-i: 17"></div>
-                <div class="side" style="--side-i: 18"></div>
+                <div class="side" style="--side-i: 12"></div> -->
             </div>
         </div>
     </div>
