@@ -45,7 +45,7 @@
                 position: relative;
                 --diameter: 2em;
                 --radius: calc(var(--diameter) / 2);
-                --depth: 3em;
+                --depth: 2em;
                 --side-count: inherit;
                 width: var(--diameter);
                 height: var(--depth);
@@ -53,6 +53,7 @@
                 top: calc(50% - var(--diameter) / 2);
                 left: calc(50% - var(--diameter) / 2);
                 transform-style: preserve-3d;
+                animation: rotateEverywhere 5s linear infinite;
 
                 .side {
                     position: absolute;
@@ -85,6 +86,20 @@
                     ;
                 }
 
+            }
+        }
+        @keyframes rotateEverywhere {
+            0%, 100% {
+                transform: rotate3d(0deg, 0deg, 0deg);
+            }
+            25% {
+                transform: rotate3d(90deg, 0deg, 0deg);
+            }
+            50% {
+                transform: rotate3d(0deg, 90deg, 0deg);
+            }
+            75% {
+                transform: rotate3d(0deg, 0deg, 90deg);
             }
         }
     </style>

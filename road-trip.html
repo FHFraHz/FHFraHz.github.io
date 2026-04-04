@@ -46,7 +46,7 @@
             --car-width: calc(var(--road-width) * 0.37);
             --car-height: calc(var(--car-width) * 0.75);
             --car-length: calc(var(--car-width) * 1);
-            --car-speed: 0.12s;
+            --car-speed: 0.2s;
 
             .grass {
                 position: absolute;
@@ -66,7 +66,7 @@
                     linear-gradient(to left, #333 0%, #333 47.99999999%, #0000 48%, #0000 52%, #333 52.11111111%),
                     repeating-linear-gradient(to top, #feee 0%, #feee 4.99999999%, #333 5%, #333 9.99999999%)
                     ;
-                    animation: anim-road-progress 1s linear infinite;
+                    animation: anim-road-progress calc(var(--car-speed) * 2) linear infinite;
                     /* background-size: 0.5em; */
                     /* background-repeat: repeat; */
                 }
@@ -84,11 +84,11 @@
                 left: 54%;
                 transform: translateZ(calc(var(--perspective-setting) * 0.1));
                 
-                .front, .back, .side.left, .side.right {
+                .side {
                     position: absolute;
                     background: #C007;
                 }
-                .front, .back {
+                .side.front, .side.back {
                     width: var(--car-width);
                     height: var(--car-height);
                 }
@@ -96,22 +96,95 @@
                     width: var(--car-length);
                     height: var(--car-height);
                 }
-                .front { transform: translateZ(calc(var(--car-length) * 0.5)); }
-                .back { transform: translateZ(calc(var(--car-length) * -0.5)); }
+                .side.front { transform: translateZ(calc(var(--car-length) * 0.5)); }
+                .side.back { transform: translateZ(calc(var(--car-length) * -0.5)); }
                 .side.left { transform: translateX(calc(0em - var(--car-width) / 2 + 1px)) rotateY(270deg); }
                 .side.right { transform: translateX(calc(var(--car-width) / 2 - 1px)) rotateY(90deg); }
+
+                .wheels {
+                    position: absolute;
+                    transform-style: preserve-3d;
+                    --wheel-diameter: calc(var(--car-height) * 0.3);
+                    --wheel-pair-width: calc(var(--car-width) * 1.1);
+                    width: var(--wheel-pair-width);
+                    height: var(--wheel-diameter);
+                    left: calc(calc(var(--wheel-pair-width) - var(--car-width)) * -0.5);
+                    bottom: 0;
+                    /* transform: rotateX(90deg); */
+                    /* outline: lime 1px solid; */
+                    --side-count: inherit;
+
+                    .front, .rear {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                    }
+                    .front {
+                        transform: translateZ(calc(var(--car-length) * 0.3));
+                    }
+                    .rear {
+                        transform: translateZ(calc(var(--car-length) * -0.2));
+                    }
+
+                    .wheel-pair {
+                        position: absolute;
+                        transform-style: preserve-3d;
+                        width: 100%;
+                        height: 100%;
+                        .side {
+                            
+                            --side-i: inherit;
+                            background: linear-gradient(to left, #444 0%, #111 25%, #0000 25.0000000001%, #0000 74.9999999999%, #111 75%, #444 100%);
+                            /* background: hsl(calc(255 * var(--side-i) / var(--side-count)), 50%, 50%); */
+                            width: 100%;
+                            /* height: 100%; */
+                            height: calc(var(--wheel-diameter) / var(--side-count) * 4);
+                            top: calc(var(--wheel-diameter) * 0.37);
+                            transform:
+                                rotateX(calc(360deg * var(--side-i) / var(--side-count)))
+                                translateZ(calc(var(--wheel-diameter) * 0.5))
+                                /* translateY(calc(var(--wheel-diameter) * 0.5)) */
+                            ;
+                        }
+                        animation: wheel-speen var(--car-speed) linear infinite reverse;
+                    }
+
+                    .wheel-pair::after, .wheel-pair::before {
+                        content: '';
+                        position: absolute;
+                        width: var(--wheel-diameter);
+                        height: var(--wheel-diameter);
+                        background:
+                            radial-gradient(circle at center, #0000 0%, #0000 36.9999999999%, #333 37%, #111 100%),
+                            repeating-conic-gradient(from 45deg, slategray 0%, lightsteelblue 50%)
+                        ;
+                        border-radius: 50%;
+                        top: 0;
+                    }
+                    .wheel-pair::after {
+                        right: 0;
+                        transform: rotateY(90deg) translateZ(calc(var(--wheel-diameter) * 0.5));
+                    }
+                    .wheel-pair::before {
+                        left: 0;
+                        transform: rotateY(90deg) translateZ(calc(var(--wheel-diameter) * -0.5));
+                    }
+                }
                 
             }
         }
         
     }
     @keyframes anim-road-progress {
-        0% {
-            top: 0%;
-        }
-        100% {
-            top: -25%;
-        }
+        0% { top: 0%; }
+        100% { top: -25%; }
+    }
+
+    @keyframes wheel-speen {
+        0% { transform: rotateX(0deg); }
+        100% { transform: rotateX(360deg); }
     }
 </style>
 
@@ -120,11 +193,66 @@
         <div class="grass">
                 <div class="road"></div>
             </div>
+            
             <div class="car">
-                <div class="front"></div>
-                <div class="back"></div>
+                <div class="side front"></div>
+                <div class="side back"></div>
                 <div class="side left"></div>
                 <div class="side right"></div>
+                <div class="body">
+                    <div class="hood">
+                        <div class="lip">
+                            <div class="curve font"></div>
+                            <div class="curve middle"></div>
+                            <div class="curve back"></div>
+                        </div>
+                        <div class="lid"></div>
+                    </div>
+                    <div class="windows"></div>
+                    <div class="roof"></div>
+                </div>
+                <div class="wheels" style="--side-count: 16">
+                    <div class="front">
+                        <div class="wheel-pair">
+                            <div class="side" style="--side-i: 1"></div>
+                            <div class="side" style="--side-i: 2"></div>
+                            <div class="side" style="--side-i: 3"></div>
+                            <div class="side" style="--side-i: 4"></div>
+                            <div class="side" style="--side-i: 5"></div>
+                            <div class="side" style="--side-i: 6"></div>
+                            <div class="side" style="--side-i: 7"></div>
+                            <div class="side" style="--side-i: 8"></div>
+                            <div class="side" style="--side-i: 9"></div>
+                            <div class="side" style="--side-i: 10"></div>
+                            <div class="side" style="--side-i: 11"></div>
+                            <div class="side" style="--side-i: 12"></div>
+                            <div class="side" style="--side-i: 13"></div>
+                            <div class="side" style="--side-i: 14"></div>
+                            <div class="side" style="--side-i: 15"></div>
+                            <div class="side" style="--side-i: 16"></div>
+                        </div>
+                    </div>
+                    <div class="rear">
+                        <div class="wheel-pair">
+                            <div class="side" style="--side-i: 1"></div>
+                            <div class="side" style="--side-i: 2"></div>
+                            <div class="side" style="--side-i: 3"></div>
+                            <div class="side" style="--side-i: 4"></div>
+                            <div class="side" style="--side-i: 5"></div>
+                            <div class="side" style="--side-i: 6"></div>
+                            <div class="side" style="--side-i: 7"></div>
+                            <div class="side" style="--side-i: 8"></div>
+                            <div class="side" style="--side-i: 9"></div>
+                            <div class="side" style="--side-i: 10"></div>
+                            <div class="side" style="--side-i: 11"></div>
+                            <div class="side" style="--side-i: 12"></div>
+                            <div class="side" style="--side-i: 13"></div>
+                            <div class="side" style="--side-i: 14"></div>
+                            <div class="side" style="--side-i: 15"></div>
+                            <div class="side" style="--side-i: 16"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
