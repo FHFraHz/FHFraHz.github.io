@@ -44,7 +44,7 @@
             transform: rotateY(-10deg);
             --road-width: 3em;
             --car-width: calc(var(--road-width) * 0.37);
-            --car-height: calc(var(--car-width) * 0.75);
+            --car-height: calc(var(--car-width) * 0.62);
             --car-length: calc(var(--car-width) * 1);
             --car-speed: 0.2s;
 
@@ -86,7 +86,8 @@
                 
                 .side {
                     position: absolute;
-                    background: #C007;
+                    background: #C00A;
+                    bottom: 0.075em;
                 }
                 .side.front, .side.back {
                     width: var(--car-width);
@@ -95,11 +96,76 @@
                 .side.left, .side.right {
                     width: var(--car-length);
                     height: var(--car-height);
+                    clip-path: polygon(0% 50%, 10% 50%, 12% 55%, 20% 55%, 30% 52%, 70% 52%, 94% 58%, 100% 66%, 100% 100%, 0% 100%);
                 }
-                .side.front { transform: translateZ(calc(var(--car-length) * 0.5)); }
-                .side.back { transform: translateZ(calc(var(--car-length) * -0.5)); }
+                .side.front { transform: translateZ(calc(var(--car-length) * 0.5)); clip-path: polygon(0% 66%, 100% 66%, 100% 110%, 0% 110%); }
+                .side.back { transform: translateZ(calc(var(--car-length) * -0.5)) rotateY(180deg); clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%); }
                 .side.left { transform: translateX(calc(0em - var(--car-width) / 2 + 1px)) rotateY(270deg); }
-                .side.right { transform: translateX(calc(var(--car-width) / 2 - 1px)) rotateY(90deg); }
+                .side.right { transform: translateX(calc(var(--car-width) / 2 - 1px)) rotateY(90deg) scaleX(-100%); }
+
+                .side .bumper {
+                    position: absolute;
+                    width: 100%;
+                    height: 6%;
+                    bottom: 0%;
+                    left: 0%;
+                    background: linear-gradient(to bottom, #822f, #a66c, #822f);
+                }
+
+                .side .license-plate {
+                    position: absolute;
+                    left: 40%;
+                    width: 20%;
+                    height: 10%;
+                    border-radius: 1px;
+                    outline: inset #7af 1px;
+                    background:
+                    linear-gradient(to bottom, blue 0%, dodgerblue 15%, #fcfcfc 15.0000000001%)
+                    ;
+                    filter: drop-shadow(0px 0px 1px #1119);
+                    
+                    p {
+                        margin: 0;
+                        padding: 2px 0 0 0;
+                        color: black;
+                        font-size: 3px;
+                        text-align: center;
+                        font-family: sans-serif;
+                    }
+                }
+                .side.front .license-plate { bottom: -2%; }
+                .side.back .license-plate { bottom: 3%; }
+
+                /* LIGHTS lol */
+                .side.front::after, .side.front::before {
+                    content: '';
+                    position: absolute;
+                }
+                .side.front::before {
+                    width: 90%;
+                    height: 20%;
+                    bottom: 7%;
+                    left: 5%;
+                    background:
+                        linear-gradient(to top, #1115 0%, #0000 33.3333333333%, #0000 66.6666666666%, #1115 100%),
+                        linear-gradient(to left, lightyellow 0%, whitesmoke 10%, lightyellow 20%, #0000 20.0000000001%, #0000 79.999999999%, lightyellow 80%, whitesmoke 90%, lightyellow 100%),
+                        repeating-linear-gradient(to top, lightsteelblue 0%, slategray 15%)
+                    ;
+                    border-radius: 4px 4px 2px 2px;
+                    clip-path: polygon(0% 0%, 20% 0%, 20% 7%, 80% 7%, 80% 0%, 100% 0%, 100% 100%, 80% 100%, 80% 95%, 20% 95%, 20% 100%, 0% 100%);
+                }
+                .side.front::after {
+                    width: 90%;
+                    height: 4%;
+                    bottom: 7%;
+                    left: 5%;
+                    border-radius: 8px 8px 4px 4px;
+                    background:
+                        /* linear-gradient(to top, #1115 0%, #0000 33.3333333333%, #0000 66.6666666666%, #1115 100%), */
+                        linear-gradient(to left, #1114 0%, #1114 20%, #0000 20.0000000001%, #0000 79.9999999999%, #1114 80%, #1114 100%),
+                        linear-gradient(to left, #fe09 0%, lightyellow 10%, #fe07 20%, #0000 20.0000000001%, #0000 79.9999999999%, #fe07 80%, lightyellow 90%, #fe09 100%)
+                        ;
+                }  
 
                 .wheels {
                     position: absolute;
@@ -140,8 +206,8 @@
                             /* background: hsl(calc(255 * var(--side-i) / var(--side-count)), 50%, 50%); */
                             width: 100%;
                             /* height: 100%; */
-                            height: calc(var(--wheel-diameter) / var(--side-count) * 4);
-                            top: calc(var(--wheel-diameter) * 0.37);
+                            height: calc(var(--wheel-diameter) / var(--side-count) * 4.75);
+                            top: calc(var(--wheel-diameter) * 0.375);
                             transform:
                                 rotateX(calc(360deg * var(--side-i) / var(--side-count)))
                                 translateZ(calc(var(--wheel-diameter) * 0.5))
@@ -195,8 +261,18 @@
             </div>
             
             <div class="car">
-                <div class="side front"></div>
-                <div class="side back"></div>
+                <div class="side front">
+                    <div class="bumper"></div>
+                    <div class="license-plate">
+                        <p>AB 123 CD</p>
+                    </div>
+                </div>
+                <div class="side back">
+                    <div class="bumper"></div>
+                    <div class="license-plate">
+                        <p>AB 123 CD</p>
+                    </div>
+                </div>
                 <div class="side left"></div>
                 <div class="side right"></div>
                 <div class="body">
